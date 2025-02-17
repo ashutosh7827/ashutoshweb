@@ -1,0 +1,141 @@
+<!doctype html>
+<html>
+<title> Photo Gallery </title>
+<head>
+<div id="header">
+<h1> <font size="5">Web Gallery</font> </h1>
+</div>
+</head>
+<style>
+@keyframes ani
+{
+from{opacity:0;}
+to{opacity:1;}
+}
+
+@keyframes ani2
+{
+from{opacity:0;}
+to{opacity:1;}
+}
+
+@keyframes ani3
+{
+from{width:100%;}
+to{width:20%;}
+}
+
+/* id style  */
+#header
+{
+background:yellow;
+width:20%;
+padding:20px;
+text-align:center;
+margin:auto;
+box-shadow: 10px 10px 20px black;
+color:black;
+transition:1s;
+border-radius:70px;
+animation:ani3 1s;
+}
+
+#header:hover
+{
+cursor:pointer;
+box-shadow: 10px 10px 20px magenta;
+color:magenta;
+background:black;
+transform:scale(1.25);
+}
+
+
+/* tag style */
+body
+{
+//background:grey;
+background:url(images/background.jpg);
+}
+
+/* class style */
+.pic
+{
+width:20%;
+height:200px;
+box-shadow: 5px 5px 30px black;
+border-radius:100px;
+margin:70px;
+animation:ani 1s;
+}
+
+.pic:hover
+{
+cursor:pointer;
+border-radius:0px;
+transform:scale(1.50);
+transition:1s;
+}
+
+
+
+
+
+</style>
+
+<body>
+
+<a href="index.html">
+Profile
+
+</a>
+
+
+
+
+<!--
+<img src="images/p2.jpg" width="10%" alt="jungle picture" border="10">
+-->
+<a href="p1.html">
+<img class="pic" src="images/p1.jpg"  alt="jungle picture">
+</a>
+
+<a href="p2.html">
+<img class="pic" src="images/p2.jpg"  alt="jungle picture">
+</a>
+
+<a href="p3.html">
+<img class="pic" src="images/p3.jpg"  alt="jungle picture">
+</a>
+
+<a href="p4.html">
+<img class="pic" src="images/p4.jpg"  alt="jungle picture">
+</a>
+
+<a href="p5.html">
+<img class="pic" src="images/p5.jpg"  alt="jungle picture">
+</a>
+
+<a href="p6.html">
+<img class="pic" src="images/p6.jpg"  alt="jungle picture">
+</a>
+
+
+
+
+
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
