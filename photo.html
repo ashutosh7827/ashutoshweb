@@ -2,6 +2,11 @@
 <html>
 <title> Photo Gallery </title>
 <head>
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
 <div id="header">
 <h1> <font size="5">Web Gallery</font> </h1>
 </div>
@@ -25,32 +30,34 @@ from{width:100%;}
 to{width:20%;}
 }
 
-/* id style  */
-#header
+                       /* id style  */
+                                   #header
 {
-background:yellow;
-width:20%;
-padding:20px;
-text-align:center;
-margin:auto;
-box-shadow: 10px 10px 20px black;
-color:black;
-transition:1s;
-border-radius:70px;
-animation:ani3 1s;
+                                   background:yellow;
+                                  width:20%;
+                                   padding:20px;
+                                   text-align:center;
+                                    margin:auto;
+                                   box-shadow: 10px 10px 20px black;
+                                   color:black;
+                                   transition:1s;
+                                         border-radius:70px;
+                                  animation:ani3 1s;
 }
 
-#header:hover
-{
-cursor:pointer;
-box-shadow: 10px 10px 20px magenta;
-color:magenta;
-background:black;
-transform:scale(1.25);
-}
+                                                      #header:hover
+                              {
+                                                       cursor:pointer;
+                                                       box-shadow: 10px 10px 20px magenta;
+                                                       color:magenta;
+                                                       background:black;
+                                                       
+
+                                                        
+                                 }
 
 
-/* tag style */
+                  /* tag style */
 body
 {
 //background:grey;
@@ -73,8 +80,149 @@ animation:ani 1s;
 cursor:pointer;
 border-radius:0px;
 transform:scale(1.50);
-transition:1s;
+transition:0.5s;
 }
+
+
+/*         Media Query    */
+
+
+
+
+@media only screen and (max-width: 600px)
+ {
+
+   	 	#header
+			{
+	 			width:80%;
+     				 //display:none;
+			}
+
+			.pic
+			{
+			width:100%;
+			margin:0px;
+			margin-top:20px;
+			border-radius:0px;
+                        box-shadow:10px 10px 10px black;
+			}
+
+  	body{background:grey;}
+
+
+
+
+ }
+
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+
+
+@media only screen and (min-width: 600px)
+ {
+		body{text-align:center;}
+#header
+			{
+	 			width:70%;
+     				 //display:none;
+			}
+
+
+
+		.pic
+			{
+			
+			width:80%;
+			margin-left:4px;
+			margin-top:30px;
+			border-radius:0px;
+                      box-shadow:10px 10px 10px cyan ;
+                      }
+
+
+		 body{background:Black}
+
+ 
+}
+
+
+
+/*   Medium devices (landscape tablets, 768px and up)   */
+
+@media only screen and (min-width: 768px)
+ {
+
+ 
+
+                         .pic
+			{
+			
+			width:40%;
+			margin-left:2px;
+			margin-top:50px;
+			border-radius:50px;
+                      box-shadow:10px 10px 10px black;
+                      }
+
+                     body{background:cyan}
+
+
+}
+
+
+
+/* Large devices (laptops/desktops, 992px and up) */
+
+@media only screen and (min-width: 992px)
+ {
+ body{background:orange;}
+	.pic
+			{
+			
+			width:40%;
+			margin-left:2px;
+			margin-top:50px;
+			border-radius:0px;
+                      box-shadow:10px 10px 10px cyan;
+                      Height:200px;
+                      }
+
+
+
+
+}
+
+
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+
+@media only screen and (min-width: 1200px) 
+{
+ body{background:teal}
+body{text-align:center;}
+
+#header
+			{
+	 			width:20%;
+     				 //display:none;
+			}
+
+
+                                    .pic
+
+                          { 
+                               width:20%;
+                                height:200px;
+                                box-shadow:10px 10px 30px black;
+                                 border-radius:80px;
+                                transition:0.50s;
+                                margin:70px;
+                                animation:ani2 2s;
+                          }
+
+
+} 
+
 
 
 
@@ -84,10 +232,6 @@ transition:1s;
 
 <body>
 
-<a href="index.html">
-Profile
-
-</a>
 
 
 
