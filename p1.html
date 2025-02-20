@@ -19,9 +19,9 @@ to{opacity:1;}
 border-radius:50px;
 animation:ani 2s;
 width:70%;
-margin:auto;
+margin:70px;
 box-shadow:10px 20px 10px black;
-border:22px green inset;
+border:22px grey inset;
 }
 
 
@@ -41,8 +41,86 @@ header
 {
 padding:1%;
 margin:auto;
-background:black;
+
 }
+
+
+@media only screen and (min-width: 768px)
+ {
+
+ 
+
+                         .pic
+			{
+			
+			width:40%;
+			margin-left:2px;
+			margin-top:50px;
+			border-radius:50px;
+                      box-shadow:10px 10px 10px black;
+                      }
+
+                     body{background:cyan}
+
+
+}
+
+
+
+/* Large devices (laptops/desktops, 992px and up) */
+
+@media only screen and (min-width: 992px)
+ {
+ body{background:orange;}
+	.pic
+			{
+			
+			width:40%;
+			margin-left:2px;
+			margin-top:50px;
+			border-radius:0px;
+                      box-shadow:10px 10px 10px cyan;
+                      Height:200px;
+                      }
+
+
+
+
+}
+
+
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+
+@media only screen and (min-width: 1200px) 
+{
+ body{background:teal}
+body{text-align:center;}
+
+#header
+			{
+	 			width:20%;
+     				 //display:none;
+			}
+
+
+                                    .pic
+
+                          { 
+                               width:20%;
+                                height:200px;
+                                box-shadow:10px 10px 30px black;
+                                 border-radius:80px;
+                                transition:1.50s;
+                               margin-top:50px;
+
+                               margin:70px;
+                                animation:ani2 2s;
+                          }
+
+
+} 
+
 
 
 
