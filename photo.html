@@ -88,6 +88,21 @@ header
 margin-right:95%;
 }
 
+.back
+{
+width:40px;
+margin-left:250%;
+
+}
+
+.back:hover
+{
+Color:white;
+transform:scale(1.25);
+transition:0.5s;
+}
+
+
 
 /*         Media Query    */
 
@@ -100,7 +115,7 @@ margin-right:95%;
    	 	#header
 			{
 	 			width:80%;
-     				 //display:none;
+     				 
 			}
 
 			.pic
@@ -111,6 +126,13 @@ margin-right:95%;
 			border-radius:0px;
                         box-shadow:10px 10px 10px black;
 			}
+.back
+{
+width:30px;
+margin-left:0%;
+
+}
+
 
   	body{background:grey;}
 
@@ -145,7 +167,7 @@ margin-right:95%;
                       }
 
 
-		 body{background:Black}
+		 body{background:grey}
 
  
 }
@@ -169,7 +191,7 @@ margin-right:95%;
                       box-shadow:10px 10px 10px black;
                       }
 
-                     body{background:cyan}
+                     body{background:grey}
 
 
 }
@@ -180,7 +202,7 @@ margin-right:95%;
 
 @media only screen and (min-width: 992px)
  {
- body{background:orange;}
+ body{background:grey;}
 	.pic
 			{
 			
@@ -237,8 +259,8 @@ body{text-align:center;}
 
 <body>
 <header>
-<a href="index.html">
-Back
+<a href="menu.html">
+<img class="back" src="images/back.png">
 </a>
 </header>
 
