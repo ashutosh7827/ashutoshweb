@@ -1,0 +1,176 @@
+<!doctype html>
+<html>
+<title>  Navigation Bar</title>
+<head></head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+<style>
+
+
+
+@keyframes ani
+{
+from{transform:scale(2.50);}
+to{transform:scale(1);}
+}
+
+@keyframes ani2
+{
+from{opacity:0;}
+to{opacity:1;}
+}
+
+header
+{
+Background:teal;
+font-size:40px;
+text-align:center;
+color:white;
+padding:10px;
+animation:ani 1s;
+
+
+}
+
+nav
+{
+background:gray;
+width:30%;
+margin-left:5%;
+text-align:center;
+
+
+}
+
+nav ol
+{
+padding:0px;
+}
+
+nav ol li
+{
+list-style:none;
+padding:50px;
+cursor:pointer;
+border:1px black solid;
+box-shadow: 5px 5px 5px white;
+}
+
+nav ol li:hover
+{
+background:black;
+transform:scale(1.10);
+transition:0.5s;
+
+}
+
+nav ol li a:link
+{
+color:white;
+text-decoration:none;
+font-size:23px;
+}
+
+nav ol li a:visited
+{
+color:white;
+}
+
+nav ol li a:hover
+{
+text-decoration:underline;
+}
+
+nav ol li a:active
+{
+color: red;
+
+}
+
+
+body
+{
+background:url(images/logos.jpg);
+animation:ani2 1s;
+
+
+
+
+
+}
+
+
+
+
+@media only screen and (max-width: 600px)
+ {
+
+nav
+{
+background:gray;
+width:80%;
+margin-left:5%;
+text-align:center;
+
+
+}
+
+
+   	 	  	body{background:black;}
+
+
+
+
+ }
+
+
+</style>
+
+
+
+
+
+
+
+<body>
+
+<header>Photogallery Bar</header>
+
+
+<nav>
+<ol>
+
+<li><a href="index.html"> Dashboard</a></li>
+<li><a href="http://www.behance.net/ashutoshmathur3"> Graphic Design</a></li>
+<li><a href="photo.html"> My Gallery Work</a></li>
+<li><a href="list.html"> Menu List</a></li>
+<li><a href="video.html"> Video Content</a></li>
+<li><a href="table.html"> Table List</a></li>
+<li><a href="div.html"> News</a></li>
+<li><a href="index.html"> About</a></li>
+
+
+
+
+
+</ol>
+</nav>
+
+
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+</html>
