@@ -1,0 +1,159 @@
+<!doctype html>
+<html>
+<title> Cards</title>
+<head></head>
+<style>
+
+@keyframes ani
+{
+10%{background:url(images/p2.jpg);}
+20%{background:url(images/p3.jpg);}
+30%{background:url(images/p4.jpg);}
+40%{background:url(images/p5.jpg);}
+50%{background:url(images/p6.jpg);}
+60%{background:url(images/p7.jpg);}
+
+}
+
+
+header
+{
+width:100%;
+height:200px;
+margin:auto;
+box-shadow:10px 10px 10px gray;
+background:url(images/p1.jpg);
+background-repeat:no repeat;
+//background-size:100% 100%;
+animation:ani 5s infinite;
+}
+
+div
+{
+border:1px solid black;
+}
+
+
+#card1, #card2, #card3, #card4
+{
+width:25%;
+}
+section
+{
+border:1px solid black;
+height:auto;
+display:flex;
+justify-content:center;
+flex-flow:row wrap;
+}
+
+.card
+{
+height:300px;
+margin:10px;
+box-shadow:10px;
+padding:20px;
+text-align:center;
+font-size:30px;
+background:grey;
+}
+
+.card img
+{
+width:50%;
+}
+
+section ol 
+{
+text-decoration:none;
+//background:red;
+width:50%;
+font-size:15px;
+position:absolute;
+top:68%;
+left:-7%;
+
+}
+
+body
+{
+background:url(images/4444.jpg);
+background-size:cover;
+}
+
+</style>
+
+
+
+
+<body>
+<header>
+
+</header>
+
+<section>
+<div id="card1" class="card">
+<img src="images/0000.jpg">
+<ol>
+<li>Mens shirt</li>
+<li>Price- 300/-</li>
+<li> Cotton</li>
+<div style="background:yellow; width:55%; margin-left:22.5%;">
+ Add to Cart
+</div>
+
+</ol>
+
+
+</div>
+<div id="card2" class="card">
+<img src="images/2222.jpg">
+<ol>
+<li>Mens shirt</li>
+<li>Price- 300/-</li>
+<li> Cotton</li>
+<li> Add to Cart</li>
+
+</ol>
+
+</div>
+
+<div id="card3" class="card">
+<img src="images/1010.jpg">
+<ol>
+<li>Mens shirt</li>
+<li>Price- 300/-</li>
+<li> Cotton</li>
+<li> Add to Cart</li>
+
+
+</ol>
+
+</div>
+
+<div id="card4" class="card">
+<img src="images/1212.jpg">
+<ol>
+<li>Mens shirt</li>
+<li>Price- 300/-</li>
+<li> Cotton</li>
+<li> Add to Cart</li>
+
+</ol>
+
+</div>
+</section>
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+</html>

@@ -11,6 +11,13 @@ from{width:0;}
 to {width:100%;}
 }
 
+@keyframes ani3
+{
+from{left:10px;}
+to{left:-3000px;}
+
+}
+
 
 
 header
@@ -20,6 +27,13 @@ color:white;
 text-align:center;
 font-size:40px;
 Font-family:arial black;
+animation:ani3 8s linear infinite;
+width:5000px;
+position:fixed;
+left:10px;
+box-sizing:border-box;
+text-transform:uppercase;
+
 }
 
 body
@@ -29,24 +43,30 @@ animation:ani 1s;
 animation:ani2 1s;
 transition:1s;
 
+
 }
 #row
 {
-Width:98%;
+Width:100%;
 margin-top:10px;
 display:block;
 margin:left;
+
+
 }
 
 #col1
 {
 text-align:justify;
 
+
+
 }
 
 .mystyle h2,h3,h4
 {
 font-size:25px;
+
 }
 
 .mystyle p1
