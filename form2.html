@@ -28,9 +28,11 @@ margin:auto;
 padding:5%;
 font-size:15px;
 border-radius:20px;
-box-shadow:10px 20px 10px 10px black;
-//background:white;
-color:black;	
+box-shadow:5px 10px 5px 10px black;
+background:white;
+color:black;
+//background:url(images/p1.jpg);
+//background-opacity:0.30;	
 
 }
 
@@ -40,14 +42,24 @@ width:100%;
 padding:5%;
 }
 
-input[type="text"]{width:90%;height:20px;}
-input[type="Number"]{width:40%;height:15px;}
+input[type="text"]{width:90%;height:30px;}
+input[type="Number"]{width:90%;height:30px;}
 input[type="submit"]{width:25%;height:30px;  font-size:15px;}
 input[type="reset"]{width:20%;height:30px;  font-size:15px;}
 input[type="radio"]{width:10%;height:20px;  font-size:30px;}
-input[type="password" ]{width:90%;height:20px;}
+input[type="password" ]{width:90%;height:30px;}
+input[type="call"]{width:90%;height:30px;}
+input[type="email"]{width:90%;height:30px;}
 
 
+
+input:invalid{
+border:blue solid 1px;
+}
+
+input:focus{
+border:blue solid 1px;
+}
 
 label
 {
@@ -79,6 +91,8 @@ margin:left;
 }
 
 
+
+
 </style>
 
 
@@ -89,10 +103,11 @@ margin:left;
 
 <body>
 
+<form>
 <br/>
 <div id="container">
 <table cellpadding="10">
-<caption style="font-size:30px;"> Registration Form</caption>
+<caption style="font-size:30px;"> <b>Registration Form</b></caption>
 <tr>
 <td><label>User Name </label></td>
 <td>
@@ -114,15 +129,32 @@ margin:left;
 <tr>
 <td><label>Mobile No. </label></td>
 <td>
-<input type="call" title="Enter your Mobile No........" placeholder="Type Mobile Number.." required>
+<input type="call" pattern="{0-9}" title="Enter your Mobile No........" placeholder="Type Mobile Number.." required>
 </td>
 
 <tr>
 <td><label>Age </label></td>
 <td>
-<input type="number" title="Mention your age...." placeholder="Day" max="31" min="1"><input type="month">  
+<input type="number" title="Mention your age...." placeholder="Type your age"> 
 </td>
 </tr>
+
+<tr>
+<td><label>D.O.B </label></td>
+<td>
+<input type="date">  
+</td>
+</tr>
+
+
+<tr>
+<td><label>Email </label></td>
+<td>
+<input type="email">  
+</td>
+</tr>
+
+
 
 
 <tr>
@@ -187,6 +219,7 @@ other<input type="radio" value="other" name="gender">
 
 
 </table>
+</form>
 
 
 

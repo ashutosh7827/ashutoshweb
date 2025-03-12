@@ -6,12 +6,12 @@
 
 @keyframes ani
 {
-10%{background:url(images/p2.jpg);}
-20%{background:url(images/p3.jpg);}
-30%{background:url(images/p4.jpg);}
-40%{background:url(images/p5.jpg);}
-50%{background:url(images/p6.jpg);}
-60%{background:url(images/p7.jpg);}
+10%{background:url(images/strip.png);}
+20%{background:url(images/1212.jpg);}
+30%{background:url(images/0000.jpg);}
+40%{background:url(images/brown.jpg);}
+50%{background:url(images/1010.jpg);}
+60%{background:url(images/2222.jpg);}
 
 }
 
@@ -19,130 +19,349 @@
 header
 {
 width:100%;
-height:200px;
+height:300px;
 margin:auto;
 box-shadow:10px 10px 10px gray;
-background:url(images/p1.jpg);
-background-repeat:no repeat;
+background:url(images/brown.jpg);
+//background-repeat:no repeat;
 //background-size:100% 100%;
 animation:ani 5s infinite;
 }
 
-div
+.cards
 {
-border:1px solid black;
-}
+width:12%;
+//background:grey;
+border:3px solid black;
+border-radius:5px;
+margin-top:20px;
+margin-left:20px;
+display:inline-block;
+margin:2%;
 
 
-#card1, #card2, #card3, #card4
-{
-width:25%;
-}
-section
-{
-border:1px solid black;
-height:auto;
-display:flex;
-justify-content:center;
-flex-flow:row wrap;
 }
 
-.card
+.image img
 {
-height:300px;
-margin:10px;
-box-shadow:10px;
-padding:20px;
+width:100%;
+}
+
+.name
+{
 text-align:center;
-font-size:30px;
-background:grey;
+font-size:15px;
+padding:0px;
 }
 
-.card img
+.price
 {
-width:50%;
+text-align:center;
+font-size:15px;
+
 }
 
-section ol 
+button
+{
+margin-bottom:3%;
+background-color:yellow;
+border:px solid black;
+border-radius:5px;
+}
+
+button:hover
+{
+color:white;
+background:black;
+transform:scale(1.25);
+transition:0.25s;
+cursor:pointer;
+}
+
+button a:link
 {
 text-decoration:none;
-//background:red;
-width:50%;
-font-size:15px;
-position:absolute;
-top:68%;
-left:-7%;
+}
+
+button a:hover
+{
+color:white;
 
 }
 
 body
 {
-background:url(images/4444.jpg);
-background-size:cover;
+//background:#aed6f1;
 }
 
-</style>
 
+
+
+</style>
 
 
 
 <body>
 <header>
 
+
 </header>
+<div class="cards">
 
-<section>
-<div id="card1" class="card">
-<img src="images/0000.jpg">
-<ol>
-<li>Mens shirt</li>
-<li>Price- 300/-</li>
-<li> Cotton</li>
-<div style="background:yellow; width:55%; margin-left:22.5%;">
- Add to Cart
-</div>
-
-</ol>
-
-
-</div>
-<div id="card2" class="card">
+<div class="image">
 <img src="images/2222.jpg">
-<ol>
-<li>Mens shirt</li>
-<li>Price- 300/-</li>
-<li> Cotton</li>
-<li> Add to Cart</li>
+</div>
 
-</ol>
+<div class="name">
+Mens Black Shirt
 
 </div>
 
-<div id="card3" class="card">
-<img src="images/1010.jpg">
-<ol>
-<li>Mens shirt</li>
-<li>Price- 300/-</li>
-<li> Cotton</li>
-<li> Add to Cart</li>
+<div class="price">
+<p>Price- 350/-</p>
+<button><a href="https://www.shopstyle.com/browse/mens-longsleeve-shirts/h-m?c=blue">Explore more..</a></button>
 
-
-</ol>
 
 </div>
 
-<div id="card4" class="card">
+
+</div>
+
+<div class="cards">
+
+<div class="image">
+<img src="images/2222.jpg">
+</div>
+
+<div class="name">
+Mens Black Shirt
+
+</div>
+
+<div class="price">
+<p>Price- 350/-</p>
+<button><a href="https://www.shopstyle.com/browse/mens-longsleeve-shirts/h-m?c=blue">Explore more..</a></button>
+
+</div>
+
+
+</div>
+
+
+<div class="cards">
+
+<div class="image">
+<img src="images/2222.jpg">
+</div>
+
+<div class="name">
+Mens Black Shirt
+
+</div>
+
+<div class="price">
+<p>Price- 350/-</p>
+<button><a href="https://www.shopstyle.com/browse/mens-longsleeve-shirts/h-m?c=blue">Explore more..</a></button>
+
+
+</div>
+
+
+</div>
+
+
+<div class="cards">
+
+<div class="image">
+<img src="images/2222.jpg">
+</div>
+
+<div class="name">
+Mens Black Shirt
+
+</div>
+
+<div class="price">
+<p>Price- 349/-</p>
+<button><a href="https://www.shopstyle.com/browse/mens-longsleeve-shirts/h-m?c=blue">Explore more..</a></button>
+
+</div>
+
+
+</div>
+
+<div class="cards">
+
+<div class="image">
+<img src="images/brown.jpg">
+</div>
+
+<div class="name">
+Men's Short Sleeve Button Down Shirt Fashion Regular Fit Shirt
+</div>
+
+<div class="price">
+<p>Price- 399/-</p>
+<button><a href="https://www.amazon.com/Wisgofre-Fashion-Regular-Lightweight-Hawaiian/dp/B0DNZ8CJ5M">Explore more..</a></button>
+
+
+</div>
+
+
+</div>
+
+<div class="cards">
+
+<div class="image">
+<img src="images/strip.png">
+</div>
+
+<div class="name">
+Long Shirt Men Large Button Front Blue White Stripe
+</div>
+
+<div class="price">
+<p>Price- 499/-</p>
+<button><a href="https://www.ebay.com/itm/296202305433">Explore more..</a></button>
+
+
+</div>
+
+
+</div>
+
+
+<div class="cards">
+
+<div class="image">
 <img src="images/1212.jpg">
-<ol>
-<li>Mens shirt</li>
-<li>Price- 300/-</li>
-<li> Cotton</li>
-<li> Add to Cart</li>
+</div>
 
-</ol>
+<div class="name">
+Mens Black Shirt
 
 </div>
-</section>
+
+<div class="price">
+<p>Price- 299/-</p>
+<button><a href="https://www.shopstyle.com/browse/mens-longsleeve-shirts/h-m?c=blue">Explore more..</a></button>
+
+
+
+</div>
+
+
+</div>
+
+
+<div class="cards">
+
+<div class="image">
+<img src="images/2222.jpg">
+</div>
+
+<div class="name">
+Mens Black Shirt
+
+</div>
+
+<div class="price">
+<p>Price- 699/-</p>
+<button><a href="https://www.shopstyle.com/browse/mens-longsleeve-shirts/h-m?c=blue">Explore more..</a></button>
+
+
+</div>
+
+
+</div>
+
+
+<div class="cards">
+
+<div class="image">
+<img src="images/brown.jpg">
+</div>
+
+<div class="name">
+Mens Brown Shirt
+
+</div>
+
+<div class="price">
+<p>Price- 350/-</p>
+<button><a href="https://www.amazon.com/Wisgofre-Fashion-Regular-Lightweight-Hawaiian/dp/B0DNZ8CJ5M">Explore more..</a></button>
+
+
+</div>
+
+
+</div>
+
+<div class="cards">
+
+<div class="image">
+<img src="images/2222.jpg">
+</div>
+
+<div class="name">
+Mens Black Shirt
+
+</div>
+
+<div class="price">
+<p>Price- 350/-</p>
+<button><a href="https://www.shopstyle.com/browse/mens-longsleeve-shirts/h-m?c=blue">Explore more..</a></button>
+
+</div>
+
+
+</div>
+
+
+<div class="cards">
+
+<div class="image">
+<img src="images/strip.png">
+</div>
+
+<div class="name">
+Mens Black Shirt
+
+</div>
+
+<div class="price">
+<p>Price- 350/-</p>
+<button><a href="https://www.ebay.com/itm/296202305433">Explore more..</a></button>
+
+
+</div>
+
+
+</div>
+
+
+<div class="cards">
+
+<div class="image">
+<img src="images/2222.jpg">
+</div>
+
+<div class="name">
+Mens Black Shirt
+
+</div>
+
+<div class="price">
+<p>Price- 350/-</p>
+<button><a href="https://www.shopstyle.com/browse/mens-longsleeve-shirts/h-m?c=blue">Explore more..</a></button>
+
+</div>
+
+
+</div>
+
+
+
 
 </body>
 
