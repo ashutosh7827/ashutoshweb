@@ -15,6 +15,21 @@
 
 }
 
+@keyframes ani2
+{
+10%{left:0%;}
+20%{left:0%;}
+30%{left:-18%;}
+40%{left:-18%;}
+50%{left:-36%;}
+60%{left:-36%;}
+70%{left:-54%;}
+80%{left:-54%;}
+90%{left:-72%;}
+100%{left:-72%;}
+
+}
+
 
 header
 {
@@ -25,7 +40,7 @@ box-shadow:10px 10px 10px gray;
 background:url(images/brown.jpg);
 //background-repeat:no repeat;
 //background-size:100% 100%;
-animation:ani 5s infinite;
+animation:ani 10s infinite;
 text-align:center;
 font-size:60px;
 color:brown;
@@ -54,6 +69,7 @@ margin:2%;
 width:100%;
 
 }
+
 
 .name
 {
@@ -100,7 +116,57 @@ color:white;
 body
 {
 //background:#aed6f1;
+margin:0px;
+padding:0px;
+overflow-x:hidden;
 }
+
+.col1
+{
+width:400px;
+//background:red;
+margin-left:1%;
+height:400px;
+float:left;
+}
+
+.col2
+{
+float:right;
+margin-right:10%;
+width:400px;
+height:400px
+}
+
+h4
+{
+width:640%;
+height:600px;
+margin-left:-32%;
+}
+
+
+.photo
+{
+width:18%;
+height:90%;
+position:relative;
+top:0px;
+margin-left:-10px;
+animation:ani2 12s infinite;
+
+}
+
+#mask
+{
+overflow:hidden;
+margin:auto;
+width:90%;
+height:600px;
+}
+
+
+
 
 
 
@@ -111,7 +177,6 @@ body
 
 <body>
 <header>
-
 Men's Shirt 
 </header>
 <div class="cards">
@@ -365,6 +430,34 @@ Mens Black Shirt
 
 </div>
 
+
+</div>
+<h4>
+<div id="mask">
+<img src="images/7827.png" class="photo">
+<img src="images/8810.jpg" class="photo">
+<img src="images/9540.gif" class="photo">
+<img src="images/9654.jpg" class="photo">
+<img src="images/2204.jpg" class="photo">
+</div>
+</h4>
+
+
+
+
+
+
+
+
+
+<div class="col1">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/SFzGXN3Y3Dw?si=uezBp35iwr0DZInH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
+
+
+<div class="col2">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/1h83uTj4N3U?si=WUeAEa5nOIIsUbQH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 </div>
 
