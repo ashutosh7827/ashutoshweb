@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    
+<head>
+    
+</head>
+<title>
+    Welcome
+    
+   </title>
+   <style>
+.pic
+{
+    margin-left:23%;
+    margin-top:5%;
+    
+    
+    
+}
+h1
+{
+    text-align:center;
+    font-size:50px;
+}
+
+
+   </style>
+<body>
+    <h1>
+    Java Script Work
+                </h1>
+                
+    <script>
+        var pic = document.createElement("img")
+        
+        pic.src="images/p4.jpg"
+        
+        document.body.appendChild(pic)
+        pic.style.width="50%"
+        pic.style.boxShadow="10px 10px 10px red"
+        pic.style.border="10px gray solid"
+        pic.style.cursor="pointer"
+        pic.className="pic"
+        
+
+
+        function hidepic()
+        {
+
+document.body.removeChild(pic)
+
+
+        }
+
+        document.title="JS work"
+
+        pic.onclick = function()
+        {
+
+         pic.src= "images/p5.jpg"
+         pic.style.transform="scale(1.25)"
+        
+        }
+
+        pic.onmouseout= function()
+        {
+pic.src="images/p4.jpg"
+pic.style.transform="scale(1)"
+pic.style.transition="1s"
+
+        }
+        
+
+        
+      
+
+
+
+
+    </script>
+    
+</body>
+</html>
