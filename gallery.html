@@ -10,7 +10,7 @@
 {
 margin:5%;
 width:40%;
-box-shadow:15px 15px 10px black;
+box-shadow:15px 15px 10px white;
 transition:0.75;
 border-radius:100px;
 
@@ -21,9 +21,14 @@ h1
 {
 text-align:center;
 background:gray;
-box-shadow:10px 10px 10px black;
+box-shadow:10px 10px 10px white;
 font-size:60px;
 
+}
+
+body
+{
+background:black;
 }
 
 
@@ -53,7 +58,7 @@ document.write("<br/>")
 for(var i = 1;i<=8;i++)
 {
 p = document.createElement("img")
-p.src="images/p2.jpg"
+p.src="images/p"+i+".jpg"
 document.body.appendChild(p)
 p.className="pic"
 

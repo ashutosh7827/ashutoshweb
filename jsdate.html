@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    .box
+    {
+width:60%;
+height:80px;
+font-size:50px;
+box-shadow:10px 10px 10px gray;
+margin:auto;
+color:red;
+font-family:arial black;
+cursor:pointer;
+    }
+
+
+</style>
+<body>
+<script>
+var d = document.createElement("div")
+document.body.appendchild(d)
+d.className="box"
+var t
+ function show_clock()
+ {
+t = new date()
+d.innerHTML= t.toLocalTimeString()
+ }
+
+ var s = setInterval("show_clock()" ,1000)
+
+ d.onmouseover = function()
+ {
+  clearInterval(s)
+ }
+
+  d.onclick = function()
+   {
+    s = setInterval("show_clock()" ,1000)
+    alert("Clock Started")
+
+   }
+
+ 
+</script>
+
+    
+</body>
+</html>
