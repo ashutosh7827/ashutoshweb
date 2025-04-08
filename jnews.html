@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #newstoday
+    {
+width:80%;
+margin:auto;
+height:200px;
+color:black;
+font-size:30px;
+font-family:arial black;
+background:gray;
+box-shadow:10px 10px 10px white;
+padding:30px;
+text-transform:capitalize;
+    }
+
+</style>
+
+<body onLoad="startnews()">
+    <div id="newstoday">News  </div>
+    <script>
+        var b = document.getElementsById("newstoday")
+
+
+        var news = ["Waqf Act Comes Into Force Top Court To Hear Pleas Challenging It Next Week","Waqf Act comes into force Centre seeks Supreme Court hearing","Rising Bharat Summit 2025 LIVE Updates Politics Of Appeasement Fuelled Waqf Protests Says PM Modi","Rising Bharat Summit 2025 LIVE Updates PM Modi Says Delay Is The Enemy Of Development"]
+
+        var c = 0
+        b.innerHTML= news[0]
+         function change_news()
+        {
+
+            if(c<news.length-1)
+        {
+            c++
+        }
+            else
+        {
+            c = 0
+        }
+
+        b.innerHTML= news[c]
+
+        document.title = c
+        }
+
+        function startnews()
+         {
+
+        setInterval("change_news()",1000)
+          }
+        
+        
+
+    document.title = "Ready"
+
+
+    
+    </script>
+    
+</body>
+
+</html>

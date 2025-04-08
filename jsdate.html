@@ -3,20 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Clock</title>
 </head>
 
 <style>
     .box
     {
-width:60%;
+width:50%;
 height:80px;
-font-size:50px;
-box-shadow:10px 10px 10px gray;
+font-size:60px;
+box-shadow:10px 10px 10px black;
 margin:auto;
-color:red;
+color:black;
 font-family:arial black;
 cursor:pointer;
+text-align:center;
+border-radius:100px;
+padding:5%;
+background-color: white;
+margin-top: 10%;
+    }
+
+    body
+    {
+        background:#00FFFF;
     }
 
 
@@ -24,13 +34,13 @@ cursor:pointer;
 <body>
 <script>
 var d = document.createElement("div")
-document.body.appendchild(d)
+document.body.appendChild(d)
 d.className="box"
 var t
  function show_clock()
  {
-t = new date()
-d.innerHTML= t.toLocalTimeString()
+t = new Date()
+d.innerHTML= t.toLocaleTimeString()
  }
 
  var s = setInterval("show_clock()" ,1000)
