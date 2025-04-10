@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color</title>
+</head>
+<style>
+.bstyle
+{
+
+    width:30px;
+    height:30px;
+    border-radius:20px;
+    box-shadow:3px 3px-3dvigray;
+    cursor:pointer;
+    margin:4px;
+}
+
+</style>
+
+<body>
+    <div style="box-shadow:10px 10px 10px gray; padding:20px;width:20%; background:black;">
+
+    <script>
+
+var r,g,b,bcolor
+
+for(var i = 1;i<=40;i++)
+{
+
+r = Math.round(Math.random()*255)
+g = Math.round(Math.random()*255)
+b = Math.round(Math.random()*255)
+
+bcolor = `rgb(${r},${g},${b})`
+document.write(`<button onclick= 'setbackground(this)' class='bstyle' style='background:${bcolor}'></button>`)
+}
+
+function setbackground(t)
+{
+
+    document.body.style.background= t.style.background
+}
+
+    </script>
+    </div>
+</body>
+</html>
