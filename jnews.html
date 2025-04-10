@@ -8,29 +8,60 @@
 <style>
     #newstoday
     {
-width:80%;
+width:98%;
 margin:auto;
-height:200px;
+height:100px;
 color:black;
-font-size:30px;
+font-size:27px;
 font-family:arial black;
-background:gray;
-box-shadow:10px 10px 10px white;
+background:#566573;
+box-shadow:10px 10px 10px black;
 padding:30px;
 text-transform:capitalize;
+//border-radius:100px;
     }
+
+p
+{
+    padding:2%;
+width:95%;
+text-align:justify;
+
+background:white;
+box-shadow:1px 1px 10px 10px gray;
+font-family:verdana;
+
+}
+
+h1
+{
+width:99%;
+//margin-left:2%;
+font-family: arial black;
+background:black;
+color:white;
+bo
+}
+
+//body{background:teal;}
+
+
+
+
 
 </style>
 
 <body onLoad="startnews()">
     <div id="newstoday">News  </div>
     <script>
-        var b = document.getElementsById("newstoday")
+        var b = document.getElementById("newstoday")
+        var r, g, bb, mycolor
 
 
-        var news = ["Waqf Act Comes Into Force Top Court To Hear Pleas Challenging It Next Week","Waqf Act comes into force Centre seeks Supreme Court hearing","Rising Bharat Summit 2025 LIVE Updates Politics Of Appeasement Fuelled Waqf Protests Says PM Modi","Rising Bharat Summit 2025 LIVE Updates PM Modi Says Delay Is The Enemy Of Development"]
-
-        var c = 0
+        var news = [" Waqf Act Comes Into Force Top Court To Hear Pleas Challenging It Next Week India approves purchase of 26 French Rafale jets for navy, sources say","Waqf Act comes into force Centre seeks Supreme Court hearing Assam SEBA HSLC Class 10th Result 2025: Result likely this month","Rising Bharat Summit 2025 LIVE Updates: Politics Of Appeasement Fuelled Waqf Protests Says PM Modi","Rising Bharat Summit 2025 LIVE Updates: PM Modi Says Delay Is The Enemy Of Development"]
+          var c = 0
+          
+          document.title="mycolor"
         b.innerHTML= news[0]
          function change_news()
         {
@@ -45,24 +76,103 @@ text-transform:capitalize;
         }
 
         b.innerHTML= news[c]
+        
 
-        document.title = c
+        r = Math.round(Math.random()*255)
+        g = Math.round(Math.random()*255)
+        bb = Math.round(Math.random()*255)
+        mycolor="rgb("+r+" , "+g+" , "+bb+")"
+        b.style.color = mycolor
+
+
+
+        //document.title = c
         }
 
         function startnews()
          {
 
-        setInterval("change_news()",1000)
+        setInterval("change_news()",2000)
           }
         
         
 
-    document.title = "Ready"
+    document.title = "News"
 
 
     
     </script>
+    <h1>
+        latest News
+    </h1>
+    <p>
+
+        <i>Assam State School Education Board (Division-I), Bamunimaidam, Guwahati will not announce the HSLC or Class 10 results tomorrow. The HSLC result link will be available at the official website of SEBA — sebaonline.org and resultsassam.nic.in–once the dates are released. Students will be able to check and download the Assam HSLC 10th result marksheet using roll number.
+
+A senior official informed indianexpress.com that the HSLC Class 10th results will be announced on April 10, however, late on April 9, Chief Minister Himanta Biswa Sarma, posted on microblogging site, X that the Class 10th results will not be declared on April 10.
+
+“I would like to inform all parents and students that the HSLC examination results will not be released tomorrow. Once the results are ready, the board will announce them promptly. Please remain patient.” read CM Sarma post.
+
+<br/>
+
+Newspapers have their own importance in the world. Newspaper publishing companies have now built applications or websites that allow users all over the world to access them. Current events and general knowledge can be learned by reading instructive articles in newspapers on a daily basis. There are a number of popular English newspapers published in India. Some of them are The Hindu, Hindustan Times, The Indian Express and The Times of India. Each newspaper has a different style of presentation though they speak about the same events/happenings from around the world.
+
+Now, what interests a person; why do they read newspapers? There are people who feel their morning tea/coffee is incomplete without a newspaper. In addition to all the news from around the world, a newspaper also includes a variety of puzzles, comics and riddles. Supplements with such miscellaneous articles, stories and puzzles interest many. There are also supplements which focus solely on the economic developments, opportunities for work and study, what’s new in cinema and so on. Youngsters and kids seem to love these more than the main newspaper.
+
+What most of us don’t really think about is the time and effort put into publishing a newspaper every single day. It is due to the relentless work of writers, journalists, news reporters, editors and the printing presses that we have been able to receive newspapers first thing in the morning, without fail.
+
+<br/>
+
+Newspapers have their own importance in the world. Newspaper publishing companies have now built applications or websites that allow users all over the world to access them. Current events and general knowledge can be learned by reading instructive articles in newspapers on a daily basis. There are a number of popular English newspapers published in India. Some of them are The Hindu, Hindustan Times, The Indian Express and The Times of India. Each newspaper has a different style of presentation though they speak about the same events/happenings from around the world.
+
+Now, what interests a person; why do they read newspapers? There are people who feel their morning tea/coffee is incomplete without a newspaper. In addition to all the news from around the world, a newspaper also includes a variety of puzzles, comics and riddles. Supplements with such miscellaneous articles, stories and puzzles interest many. There are also supplements which focus solely on the economic developments, opportunities for work and study, what’s new in cinema and so on. Youngsters and kids seem to love these more than the main newspaper.
+
+What most of us don’t really think about is the time and effort put into publishing a newspaper every single day. It is due to the relentless work of writers, journalists, news reporters, editors and the printing presses that we have been able to receive newspapers first thing in the morning, without fail.
+
+A senior official informed indianexpress.com that the HSLC Class 10th results will be announced on April 10, however, late on April 9, Chief Minister Himanta Biswa Sarma, posted on microblogging site, X that the Class 10th results will not be declared on April 10.
     
+
+    
+
+        Newspapers have their own importance in the world. Newspaper publishing companies have now built applications or websites that allow users all over the world to access them. Current events and general knowledge can be learned by reading instructive articles in newspapers on a daily basis. There are a number of popular English newspapers published in India. Some of them are The Hindu, Hindustan Times, The Indian Express and The Times of India. Each newspaper has a different style of presentation though they speak about the same events/happenings from around the world.
+
+        Now, what interests a person; why do they read newspapers? There are people who feel their morning tea/coffee is incomplete without a newspaper. In addition to all the news from around the world, a newspaper also includes a variety of puzzles, comics and riddles. Supplements with such miscellaneous articles, stories and puzzles interest many. There are also supplements which focus solely on the economic developments, opportunities for work and study, what’s new in cinema and so on. Youngsters and kids seem to love these more than the main newspaper.
+        
+        What most of us don’t really think about is the time and effort put into publishing a newspaper every single day. It is due to the relentless work of writers, journalists, news reporters, editors and the printing presses that we have been able to receive newspapers first thing in the morning, without fail.
+        
+        Newspapers have their own importance in the world. Newspaper publishing companies have now built applications or websites that allow users all over the world to access them. Current events and general knowledge can be learned by reading instructive articles in newspapers on a daily basis. There are a number of popular English newspapers published in India. Some of them are The Hindu, Hindustan Times, The Indian Express and The Times of India. Each newspaper has a different style of presentation though they speak about the same events/happenings from around the world.
+
+Now, what interests a person; why do they read newspapers? There are people who feel their morning tea/coffee is incomplete without a newspaper. In addition to all the news from around the world, a newspaper also includes a variety of puzzles, comics and riddles. Supplements with such miscellaneous articles, stories and puzzles interest many. There are also supplements which focus solely on the economic developments, opportunities for work and study, what’s new in cinema and so on. Youngsters and kids seem to love these more than the main newspaper.
+
+What most of us don’t really think about is the time and effort put into publishing a newspaper every single day. It is due to the relentless work of writers, journalists, news reporters, editors and the printing presses that we have been able to receive newspapers first thing in the morning, without fail.
+
+
+Newspapers have their own importance in the world. Newspaper publishing companies have now built applications or websites that allow users all over the world to access them. Current events and general knowledge can be learned by reading instructive articles in newspapers on a daily basis. There are a number of popular English newspapers published in India. Some of them are The Hindu, Hindustan Times, The Indian Express and The Times of India. Each newspaper has a different style of presentation though they speak about the same events/happenings from around the world.
+
+Now, what interests a person; why do they read newspapers? There are people who feel their morning tea/coffee is incomplete without a newspaper. In addition to all the news from around the world, a newspaper also includes a variety of puzzles, comics and riddles. Supplements with such miscellaneous articles, stories and puzzles interest many. There are also supplements which focus solely on the economic developments, opportunities for work and study, what’s new in cinema and so on. Youngsters and kids seem to love these more than the main newspaper.
+
+What most of us don’t really think about is the time and effort put into publishing a newspaper every single day. It is due to the relentless work of writers, journalists, news reporters, editors and the printing presses that we have been able to receive newspapers first thing in the morning, without fail.
+    
+        Newspapers have their own importance in the world. Newspaper publishing companies have now built applications or websites that allow users all over the world to access them. Current events and general knowledge can be learned by reading instructive articles in newspapers on a daily basis. There are a number of popular English newspapers published in India. Some of them are The Hindu, Hindustan Times, The Indian Express and The Times of India. Each newspaper has a different style of presentation though they speak about the same events/happenings from around the world.
+
+        Now, what interests a person; why do they read newspapers? There are people who feel their morning tea/coffee is incomplete without a newspaper. In addition to all the news from around the world, a newspaper also includes a variety of puzzles, comics and riddles. Supplements with such miscellaneous articles, stories and puzzles interest many. There are also supplements which focus solely on the economic developments, opportunities for work and study, what’s new in cinema and so on. Youngsters and kids seem to love these more than the main newspaper.
+        
+        What most of us don’t really think about is the time and effort put into publishing a newspaper every single day. It is due to the relentless work of writers, journalists, news reporters, editors and the printing presses that we have been able to receive newspapers first thing in the morning, without fail.
+        
+        Newspapers have their own importance in the world. Newspaper publishing companies have now built applications or websites that allow users all over the world to access them. Current events and general knowledge can be learned by reading instructive articles in newspapers on a daily basis. There are a number of popular English newspapers published in India. Some of them are The Hindu, Hindustan Times, The Indian Express and The Times of India. Each newspaper has a different style of presentation though they speak about the same events/happenings from around the world.
+
+Now, what interests a person; why do they read newspapers? There are people who feel their morning tea/coffee is incomplete without a newspaper. In addition to all the news from around the world, a newspaper also includes a variety of puzzles, comics and riddles. Supplements with such miscellaneous articles, stories and puzzles interest many. There are also supplements which focus solely on the economic developments, opportunities for work and study, what’s new in cinema and so on. Youngsters and kids seem to love these more than the main newspaper.
+
+What most of us don’t really think about is the time and effort put into publishing a newspaper every single day. It is due to the relentless work of writers, journalists, news reporters, editors and the printing presses that we have been able to receive newspapers first thing in the morning, without fail.
+
+
+Newspapers have their own importance in the world. Newspaper publishing companies have now built applications or websites that allow users all over the world to access them. Current events and general knowledge can be learned by reading instructive articles in newspapers on a daily basis. There are a number of popular English newspapers published in India. Some of them are The Hindu, Hindustan Times, The Indian Express and The Times of India. Each newspaper has a different style of presentation though they speak about the same events/happenings from around the world.
+
+Now, what interests a person; why do they read newspapers? There are people who feel their morning tea/coffee is incomplete without a newspaper. In addition to all the news from around the world, a newspaper also includes a variety of puzzles, comics and riddles. Supplements with such miscellaneous articles, stories and puzzles interest many. There are also supplements which focus solely on the economic developments, opportunities for work and study, what’s new in cinema and so on. Youngsters and kids seem to love these more than the main newspaper.
+
+What most of us don’t really think about is the time and effort put into publishing a newspaper every single day. It is due to the relentless work of writers, journalists, news reporters, editors and the printing presses that we have been able to receive newspapers first thing in the morning, without fail.
+</i>
+</p>   
 </body>
 
 </html>
