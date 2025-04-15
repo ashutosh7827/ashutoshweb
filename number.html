@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+</head>
+<style>
+#main
+{
+    width:100%;
+    box-shadow:10px 10px 10px black;
+    text-align:center;
+    margin:auto;
+    font-size:25px;
+    font-family:arial black;
+    color:navy;
+
+}
+
+body
+{
+    background:url(images/tableimg.jpg)
+}
+
+</style>
+<body>
+    <div id="main">
+    <script>
+var n = 1
+var a = prompt("Enter a number to create table", "2")
+
+document.write(`<p style="color:Black;font-size:26px;background:white;"> Table of ${a}</p>`)
+while(n<=10)
+
+{
+
+    document.write(`<p> ${a} * ${n} = ${a*n}</p>`)
+
+    n++
+}
+
+    </script>
+    </div>
+</body>
+</html>
