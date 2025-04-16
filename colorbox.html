@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+#t1
+{
+    font-size:10px;
+    color:black;
+    
+
+}
+
+</style>
+<body>
+    <input type ="color" id="mybox">
+    <input type ="color" id="mybox2">
+    
+    <br/> <br/> <br/>
+
+    <p> Change Font size</p>
+    <input id="slider1" type = "range" max="100" min="10" value="1">
+    <p id="text">0</p>
+
+    <div id="t1">
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, enim quia illo, vitae maxime quas reiciendis molestiae et laudantium harum suscipit dolore mollitia non nihil magnam itaque repellendus exercitationem. Minus?
+Unde corrupti aliquam atque voluptates et! Esse recusandae dolorem totam eius dolore libero dicta. Nostrum officia optio, tenetur fuga aliquid nesciunt explicabo sed voluptate illo ratione! Dignissimos excepturi facere illo.
+Corporis deleniti delectus id accusantium, distinctio qui facilis fugit odit quisquam laborum hic obcaecati sint eaque incidunt eius libero, cupiditate voluptatum ab numquam, at soluta iure. Vitae perferendis qui nulla?
+Sit ducimus veniam, maxime error et minima officia pariatur reiciendis tenetur temporibus magnam modi consequatur, officiis saepe? Nisi accusamus omnis, ipsa, voluptates qui et repellat doloribus neque, magni nihil aliquam?
+Magnam, neque ducimus adipisci expedita fuga praesentium distinctio nemo aliquid delectus dicta doloribus quibusdam exercitationem similique! Laborum eum a ducimus odit ullam temporibus autem pariatur tempora, mollitia voluptates dicta neque.
+Ad ipsa est asperiores, minus accusantium cupiditate tempora perferendis assumenda itaque. Est perspiciatis natus quaerat repellendus soluta quibusdam necessitatibus nesciunt ipsa obcaecati unde neque, quia esse recusandae dignissimos. Cupiditate, qui.
+Dolorum, ab deserunt necessitatibus sunt saepe nostrum consequatur accusantium iure voluptate accusamus porro officia ipsa voluptas ut natus quam voluptatem. Asperiores, adipisci eum! A, nesciunt molestiae. Numquam atque aliquid praesentium.
+Modi dolorem doloremque reprehenderit suscipit laborum ipsa, architecto dignissimos, nobis quae culpa accusantium. Repudiandae delectus assumenda totam sunt quisquam hic autem earum atque dicta, soluta, facere vitae architecto dolores accusamus?
+Eligendi amet maxime laboriosam error, corrupti autem porro debitis! Odio ex, laboriosam voluptate dicta possimus, eum placeat ab blanditiis rerum officia non culpa? Dolores atque molestiae sapiente itaque quam accusamus?
+Dolorem corrupti, reiciendis totam qui libero officiis doloribus cum temporibus aliquid harum, veniam corporis porro nulla repudiandae doloremque maiores quo, cumque quod optio deserunt! Corrupti ex possimus optio repellat aspernatur!
+
+
+    </div>
+<script>
+var c = document.getElementById("mybox")
+var c2 = document.getElementById("mybox2")
+var s1 = document.getElementById("slider1")
+
+var t = document.getElementById("text")
+var t1 = document.getElementById("t1")
+
+s1.onchange = function()
+{
+
+    document.title = this.value
+    t.innerHTML= "<h1>"+this.value+"</h1>"
+    t1.style.fontSize = s1.value+"px"
+}
+
+c2.onchange = function()
+{
+t1.style.color = c2.value
+
+}
+
+c.onchange = function()
+{
+
+    document.body.style.background=c.value
+}
+ 
+document.title = "ready"
+
+</script>
+
+</body>
+</html>
