@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day</title>
+</head>
+<body>
+    <header>
+
+        <h1 id="text"> Image of the day </h1>
+        <img id="pic" src="images/p1.jpg" class="pic">
+    </header>
+    <script>
+
+        var pic = document.getElementById("pic")
+         var text = document.getElementById("text")
+
+         var today = new Date().getday()
+
+         switch(today)
+         {
+                case 1:
+
+                pic.src="images/p2.jpg"
+                text.innerHTML="Image of the Monday"
+
+                break;
+
+                case 1:
+
+                pic.src="images/p3.jpg"
+                text.innerHTML="Image of the Tuesday"
+
+                break;
+                
+
+                case 1:
+
+                pic.src="images/p4.jpg"
+                text.innerHTML="Image of the Wednesday"
+
+                break;
+                
+
+                case 1:
+
+                pic.src="images/p5.jpg"
+                text.innerHTML="Image of the Thursday"
+
+                break;
+
+                case 1:
+
+                pic.src="images/p6.jpg"
+                text.innerHTML="Image of the Friday"
+
+
+                break;
+
+                case 1:
+
+                pic.src="images/p7.jpg"
+                text.innerHTML="Image of the saturday"
+
+                break;
+                
+
+                 }
+                
+
+    </script>
+    
+</body>
+</html>

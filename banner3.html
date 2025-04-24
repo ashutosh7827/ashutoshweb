@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banner</title>
+</head>
+<style>
+*{
+margin:0;
+padding:0;
+transition:0.50;
+
+}
+
+header{
+
+    width:80%;
+    height:400px;
+
+}
+
+
+.pic
+{
+width:70%;
+height:400px;
+transition:2s;
+position:absolute;
+box-shadow:10px 10px 10px white;
+left:160px;
+top:10px;
+
+
+
+}
+
+body
+{
+
+    background:navy;
+}
+
+
+</style>
+<body onLoad="runbanner()">
+    <header>
+
+
+<img id="p52" src="images/p5.jpg" class="pic">
+<img id="p4" src="images/p4.jpg" class="pic">
+<img id="p3" src="images/p3.jpg" class="pic">
+<img id="p2" src="images/p2.jpg" class="pic">
+<img id="p1" src="images/p1.jpg" class="pic">
+    
+    </header>
+    <script>
+
+        var pic = document.getElementById("pic")
+        var c = 0
+
+        var p1 = document.getElementById("p1")
+        var p2 = document.getElementById("p2")
+        var p3 = document.getElementById("p3")
+        var p4 = document.getElementById("p4")
+        var p5 = document.getElementById("p5")
+
+        function runbanner()
+        {
+switch(c)
+{
+
+    case 1:
+     p1.style.opacity="0"
+     p1.style.transform="scale(0)"
+     break;
+
+     case 2:
+     p2.style.opacity="0"
+     p2.style.transform="scale(0)"
+     break;
+
+     case 3:
+     p3.style.opacity="0"
+     p3.style.transform="scale(0)"
+     break;
+
+     case 4:
+     p4.style.opacity="0"
+     p4.style.transform="scale(0)"
+     break;
+
+     case 5:
+     p1.style.opacity="1"
+     p1.style.transform="scale(1)"
+
+     p2.style.opacity="1"
+     p2.style.transform="scale(1)"
+
+     p3.style.opacity="1"
+     p3.style.transform="scale(1)"
+
+
+     p4.style.opacity="1"
+     p4.style.transform="scale(1)"
+     break;
+
+}
+
+if(c<5)
+{
+
+    c++
+}
+else
+{
+
+    c=1
+}
+
+document.title = c
+setTimeout("runbanner()",2000)
+        }
+    </script>
+    
+</body>
+</html>
