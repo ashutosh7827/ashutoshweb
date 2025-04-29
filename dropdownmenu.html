@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Bar</title>
+</head>
+<style>
+#menu
+{
+
+    background:navy;
+    color:white;
+    padding:10px;
+    width:40px;
+}
+
+li
+{
+
+    width:100px;
+    background:navy;
+    color:white;
+    list-style:none;
+    text-align:center;
+    padding:10px;
+    margin-left:-2px;
+
+}
+#projectsub
+
+{
+
+    margin-left:80px;
+    margin-top:-20px;
+
+}
+
+#aotmsub
+{
+
+    margin-left:100px;
+    margin-top:-50px;
+
+}
+#menu,#submenu,aotmsub
+{
+    cursor:pointer;
+    
+
+
+}
+
+
+
+
+
+
+</style>
+<body>
+    <div id="menu"> Menu</div>
+
+    <ol id="submenu">
+<li>home</li>
+<li id="project">Project</li>
+<ol id="projectsub">
+    <li>sunrise  Web sites</li>
+    <li id="aotm">AOTM web sites</li>
+    <ol id="aotmsub">
+<li>Botanical garden</li>
+<li> Event managenment websites</li>
+
+    </ol>
+
+    <li> Bootstrapes</li>
+    <li>class excercise</li>
+</ol>
+
+<li> Services</li>
+<li> About</li>
+<li>Data</li>
+<li> Contact</li>
+</ol>
+
+
+<script>
+
+var menu = document.getElementById("menu")
+var submenu = document.getElementById("submenu")
+var project = document.getElementById("project")
+var projectsub = document.getElementById("projectsub")
+var aotm = document.getElementById("aotm")
+var aotmsub = document.getElementById("aotmsub")
+var pro,mon
+
+submenu.style.display="none"
+projectsub.style.display="none"
+aotmsub.style.display="none"
+
+var kya_menu_on_hai = "no"
+menu.onclick = function()
+{
+
+    if(kya_menu_on_hai =="no")
+{
+
+    submenu.style.display="block"
+
+    kya_menu_on_hai = "yes"
+}
+else
+{
+
+    submenu.style.display="none"
+    projectsub.style.display="none"
+    aotmsub.style.display="none"
+    kya_menu_on_hai = "no"
+
+}
+
+
+}
+
+pro = true
+
+project.onclick = function()
+{
+
+    if(pro)
+{
+    projectsub.style.display = "none"
+    pro = false
+    
+}
+
+else
+{
+
+    projectsub.style.display="block"
+    pro = true
+}
+
+
+}
+
+mon = true
+aotm.onclick = function()
+{
+    if(mon)
+{
+    aotmsub.style.display="none"
+    mon = false
+    
+}
+
+else
+{
+
+    aotmsub.style.display="block"
+    mon = true
+}
+
+
+}
+
+
+</script>
+    
+</body>
+</html>
