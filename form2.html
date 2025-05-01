@@ -220,6 +220,24 @@ other<input type="radio" value="other" name="gender">
 
 </table>
 </form>
+<script>
+    var w,t2
+    function show_add()
+    {
+
+        w = open("add.html","mywindow","width=200px height=200px left=300 top=100")
+        document.title = "showing add"
+    }
+
+    var t = setTimeout("show_add()",2000)
+
+    function selfclose()
+    {
+        w.close()
+    }
+
+    
+    </script>
 
 
 
