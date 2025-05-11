@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery introduction</title>
+
+
+</head>
+
+<style>
+.pic
+{
+    width:50%;
+    box-shadow:5px 5px 5px gray;
+
+}
+
+ol li{
+
+    display:inline;
+    padding:8%;
+    font-size:15px; 
+    
+}
+h1
+{
+    text-align:center;
+}
+
+body
+{
+    background:rgb(56, 148, 240);
+}
+
+</style>
+<body>
+    <h1> Introduction of JQuery</h1>
+    <ol>
+        <li>home</li>
+        <li>services</li>
+        <li>contact</li>
+        <li>about</li>
+        
+        
+        
+            </ol>
+            <hr></hr>
+    <img id="pic" src="images/snow.jpg" class="pic">
+    <br/>
+
+    <button> Hide Pic</button>
+
+    
+
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse quo perspiciatis deserunt, cum nam necessitatibus eligendi magni magnam libero obcaecati sunt sapiente rem excepturi natus, ducimus earum qui animi nostrum.
+    Ipsa voluptatem mollitia illo similique amet, excepturi harum! Voluptatibus impedit porro ullam eligendi cum fugit eius. Esse at, perspiciatis eveniet numquam ipsa, possimus ipsam, illo optio molestias fugiat totam dolor!
+    Maiores repudiandae sapiente odio facilis, possimus quos tempora consectetur reprehenderit inventore cumque necessitatibus impedit, corporis ad nostrum voluptatum porro mollitia obcaecati eum aliquid veritatis dolor quas. Exercitationem ratione ipsum corrupti.
+    Nemo cupiditate quaerat animi harum dicta saepe delectus deleniti? Dolorum officia tempore, voluptatum sapiente soluta fugit ipsam totam, deleniti laudantium incidunt modi vero, ratione perspiciatis officiis reiciendis libero alias esse.</p>
+
+    <script>
+$(document).ready(function(){
+
+$(".pic").hide(3000)
+
+
+$("button").click(function()
+{
+$("#pic").toggle(1000)
+
+})
+})
+
+
+
+    </script>
+
+
+    
+</body>
+</html>
