@@ -13,18 +13,34 @@
 {
     width:50%;
     box-shadow:5px 5px 5px gray;
+    margin-left:25%;
 
+}
+ol
+{
+    margin-left:25%;
 }
 
 ol li{
 
     display:inline;
-    padding:8%;
-    font-size:15px; 
+    padding:4%;
+    font-size:25px; 
+
     
 }
 h1
 {
+    text-align:center;
+}
+
+#logo
+{
+    background:white;
+    cursor:pointer;
+    width:10%;
+    padding:1%;
+    margin:auto;
     text-align:center;
 }
 
@@ -49,7 +65,7 @@ body
     <img id="pic" src="images/snow.jpg" class="pic">
     <br/>
 
-    <button> Hide Pic</button>
+    <div id="logo">Hide Pic</div>
 
     
 
@@ -61,15 +77,16 @@ body
     <script>
 $(document).ready(function(){
 
-$(".pic").hide(3000)
+//$(".pic").hide(3000)
+//$(".pic").hide(slow)
+//$(".pic").hide(fast)
 
 
-$("button").click(function()
-{
-$("#pic").toggle(1000)
 
-})
-})
+$("#logo").click(function(){
+  $("#pic").hide(1000);
+});
+});
 
 
 
