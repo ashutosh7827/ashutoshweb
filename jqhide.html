@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery introduction</title>
+
+
+</head>
+<script
+  src="https://code.jquery.com/jquery-2.2.4.js"
+  integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+  crossorigin="anonymous"></script>
+
+<style>
+.pic
+{
+    width:50%;
+    
+    
+
+}
+ol
+{
+    margin-left:25%;
+}
+
+ol li{
+
+    display:inline;
+    padding:4%;
+    font-size:25px; 
+
+    
+}
+h1
+{
+    text-align:center;
+}
+
+#logo
+{
+    background:white;
+    cursor:pointer;
+    width:10%;
+    padding:1%;
+    margin:auto;
+    text-align:center;
+}
+
+#accordian
+{
+    width:100%;
+    margin:auto;
+    padding:30px;
+    
+    border-radius:20px;
+}
+
+h1
+{
+    width:100%;
+    margin-left:-2%;
+}
+
+.box
+{
+    color:black;
+    padding:15px;
+    background:white;
+    cursor:pointer;
+    font-size:30px;
+    
+    
+
+}
+
+p
+{
+border:1px solid white;
+font-size:30px;
+text-align:justify;
+padding:50px;
+border:3px solid white;
+margin:20px;
+
+}
+
+#Aboutsub, #servicessub, #productsub, #policysub
+{
+    //heigh2t:100px;
+    
+}
+
+#line
+{
+    position:absolute;
+    top:25%;
+    left:55%;
+    width:40%;
+    font-size:25px;
+    text-align:justify;
+    border:1px solid white;
+    padding:20px;
+    box-shadow:5px 30px 0px solid black;
+}
+
+
+body
+{
+    background:rgb(56, 148, 240);
+    overflow-x:hidden;
+}
+
+</style>
+<body>
+    <h1> Working with Jquery</h1>
+    <ol>
+        <li>home</li>
+        <li>services</li>
+        <li>contact</li>
+        <li>about</li>
+        
+        
+        
+            </ol>
+            <hr></hr>
+    <img id="pic" src="images/snow.jpg" class="pic">
+<div id="line">
+    <p1>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatibus atque impedit a omnis molestiae et dolorem eius velit, voluptas aliquid inventore autem commodi, porro similique rem dignissimos officia mollitia ratione.
+        Soluta qui reprehenderit fugit unde libero, consequuntur repellat numquam nihil accusamus aperiam aut sequi suscipit ea architecto quos dicta magni alias autem dolor nesciunt! Saepe quisquam suscipit cum recusandae sequi.
+        Dolore sint quis tempora, excepturi sapiente facere dolores similique nam, id pariatur inventore quo dolorum incidunt voluptate omnis fuga eveniet accusamus laborum vero! Sint facere enim, illo quibusdam dicta quo.
+        
+    </p1>
+</div>
+    <br/>
+
+
+<div id="accordian">
+<div>
+    <h1 id="About" class="box">About </h1>
+
+    <p id="Aboutsub">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse quo perspiciatis deserunt, cum nam necessitatibus eligendi magni magnam libero obcaecati sunt sapiente rem excepturi natus, ducimus earum qui animi nostrum.
+    Ipsa voluptatem mollitia illo similique amet, excepturi harum! Voluptatibus impedit porro ullam eligendi cum fugit eius. Esse at, perspiciatis eveniet numquam ipsa, possimus ipsam, illo optio molestias fugiat totam dolor!
+    Maiores repudiandae sapiente odio facilis, possimus quos tempora consectetur reprehenderit inventore cumque necessitatibus impedit, corporis ad nostrum voluptatum porro mollitia obcaecati eum aliquid veritatis dolor quas. Exercitationem ratione ipsum corrupti.
+    Nemo cupiditate quaerat animi harum dicta saepe delectus deleniti? Dolorum officia tempore, voluptatum sapiente soluta fugit ipsam totam, deleniti laudantium incidunt modi vero, ratione perspiciatis officiis reiciendis libero alias esse.</p>
+
+    </div>
+
+    <div>
+    <h1 id="services" class="box">services</h1>
+    <p id="servicessub">
+
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae cupiditate fugit ipsum expedita doloribus aspernatur aliquam corporis reiciendis quisquam rerum, in aliquid praesentium debitis corrupti beatae, veritatis quidem natus explicabo?
+        Facilis officia deleniti perspiciatis vitae, quas rem pariatur nisi dolor repudiandae? Omnis nulla aliquid obcaecati quae eos, in, amet deserunt deleniti officiis odio libero quaerat alias doloribus laboriosam iste aliquam?
+        Possimus repudiandae recusandae delectus laboriosam blanditiis magni dolores maxime repellat, quo eaque corrupti quia adipisci consequuntur ea molestias tenetur dolorem impedit cum sunt, minima obcaecati saepe maiores esse. Nesciunt, doloremque!
+        Hic odio, temporibus vel adipisci soluta sit, eum doloribus, dolores a corrupti esse sequi provident. Cupiditate dignissimos fugit molestias accusantium. Dolorum, magnam ullam iure voluptatem nostrum error officia laudantium incidunt?
+    </p>
+
+    </div>
+
+    <div>
+    <h1 id="product" class="box">Product</h1>
+    <p id="productsub">
+
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae cupiditate fugit ipsum expedita doloribus aspernatur aliquam corporis reiciendis quisquam rerum, in aliquid praesentium debitis corrupti beatae, veritatis quidem natus explicabo?
+        Facilis officia deleniti perspiciatis vitae, quas rem pariatur nisi dolor repudiandae? Omnis nulla aliquid obcaecati quae eos, in, amet deserunt deleniti officiis odio libero quaerat alias doloribus laboriosam iste aliquam?
+        Possimus repudiandae recusandae delectus laboriosam blanditiis magni dolores maxime repellat, quo eaque corrupti quia adipisci consequuntur ea molestias tenetur dolorem impedit cum sunt, minima obcaecati saepe maiores esse. Nesciunt, doloremque!
+        Hic odio, temporibus vel adipisci soluta sit, eum doloribus, dolores a corrupti esse sequi provident. Cupiditate dignissimos fugit molestias accusantium. Dolorum, magnam ullam iure voluptatem nostrum error officia laudantium incidunt?
+    </p>
+
+    </div>
+
+    <div>
+    <h1 id="policy" class="box">Policy</h1>
+    <p id="policysub">
+
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae cupiditate fugit ipsum expedita doloribus aspernatur aliquam corporis reiciendis quisquam rerum, in aliquid praesentium debitis corrupti beatae, veritatis quidem natus explicabo?
+        Facilis officia deleniti perspiciatis vitae, quas rem pariatur nisi dolor repudiandae? Omnis nulla aliquid obcaecati quae eos, in, amet deserunt deleniti officiis odio libero quaerat alias doloribus laboriosam iste aliquam?
+        Possimus repudiandae recusandae delectus laboriosam blanditiis magni dolores maxime repellat, quo eaque corrupti quia adipisci consequuntur ea molestias tenetur dolorem impedit cum sunt, minima obcaecati saepe maiores esse. Nesciunt, doloremque!
+        Hic odio, temporibus vel adipisci soluta sit, eum doloribus, dolores a corrupti esse sequi provident. Cupiditate dignissimos fugit molestias accusantium. Dolorum, magnam ullam iure voluptatem nostrum error officia laudantium incidunt?
+    </p>
+
+    </div>
+
+    </div>
+
+    <script>
+$(document).ready(function()
+{
+
+$("#Aboutsub").hide()
+$("#servicessub").hide()
+$("#productsub").hide()
+$("#policysub").hide()
+
+$("#About").click(function(){ $("#Aboutsub").slideToggle(300)
+
+$("#servicessub").hide()
+$("#productsub").hide()
+$("#policysub").hide()
+})
+
+$("#services").click(function(){ $("#servicessub").slideToggle(300)
+
+$("#Aboutsub").hide()
+$("#productsub").hide()
+$("#policysub").hide()
+})
+
+$("#product").click(function(){ $("#productsub").slideToggle(300)
+
+$("#servicessub").hide()
+$("#Aboutsub").hide()
+$("#policysub").hide()
+})
+
+$("#policy").click(function(){ $("#policysub").slideToggle(300)
+
+$("#servicessub").hide()
+$("#productsub").hide()
+$("#Aboutsub").hide()
+})
+
+
+})
+
+
+
+    </script>
+
+
+</body>
+</html>
