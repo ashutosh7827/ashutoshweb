@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script
+  src="https://code.jquery.com/jquery-2.2.4.js"
+  integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+  crossorigin="anonymous"></script>
+</head>
+
+<style>
+
+    .text-style
+    {
+        color:red;
+        font-size:50px;
+        
+        
+    }
+
+    .mselect
+    {
+        background:rgb(51, 135, 252);
+    padding:10px;
+        border:7px red dotted;
+        transition:1s;
+    }
+
+    body
+    {
+        background:rgb(1, 100, 85);
+    }
+
+   
+
+    
+
+    
+
+    
+</style>
+
+<body>
+    <h1> Working with jquery</h1>
+    <pre>
+     Paragraphs are the building blocks of papers. Many students define paragraphs in terms of length: a paragraph is a group of
+      at least five sentences, a paragraph is half a page long, etc. In reality, though, the unity and coherence of ideas among 
+      sentences is what constitutes a paragraph. A paragraph is defined as “a group of sentences or a single sentence that forms 
+      a unit” (Lunsford and Connors 116). Length and appearance do not determine whether a section in a paper is a paragraph. For
+      
+      instance, in some styles of writing, particularly journalistic styles, a paragraph can be just one sentence long. 
+      Ultimately, a paragraph is a sentence or group of sentences that support one main idea. In this handout, we will refer to 
+      this as the “controlling idea,” because it controls what happens in the rest of the paragraph.
+    </pre>
+    <script>
+        $(document).ready(function()
+    {
+        $("span").css({"cursor":"pointer", "font-size":"40px", "font-family":"arial black"})
+         
+$("p:first").click(function()
+{
+
+    //alert($(this).css("font-size"))
+})
+
+$("p").mouseover(function()
+{
+
+$(this).css("border","5px navy solid").addClass("mselect")
+
+})
+
+$("p").mouseout(function()
+{
+
+$(this).css("border","0px black solid").removeClass("mselect")
+
+})
+
+$("span").click(function()
+{
+    $(this).toggleClass("text-style")
+})
+
+$("p").mouseover(function()
+{
+    $(this).css("color","white")
+})
+
+$("p").mouseout(function()
+{
+    $(this).css("color","black")
+})
+
+    })
+
+    document.title = "Jquery work"
+    </script>
+
+    <p>
+        <span id="about">About</span></p>
+        <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus repellat temporibus quis dolore unde, vel neque est, laborum placeat corporis vero sint fugiat similique possimus suscipit eos? Error, itaque quae.
+            Totam sit neque, quidem possimus ducimus, necessitatibus eaque quas in molestias debitis repellendus quaerat nostrum hic nulla quae quisquam optio exercitationem laudantium, aspernatur ipsum? Et, corrupti. Fugiat tempore corrupti debitis?
+            Consequatur laboriosam repellat quam possimus illum provident! Id consectetur quae dicta modi quod perspiciatis, assumenda officiis incidunt nobis eligendi ea iste quam neque ducimus accusantium, nemo atque repellendus? Quisquam, ut?
+            Consectetur ipsam ea aliquid est necessitatibus dolor dolores non accusantium similique fuga magni voluptatum excepturi itaque, repellat fugiat, iusto recusandae quia ipsa. Nostrum alias nesciunt quidem quia perspiciatis soluta quibusdam.
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus repellat temporibus quis dolore unde, vel neque est, laborum placeat corporis vero sint fugiat similique possimus suscipit eos? Error, itaque quae.
+            Totam sit neque, quidem possimus ducimus, necessitatibus eaque quas in molestias debitis repellendus quaerat nostrum hic nulla quae quisquam optio exercitationem laudantium, aspernatur ipsum? Et, corrupti. Fugiat tempore corrupti debitis?
+            Consequatur laboriosam repellat quam possimus illum provident! Id consectetur quae dicta modi quod perspiciatis, assumenda officiis incidunt nobis eligendi ea iste quam neque ducimus accusantium, nemo atque repellendus? Quisquam, ut?
+            Consectetur ipsam ea aliquid est necessitatibus dolor dolores non accusantium similique fuga magni voluptatum excepturi itaque, repellat fugiat, iusto recusandae quia ipsa. Nostrum alias nesciunt quidem quia perspiciatis soluta quibusdam.
+        </p>
+<p>
+        <span id="data">Data</span></p>
+        <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus repellat temporibus quis dolore unde, vel neque est, laborum placeat corporis vero sint fugiat similique possimus suscipit eos? Error, itaque quae.
+            Totam sit neque, quidem possimus ducimus, necessitatibus eaque quas in molestias debitis repellendus quaerat nostrum hic nulla quae quisquam optio exercitationem laudantium, aspernatur ipsum? Et, corrupti. Fugiat tempore corrupti debitis?
+            Consequatur laboriosam repellat quam possimus illum provident! Id consectetur quae dicta modi quod perspiciatis, assumenda officiis incidunt nobis eligendi ea iste quam neque ducimus accusantium, nemo atque repellendus? Quisquam, ut?
+            Consectetur ipsam ea aliquid est necessitatibus dolor dolores non accusantium similique fuga magni voluptatum excepturi itaque, repellat fugiat, iusto recusandae quia ipsa. Nostrum alias nesciunt quidem quia perspiciatis soluta quibusdam.
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus repellat temporibus quis dolore unde, vel neque est, laborum placeat corporis vero sint fugiat similique possimus suscipit eos? Error, itaque quae.
+            Totam sit neque, quidem possimus ducimus, necessitatibus eaque quas in molestias debitis repellendus quaerat nostrum hic nulla quae quisquam optio exercitationem laudantium, aspernatur ipsum? Et, corrupti. Fugiat tempore corrupti debitis?
+            Consequatur laboriosam repellat quam possimus illum provident! Id consectetur quae dicta modi quod perspiciatis, assumenda officiis incidunt nobis eligendi ea iste quam neque ducimus accusantium, nemo atque repellendus? Quisquam, ut?
+            Consectetur ipsam ea aliquid est necessitatibus dolor dolores non accusantium similique fuga magni voluptatum excepturi itaque, repellat fugiat, iusto recusandae quia ipsa. Nostrum alias nesciunt quidem quia perspiciatis soluta quibusdam.
+        </p>
+<p>
+        <span id="services">Services</span></p>
+        <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus repellat temporibus quis dolore unde, vel neque est, laborum placeat corporis vero sint fugiat similique possimus suscipit eos? Error, itaque quae.
+            Totam sit neque, quidem possimus ducimus, necessitatibus eaque quas in molestias debitis repellendus quaerat nostrum hic nulla quae quisquam optio exercitationem laudantium, aspernatur ipsum? Et, corrupti. Fugiat tempore corrupti debitis?
+            Consequatur laboriosam repellat quam possimus illum provident! Id consectetur quae dicta modi quod perspiciatis, assumenda officiis incidunt nobis eligendi ea iste quam neque ducimus accusantium, nemo atque repellendus? Quisquam, ut?
+            Consectetur ipsam ea aliquid est necessitatibus dolor dolores non accusantium similique fuga magni voluptatum excepturi itaque, repellat fugiat, iusto recusandae quia ipsa. Nostrum alias nesciunt quidem quia perspiciatis soluta quibusdam.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus repellat temporibus quis dolore unde, vel neque est, laborum placeat corporis vero sint fugiat similique possimus suscipit eos? Error, itaque quae.
+            Totam sit neque, quidem possimus ducimus, necessitatibus eaque quas in molestias debitis repellendus quaerat nostrum hic nulla quae quisquam optio exercitationem laudantium, aspernatur ipsum? Et, corrupti. Fugiat tempore corrupti debitis?
+            Consequatur laboriosam repellat quam possimus illum provident! Id consectetur quae dicta modi quod perspiciatis, assumenda officiis incidunt nobis eligendi ea iste quam neque ducimus accusantium, nemo atque repellendus? Quisquam, ut?
+            Consectetur ipsam ea aliquid est necessitatibus dolor dolores non accusantium similique fuga magni voluptatum excepturi itaque, repellat fugiat, iusto recusandae quia ipsa. Nostrum alias nesciunt quidem quia perspiciatis soluta quibusdam.
+        </p>
+    <p>
+        <span id="policy">Policy</span></p>
+        <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus repellat temporibus quis dolore unde, vel neque est, laborum placeat corporis vero sint fugiat similique possimus suscipit eos? Error, itaque quae.
+            Totam sit neque, quidem possimus ducimus, necessitatibus eaque quas in molestias debitis repellendus quaerat nostrum hic nulla quae quisquam optio exercitationem laudantium, aspernatur ipsum? Et, corrupti. Fugiat tempore corrupti debitis?
+            Consequatur laboriosam repellat quam possimus illum provident! Id consectetur quae dicta modi quod perspiciatis, assumenda officiis incidunt nobis eligendi ea iste quam neque ducimus accusantium, nemo atque repellendus? Quisquam, ut?
+            Consectetur ipsam ea aliquid est necessitatibus dolor dolores non accusantium similique fuga magni voluptatum excepturi itaque, repellat fugiat, iusto recusandae quia ipsa. Nostrum alias nesciunt quidem quia perspiciatis soluta quibusdam.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus repellat temporibus quis dolore unde, vel neque est, laborum placeat corporis vero sint fugiat similique possimus suscipit eos? Error, itaque quae.
+            Totam sit neque, quidem possimus ducimus, necessitatibus eaque quas in molestias debitis repellendus quaerat nostrum hic nulla quae quisquam optio exercitationem laudantium, aspernatur ipsum? Et, corrupti. Fugiat tempore corrupti debitis?
+            Consequatur laboriosam repellat quam possimus illum provident! Id consectetur quae dicta modi quod perspiciatis, assumenda officiis incidunt nobis eligendi ea iste quam neque ducimus accusantium, nemo atque repellendus? Quisquam, ut?
+            Consectetur ipsam ea aliquid est necessitatibus dolor dolores non accusantium similique fuga magni voluptatum excepturi itaque, repellat fugiat, iusto recusandae quia ipsa. Nostrum alias nesciunt quidem quia perspiciatis soluta quibusdam.
+        </p>
+        
+    
+</body>
+</html>
