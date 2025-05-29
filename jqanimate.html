@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<style>
+    #box
+    {
+color:white;
+background:black;
+font-size:50px;
+font-family:arial black;
+display:inline-block;
+padding:20px;
+position:absolute;
+box-shadow:50px 5px 5px solid gray;
+top:0px;
+left:-100%;
+
+    }
+
+    body{background:rgb(103, 103, 3);}
+</style>
+<body>
+    <div id="box">
+        <h1>Jquery Animate</h1>
+    </div>
+    <script>
+$(document).ready(function()
+{
+
+    $("#box").animate({left:"300px"},1000).delay(1000).animate({top:"+=100px"},500).delay(500).animate({fontSize:"50px"},300).delay(400)
+    $("#box").animate({borderRadius:"100px",padding:"+=30px"},1000,mycolor).delay(5000)
+    $("#box").animate({left:"-1000px"},100)
+})
+
+var r,g,b,c
+
+function mycolor()
+{
+    d = document.getElementById("box")
+
+    setInterval(function()
+{
+
+    r = Math.round(Math.random()*255)
+    g = Math.round(Math.random()*255)
+    b = Math.round(Math.random()*255)
+    c = `rgb(${r},${g},${b})`
+    d.style.color=c
+},500)
+
+
+
+
+}
+
+document.title="Ready"
+    </script>
+    
+</body>
+</html>
