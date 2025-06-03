@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>banner</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.cycle/3.0.3/jquery.cycle.all.js"></script>
+</head>
+<style>
+    #myslider
+    {
+        width:70px;
+    margin:auto;
+        box-shadow:10px 10px 10px rgb(50, 48, 48);
+
+    }
+
+    .pic
+    {
+        width:1000px;
+        height:400px;
+    }
+
+    h1
+    {
+        text-align:center;
+    }
+
+    body
+    {
+        background:gray;
+    }
+</style>
+<body>
+    <h1>Banner slidshows</h1>
+    <script>
+$(document).ready(function()
+{
+    $("#myslider").cycle({fx:'scrollLeft'});
+})
+
+    </script>
+
+    <div id="myslider">
+
+    <img src="images/p1.jpg" class="pic">
+    <img src="images/p2.jpg" class="pic">
+    <img src="images/p3.jpg" class="pic">
+    <img src="images/p4.jpg" class="pic">
+    <img src="images/p5.jpg" class="pic">
+    </div>
+    
+</body>
+</html>
