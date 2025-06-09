@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Profile</title>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
 </head>
 <a name="top">
   <header>
@@ -120,14 +122,14 @@ body {
 }
 
 .navbar a:hover,  .dropbtn {
-  background-color: red;
+  background-color: rgb(40, 141, 242);
   border-radius:8px;
   cursor:pointer;
-  color:black;
+  color:white;
 }
 
 .dropdown-content {
-  display: none;
+  display:none;
   position: absolute;
   background-color: #f9f9f9;
   min-width: 160px;
@@ -136,7 +138,7 @@ body {
 }
 
 .dropdown-content a {
-  float: none;
+  float:none;
   color: black;
   padding: 12px 16px;
   text-decoration: none;
@@ -145,7 +147,7 @@ body {
 }
 
 .dropdown-content a:hover {
-  background-color: #ddd;
+  background-color:rgb(40, 141, 242);
 }
 
 .dropdown:hover .dropdown-content {
@@ -191,6 +193,7 @@ scroll-behavior:smooth;
                             font-size:10px;
                               padding:10px;
                              animation:ani3 0.75s;
+                             
                        
                               
 
@@ -280,10 +283,11 @@ margin-left:65%;
 
 .tag
 {
-margin-top:-33%;
+margin-top:-30%;
 padding:8%;
 margin-right:60%;
 width:100%;
+
 
 
 }
@@ -316,12 +320,7 @@ padding:1%;
 
 }
 
-#footer
-{
-//background:grey;
 
-
-}
 
 
 
@@ -371,7 +370,7 @@ letter-spacing:1px;
 margin-left:1%;
 
 text-transform:capitalize;
-box-shadow:2px 2px 2px grey;
+
 padding:20px;
 
 
@@ -393,8 +392,8 @@ letter-spacing:1px;
 
 #main p:hover
 {
- Cursor:pointer
-          color:grey;
+ 
+
 }
 
 .logopic
@@ -446,9 +445,67 @@ color:black;
 margin-left:45%;
 }
 
+#web h1
+{
+  font-size:30px;
+  background:#4aa5f9;
+  text-align:center;
+  box-shadow:10px 10px 10px black;
+}
+
+.interior
+{
+    width:40%;
+    margin:4%;
+    
+}
+
+.interior:hover
+{
+    transform:scale(1.03);
+    transition:0.5s;
+     box-shadow:5px 5px 5px gray;
+}
+
+#int
+{
+    display:inline-block;
+    margin:17%;
+    margin-top:-5%;
+}
+#int p
+{
+    color:gray;
+}
+
+#int p1
+{
+    border:1px solid black;
+    padding:8px;
+    font-size:15px;
+    cursor:pointer;
+    margin-left:22%;
+    background:rgb(79, 103, 238);
+    color:white;
+    border-radius:8px;
+    
+}
 
 
+#btn-top
+{
+  margin-left:2%;
+}
 
+#int h2
+{
+  margin-left:-8%;
+}
+
+#int h3
+{
+  font-size:25px;
+}
 
 
 
@@ -720,8 +777,7 @@ height:200px;
 width:100%;
 margin:auto;
 margin-top:30px;
-border-bottom:8px grey solid;
-box-shadow:2px 2px 2px grey;
+
 }
 
 
@@ -838,13 +894,15 @@ margin-left:45%;
 
 
 
+
+
 </style>
 
 
 <div style="main">
 
 <a name="About me">
-<div style="color:white; background:#4aa5f9; box-shadow:10px 10px 10px black;">
+<div style="color:white; background:#4aa5f9; box-shadow:10px 10px 10px black; text-align:center;">
 <h1>About me </h1>
 </div>
 
@@ -860,7 +918,7 @@ margin-left:45%;
 
 <div id="main">
 
-<div style="font-family:verdana;margin-bottom:20px;">
+<div style="font-family:verdana;margin-bottom:20px; text-align:center;">
 <p class="my style">
 
 
@@ -887,7 +945,7 @@ features that will deliver you, the user, an enjoyable experience.
 
 
 <a name="My skills">
-<div style="color:white; background:#4aa5f9;box-shadow:10px 10px 10px black;">
+<div style="color:white; background:#4aa5f9;box-shadow:10px 10px 10px black; text-align:center;">
 <h2><font size="5" >My skills</font> </h2>
 </div>
 
@@ -908,12 +966,12 @@ features that will deliver you, the user, an enjoyable experience.
 
 </p1> 
 </div>
-<hr></hr>
+
 
 
 <a name="Social Media Link">
 
-<div style="color:white; background:#4aa5f9;box-shadow:10px 10px 10px black;">
+<div style="color:white; background:#4aa5f9;box-shadow:10px 10px 10px black; text-align:center;">
 <h3><font size="5" >
 Social Media Link
 </font>
@@ -940,7 +998,7 @@ Social Media Link
 
 <a name="Contact Us">
 
-<div style="color:white; background:#4aa5f9;box-shadow:10px 10px 10px black;">
+<div style="color:white; background:#4aa5f9;box-shadow:10px 10px 10px black; text-align:center;">
 <h4><font size="5">Contact Us</font></h4>
 </div>
 
@@ -970,16 +1028,80 @@ Social Media Link
 
 
 
-<div id="up">
-<a href="#top">
-<img src="images/up.png" width="1%"> Click to Go up
-</a>
+
+
+
+
+
+<canvas id="myChart" style="width:20%;max-width:1500px; height:80px;"></canvas>
+
+<script>
+const xValues = ["HTML", "CSS", "Java Script", "Jquery", "Bootstrap", "PHP", "Wordpress"];
+const yValues = [55, 52, 44, 50, 15, 2, 1,];
+const barColors = ["red", "green","blue","orange","brown", "purple", "Blue"];
+
+new Chart("myChart", {
+  type: "bar",
+  data: {
+    labels: xValues,
+    datasets: [{
+      backgroundColor: barColors,
+      data: yValues
+    }]
+  },
+  options: {
+    legend: {display: false},
+    scales: {
+      yAxes: [{
+        ticks: {
+          beginAtZero: true
+        }
+      }]
+    },
+
+    title: {
+      display: true,
+      text: "My work Average"
+    }
+  }
+});
+</script>
+
+<div id="web">
+
+<h1>My Sites</h1>
 </div>
+<div id="btn-top">
+<img src="images/f1.jpeg" class="interior">
+    <img src="images/m1.jpg" class="interior">
+    </div>
+
+    <div id="int">
+        <h2>
+            Formula 1 Car Racing
+         </h2>
+  
+        <p1>Visit Site</p1>
+    </div>
+
+    <div id="int">
+        <h3>
+           Mercedes-Benz
+
+
+
+         </h3>
+      
+        <p1>Visit Site</p1>
+    </div>
 
 
 
 
 <div style="space:100px;height:200px;"> </div>
+
+
+
 
 </body>
 
