@@ -102,8 +102,19 @@ overflow-x:hidden;
 {
   width:28vw;
   margin-left:50%;
+  animation: floatImage 4s ease-in-out infinite;
 }
-
+@keyframes floatImage{
+  0%{
+    transform: translateY(0);
+  }
+  50%{
+    transform: translateY(-2.4rem);
+  }
+ 100%{
+    transform: translateY(0);
+  }
+}
 .home-content h3
 {
   font-size:3.2rem;
@@ -580,14 +591,14 @@ padding:10rem 3% 2rem;
   }
 
   .home-content h3{
-    font-size: 2rem;
+    font-size: 2.5rem;
 
   }
   .home-content h1{
-    font-size: 4rem;
+    font-size: 4.5rem;
   }
   .home-img img{
-    width:70vw;
+    width:80vw;
     margin-top: 4rem;
     margin-left:1%;
   }
@@ -596,16 +607,44 @@ padding:10rem 3% 2rem;
     flex-direction: column-reverse;
   }
   .about img{
-    width:70vw;
+    width:80vw;
     margin-top:4rem;
     margin-left:10%;
   }
 
   .contact form{
-    margin-left:%;
+    margin-left:10%;
   }
 
+  
+
 }
+
+@media (max-width: 450px)
+{
+html{
+  font-size:50%;
+
+}
+.contact form .input-box input{
+  width:100%;
+}
+
+.contact form{
+    margin-left:10%;
+  }
+
+  .footer{
+    flex-direction: column-reverse;
+
+  }
+  .footer p{
+    text-align: center;
+    margin-top: 2rem;
+  }
+}
+
+
 
 </style>
 <body>
@@ -619,7 +658,7 @@ padding:10rem 3% 2rem;
       <a href="#myskills">Skills</a>
       <a href="#project">My Project</a>
       <a href="#contact">Contact</a>
-      <a href="#">Practice Work</a>
+      <a href="menu.html">Practice Work</a>
 
     </nav>
 
@@ -628,7 +667,7 @@ padding:10rem 3% 2rem;
 <div class="home-content">
   <h3>Hello, It's me</h3>
   <h1>Ashutosh Mathur</h1>
-  <h3> And I'm a <span>Web Developer</span></h3>
+  <h3> And I'm a <span class="multiple-text"></span></h3>
   <p>Hello, I am web Designer to create a attractive websites frontend and<br/> many more using HTML, CSS, JavaScript and jquery</p>
   <div class="social-media">
     <a href="#"><i class='bx bxl-facebook'></i></a>
@@ -765,6 +804,9 @@ I have a diploma in computer and worked as a senior Accountant. My goal is to to
   </div>
 </footer>
 
+<script src="https://unpkg.com/scrollreveal"></script>
+<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
 <script>
 
   let menuIcon = document.querySelector('#menu-icon');
@@ -803,6 +845,30 @@ window.onscroll = () => {
    menuIcon.classList.remove('bx-x');
     navbar.classList.remove('active');
 };
+
+ScrollReveal({ 
+  reset: true,
+  distance: '80px',
+  duration: 2000,
+  delay: 200 
+
+});
+
+ScrollReveal().reveal('.home-content, .heading', { origin: 'top'});
+ScrollReveal().reveal('.home-img, .services-container, .project-box, .contact form', { origin: 'bottom'});
+ScrollReveal().reveal('.home-content h1, .about-img', { origin: 'left'});
+ScrollReveal().reveal('.home-content p, .about-content', { origin: 'right'});
+
+
+const typed = new Typed('.multiple-text', {
+  strings: ['Web Developer', 'Graphic Designer', 'Accountant Manager'], 
+
+  typeSpeed: 100,
+  backSpeed: 100,
+  backDelay: 1000,
+  loop: true
+
+});
 
 
 
