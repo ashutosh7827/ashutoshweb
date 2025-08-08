@@ -4,1150 +4,810 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Profile</title>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+ <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
-<a name="top">
-  <header>
-    
-
-<div class="navbar">
-  <a href="#About me">About Us</a>
-  <a href="#My skills">My Skills</a>
-  <a href="#Contact Us">Contact</a>
-  <div class="dropdown">
-    <button class="dropbtn"><div></div><div></div><div></div>
-      <i class="fa fa-caret-down"></i>
-    </button>
-    <div class="dropdown-content">
-      <ol>
-       <li><a href="menu.html"> Practice Work</a></li>
-         
-           
-              <li><a href="#Social Media Link"> Social Media </a></li>
-                
-                  
-                       <li><a href="https://ashutosh7827.github.io/Disney/"> Project 1</a></li>
-
-                       <li><a href="https://ashutosh7827.github.io/f1racing/"> Project 2</a></li>
-
-                       <li><a href="https://ashutosh7827.github.io/smurfweb/"> Project 3</a></li>
-
-                    </ol>
-
-                     </header>
-    </div>
-  </div> 
-</div>
-    
-                     <img class="head" src="images/headpic.png">
-
-
-
-<div id="pic">
-<img class="pic" src="images/Ashu.png">
-</div>
-<br/>
-
-<div class="tag">
-  
-<div class="ashu">Ashutosh Mathur</div>
-
-<div class="des">Web Developer</div>
-<p>Hello, I am web Designer to create a attractive websites frontend and<br/> many more using HTML, CSS, JavaScript and jquery</p>
-<div id="footer">
-<img class="jj" src="images/insta.png">
-<img class="jj" src="images/whatsapp.png">
-<img class="jj" src="images/link.png">
-<img class="jj" src="images/facebook.png">
-
-</div>
-</div>
-
-
-
-
 <style>
-@keyframes ani
+  *
+  {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    text-decoration:none;
+    border:none;
+    outline:none;
+    scroll-behavior:smooth;
+    font-family:'Poppins', sans-serif;
+  }
+
+  :root
+  {
+    --bg-color:#1f242d;
+    --second-bg-color:#323946;
+    --text-color:#fff;
+    --main-color:#0ef;
+
+  }
+
+  html
+  {
+font-size:62.5%;
+overflow-x:hidden;
+  }
+
+  body{
+    background:var(--bg-color);
+    color:var(--text-color);
+  }
+  section
 {
-from{opacity:0;}
-to{opacity:1;}
+  min-height:100vh;
+  padding:10rem 9% 2rem;
+  margin-left:-12%;
 }
+  .header
+  {
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    padding:2rem 9%;
+    background:var(--bg-color);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    z-index:100;
+  }
 
-@keyframes ani2
+  .header.sticky
+  {
+    border-bottom: .1rem solid rgba(0, 0, 0, .2);
+  }
+  .logo
+  {
+    font-size:2.5rem;
+    color:var(--text-color);
+    font-weight:600;
+    cursor:default;
+  }
+
+  .navbar a
+  {
+    font-size:1.7rem;
+    color:var(--text-color);
+    margin-left:4rem;
+    transition:.3s;
+    font-family:verdana;
+    
+  }
+  .navbar a:hover, .navbar a.active
 {
-from{opacity:0;}
-to {opacity:1;}
+  color:var(--main-color);
 }
 
-@keyframes ani3
+#menu-icon
 {
-from{width:1%;}
-to{width:80%;}
+  font-size:3.6rem;
+  color:var(--text-color);
+  display:none;
 }
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
+.home
+{
+  display:flex;
+  justify-content:center;
+  align-items:center;
 }
 
-.navbar {
-  overflow: hidden;
-  color:navy;
+.home-img img
+{
+  width:28vw;
   margin-left:50%;
 }
 
-.navbar a {
-  float: left;
-  font-size: 20px;
-  color: navy;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-.dropdown {
-  float: left;
-  overflow: hidden;
-}
-
-.dropdown .dropbtn {
-  font-size: 20px;  
-  border: none;
-  outline: none;
-  color: navy;
-  padding: 14px 16px;
-  background-color: inherit;
-  font-family: inherit;
-  margin: 0;
-}
-
-.navbar a:hover,  .dropbtn {
-  background-color: rgb(40, 141, 242);
-  border-radius:8px;
-  cursor:pointer;
-  color:white;
-}
-
-.dropdown-content {
-  display:none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
-.dropdown-content a {
-  float:none;
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  text-align: left;
-}
-
-.dropdown-content a:hover {
-  background-color:rgb(40, 141, 242);
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-.dropbtn div
+.home-content h3
 {
+  font-size:3.2rem;
+  font-weight:700;
   
-  width: 35px;
-  height: 4px;
-  background-color:navy;
-  margin: 6px 0;
-  margin-top:1.5%;
-  
-
-
 }
 
-.dropdown:hover
+span
 {
-  background:rgb(176, 175, 175);
-
-  border-radius:10px;
+  color:var(--main-color);
 }
 
-
-
-
-html
+.home-content h3:nth-of-type(2)
 {
-scroll-behavior:smooth;
+  margin-bottom:2rem;
 }
 
-
-
-                header
-                {
-                     //background:#2C2D2D;
-                      width:80%;
-                        margin-left:22%;
-                         text-align:center;
-                            font-size:10px;
-                              padding:10px;
-                             animation:ani3 0.75s;
-                             
-                       
-                              
-
-
-                         }
-
-header ol
+.home-content h1
 {
-padding:0px;
+  font-size:5.6rem;
+  font-weight:700;
+  line-height:1.3;
 }
 
-header ol li
+.home-content p
 {
-list-style:none;
-padding:10px;
-cursor:pointer;
-display:inline;
-margin:1%;
-//font-family:verdana;
-;
-
-
-
-
+  font-size:1.6rem;
+  font-family:verdana;
 }
 
-header ol li:hover
+.social-media a
 {
-
-transform:scale(1.10);
-transition:0.5s;
-border-radius:60px;
-
-
+  display:inline-flex;
+  justify-content:center;
+  align-items:center;
+  width:4rem;
+  height:4rem;
+  background:transparent;
+  border:.2rem solid var(--main-color);
+  border-radius:50%;
+  font-size:2rem;
+  color:var(--main-color);
+  margin:3rem 1.5rem 3rem 0;
 }
 
-header ol li a:link
+.social-media a:hover
 {
-color:navy;
-text-decoration:none;
-font-size:20px;
+  background:var(--main-color);
+  color:var(--second-bg-color);
+  box-shadow:0 0 1rem var(--main-color);
 }
 
-header ol li a:visited
+.btn
 {
-color:navy;
+  display:inline-block;
+  padding:1rem 2.8rem;
+  background:var(--main-color);
+  border-radius:4rem;
+  box-shadow:0 0 1rem var(--main-color);
+  font-size:1.6rem;
+  color:var(--second-bg-color);
+  letter-spacing: .1rem;
+  font-weight: 600;
+  transition: .5s;
 }
 
-header ol li a:hover
+.btn:hover
 {
-text-decoration:underline;
-color:rgb(11, 2, 2);
-
+  box-shadow:none;
 }
 
-header ol li a:active
+.about
 {
-color: red;
-
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:2rem;
+  background:var(--second-bg-color);
 }
 
-.head
+.about-img img
 {
-position:absolute;
-left:1%;
-top:-1%;
-width:10%;
-padding:0px;
-
+  width:28vw;
+  margin-left:30%;
 }
 
-
-
-.pic
+.heading
 {
-width:25%;
-padding:10px;
-margin-left:65%;
-
-
-
-
-}
-
-
-
-
-.tag
-{
-margin-top:-30%;
-padding:8%;
-margin-right:60%;
-width:100%;
-
-
-
-}
-
-.ashu
-{
-  font-size:50px;
-  font-family:arial black;
-  width:100%;
-}
-.des
-{
-
-font-size:40px;
-font-weight:500;
-color:rgb(189, 152, 2);
-}
-
-.tag p
-{
-  font-size:20px;
-}
-
-
-.jj
-{
-width:2%;
-padding:1%;
-
-
-}
-
-
-
-
-
-
-
-body
-{
-background:url(images/dddd.jpg);
-background-size:100% 100%;
-animation:ani 2s;
-width:100%;
-overflow-x: hidden;
-
-}
-
-
-
-
-
-#space
-{
-height:200px;
-}
-
-#main
-{
-width:100%;
-margin:auto;
-margin-top:30px;
-border-bottom:8px grey solid;
-box-shadow:2px 2px 2px grey;
-}
-
-
-
-
-
-
-#main p
-{
-width:95%;
-text-indent:50px;
-font-size:15px;
-font-family:verdana;
-text-align:justify;
-letter-spacing:1px;
-margin-left:1%;
-
-text-transform:capitalize;
-
-padding:20px;
-
-
-
-}
-
-
-
-
-#main p1 ul li
-{
-padding:5px;
-text-transform:capitalize;
-letter-spacing:1px;
-
-
-}
-
-
-#main p:hover
-{
- 
-
-}
-
-.logopic
-{
-width:2%;
-
-margin:0.50%;
-
-
-
-}
-.image
-{
- width:3%;
- 
-}
-
-
-
-.logopic:hover
-{
-Cursor:pointer;
-transform:scale(1.50);
-transition:0.50s;
-}
-
-.image:hover
-{
-Cursor:pointer;
-transform:scale(1.50);
-transition:0.50s;
-}
-
-
-#main h1
-{
-
-font-size:5px;
-color:white;
-
-}
-
-
-#up a:link
-{
-font-size:20px;
-color:black;
-
-margin-left:45%;
-}
-
-#web h1
-{
-  font-size:30px;
-  background:#4aa5f9;
   text-align:center;
-  box-shadow:10px 10px 10px black;
-}
+  font-size:4.5rem;
+  
 
-.interior
+}
+.about-content
 {
-    width:40%;
-    margin:4%;
-    
+  margin-left:20%;
+  
 }
 
-.interior:hover
+.about-content h2
 {
-    transform:scale(1.03);
-    transition:0.5s;
-     box-shadow:5px 5px 5px gray;
-}
+  text-align:left;
+  line-height:1.2;
 
-#int
+}
+.about-content h3
 {
-    display:inline-block;
-    margin:17%;
-    margin-top:-5%;
+  font-size: 2.6rem;
 }
-#int p
+.about-content p
 {
-    color:gray;
+  font-size: 1.6rem;
+  margin:2rem 0 3rem;
+  font-size: Medium;
+  letter-spacing:1px;
 }
 
-#int p1
+.myskills h2
 {
-    border:1px solid black;
-    padding:8px;
-    font-size:15px;
-    cursor:pointer;
-    margin-left:22%;
-    background:rgb(79, 103, 238);
-    color:white;
-    border-radius:8px;
-    
+  margin-bottom:5rem;
+   margin-left:10%;
+
+  
+  
 }
 
-
-#btn-top
+.services-container
 {
-  margin-left:2%;
+  display:flex;
+  justify-content:center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap:2rem;
+  margin-left:10%;
+
 }
 
-#int h2
+
+
+.services-container .services-box
 {
-  margin-left:-8%;
-}
-
-#int h3
-{
-  font-size:25px;
-}
-
-
-
-
-@media screen and (max-width:600px)
-{
-
-  .navbar {
-  overflow: hidden;
-  color:navy;
-  margin-left:5%;
-}
-
-.navbar a {
-  float: left;
-  font-size: 10px;
-  color: navy;
+  flex:1 1 30rem;
+  background:var(--second-bg-color);
+  padding: 3rem 2rem 5rem;
+  border-radius: 2rem;
   text-align: center;
-  padding: 4px 8px;
-  text-decoration: none;
+  border: .2rem solid var(--bg-color);
+  transition: 0.5s;
+}
+.services-container .services-box:hover
+{
+border-color: var(--main-color);
+transform:scale(1.02)
+}
+.services-box i
+{
+  font-size:7rem;
+  color:var(--main-color);
 }
 
-.dropdown {
-  float: left;
+.services-box h3
+{
+  font-size:2.6rem;
+}
+
+.services-box p
+{
+  font-size: 1.6rem;
+  margin: 2rem 0 4rem;
+  
+}
+
+.project
+{
+  background: var(--second-bg-color);
+}
+.project h2
+{
+  margin-bottom: 4rem;
+  margin-left:10%;
+
+}
+.project-container
+{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  gap:2rem;
+  margin-left:10%;
+}
+
+.project-container .project-box
+{
+  position: relative;
+  border-radius: 2rem;
+  box-shadow: 0 0 1rem var(--bg-color);
   overflow: hidden;
+  display: flex;
 }
-
-.dropdown .dropbtn {
-  font-size: 10px;  
-  border: none;
-  outline: none;
-  color: navy;
-  padding: 14px 16px;
-  background-color: inherit;
-  font-family: inherit;
-  margin: 0;
-}
-
-.navbar a:hover,  .dropbtn {
-  background-color: red;
-  border-radius:8px;
-  cursor:pointer;
-  color:white;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
-.dropdown-content a {
-  float: none;
-  color: black;
-  padding: 5px 8px;
-  text-decoration: none;
-  display: block;
-  text-align: left;
-}
-
-.dropdown-content a:hover {
-  background-color: #ddd;
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-.dropbtn div
+.project-box img
 {
-  
-  width: 18px;
-  height: 3px;
-  background-color:navy;
-  margin: 5px 0;
-  margin-top:-10%;
-  
-
-
-}
-
-.dropdown:hover
-{
-  background:rgb(176, 175, 175);
-
-  border-radius:10px;
-}
-
-
-
-
-html
-{
-scroll-behavior:smooth;
-}
-
-
-
-                header
-                {
-                     //background:#2C2D2D;
-                      width:80%;
-                        margin-left:22%;
-                         text-align:center;
-                            font-size:10px;
-                              padding:10px;
-                             animation:ani3 0.75s;
-                             
-                       
-                              
-
-
-                         }
-
-header ol
-{
-padding:0px;
-
-}
-
-header ol li
-{
-list-style:none;
-padding:10px;
-cursor:pointer;
-display:inline;
-margin:1%;
-
-
-;
-
-
-
-
-}
-
-header ol li:hover
-{
-
-transform:scale(1.10);
-transition:0.5s;
-border-radius:60px;
-
-
-}
-
-header ol li a:link
-{
-color:navy;
-text-decoration:none;
-font-size:10px;
-}
-
-header ol li a:visited
-{
-color:navy;
-}
-
-header ol li a:hover
-{
-text-decoration:underline;
-color:rgb(11, 2, 2);
-
-}
-
-header ol li a:active
-{
-color: red;
-
-}
-
-.head
-{
-position:absolute;
-left:1%;
-top:2%;
-width:15%;
-padding:0px;
-
-}
-
-
-
-.pic
-{
-width:40%;
-padding:10px;
-margin-left:35%;
-
-
-
-
-
-}
-
-
-
-
-.tag
-{
-margin-top:-8%;
-padding:8%;
-
-width:100%;
-text-align:center;
-
-
-
-}
-
-.ashu
-{
-  font-size:15px;
-  font-family:arial black;
   width:100%;
-}
-.des
-{
-
-font-size:12px;
-font-weight:500;
-color:rgb(189, 152, 2);
+  transition: .5s ease;
 }
 
-.tag p
+.project-box:hover img
 {
-  font-size:9px;
+  transform: scale(1.1);
 }
 
-
-.jj
+.project-box .project-layer
 {
-width:4%;
-padding:1%;
-
-
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width:100%;
+  height:100%;
+  background:linear-gradient(rgba(0, 0, 0, .1), var(--main-color));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding:0 4rem;
+  transform: translateY(100%);
+  transition: 1s ease;
 }
 
-#footer
+.project-box:hover .project-layer
 {
-//background:grey;
-
-
+  transform: translateY(0);
 }
 
-
-
-
-
-body
+.project-layer h4
 {
-background:url(images/dddd.jpg);
-background-size:cover;
-animation:ani 2s;
-width:100%;
-overflow-x: hidden;
-
+  font-size: 4rem;;
+}
+.project-layer p
+{
+  font-size: 1.6rem;
+  margin:.3rem 0 1rem;
 }
 
-
-
-
-
-#space
+.project-layer a
 {
-height:200px;
-}
-
-#main
-{
-width:100%;
-margin:auto;
-margin-top:30px;
+  display: inline-flex;
+  justify-content: center;
+align-items: center;
+width: 5rem;
+height:5rem;
+background: var(--text-color);
+border-radius: 50%;
 
 }
-
-
-
-
-
-
-#main p
+.project-layer a i
 {
-width:90%;
-text-indent:50px;
-font-size:8px;
-font-family:verdana;
-text-align:justify;
-letter-spacing:1px;
-margin-left:1%;
-
-text-transform:capitalize;
-
-padding:20px;
-
-
-
+  font-size:2rem;
+  color:var(--second-bg-color);
 }
 
-
-
-
-#main p1 ul li
+.contact h2
 {
-padding:5px;
-text-transform:capitalize;
-letter-spacing:1px;
-font-size:8px;
+  margin-bottom: 3rem;
+  margin-left:15%;
+}
+.contact form
+{
+  max-width:70rem;
+  margin:1rem auto;
+  text-align: center;
+  margin-bottom: 3rem;
+  margin-left:30%;
+}
+.contact form .input-box
+{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  
+}
 
+.contact form .input-box input, .contact form textarea
+{
+  width: 100%;
+  padding: 1.5rem;
+  font-size: 1.6rem;
+  color: var(--text-color);
+  background: var(--second-bg-color);
+  border-radius: .8rem;
+  margin:.7rem 0;
+  
 
 }
 
-#main p2
+.contact form .input-box input
 {
-  font-size:8px;
+  width: 49%;
 }
 
-
-#main p:hover
+.contact form textarea
 {
- Cursor:pointer
-          color:gray;
+  resize:none;
 }
 
-.logopic
+.contact form .btn
 {
-width:5%;
-
-margin:0.50%;
-
-
-
-}
-.image
-{
- width:5%;
- 
+  margin-top: 2rem;
+  cursor: pointer;
 }
 
-
-
-.logopic:hover
+.footer 
 {
-Cursor:pointer;
-transform:scale(1.50);
-transition:0.50s;
-}
-
-.image:hover
-{
-Cursor:pointer;
-transform:scale(1.50);
-transition:0.50s;
-}
-
-
-#main h1
-{
-
-font-size:2px;
-color:white;
-width:100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding:2rem 9%;
+  background: var(--second-bg-color);
 
 }
 
-.main h1
+.footer-text p
 {
-  font-size:2px;
+  font-size:1.6rem;
+
+}
+.footer-iconTop a
+{
+  display: inline-flex;
+  justify-items: center;
+  align-items: center;
+  padding: .8rem;
+  background: var(--main-color);
+  border-radius: .5rem;
+
 }
 
-
-#up a:link
+.footer-iconTop a:hover
 {
-font-size:10px;
-color:black;
-
-margin-left:45%;
+  box-shadow: 0 0 1rem var(--main-color);
 }
 
-#int
+.footer-iconTop a i
 {
-    display:inline-block;
-    margin:7%;
-    margin-top:-5%;
-}
-#int p
-{
-    color:gray;
+font-size:2.4rem;
+color:var(--second-bg-color);
 }
 
-#int p1
+@media (max-width: 1200px)
 {
-    border:1px solid black;
-    padding:8px;
-    font-size:15px;
-    cursor:pointer;
-    margin-left:22%;
-    background:rgb(79, 103, 238);
-    color:white;
-    border-radius:8px;
+  html{
+    font-size: 55%;
+  }
+}
+
+@media (max-width: 991px)
+{
+.header
+{
+  padding:2rem 3%;
+}
+section
+{
+padding:10rem 3% 2rem;
+}
+
+.project{
+  padding-bottom: 7rem;
+}
+
+.services{
+  padding-bottom: 7rem;
+}
+
+.contact
+{
+
+  min-height: auto;
+}
+.footer
+{
+  padding: 2rem 3%;
+}
+}
+
+@media (max-width: 768px)
+{
+  #menu-icon
+  {
+    display: block;
+    cursor: pointer;
+
+  }
+  .navbar
+  {
+    position: absolute;
+    top:100%;
+    left: 0;
+    width:100%;
+    background: var(--bg-color);
+    padding: 1rem 3%;
+    border-top:.1rem solid rgba(0, 0, 0, .2);
+    box-shadow:0 .5rem 1rem rgba(0, 0, 0, .2);
+    display:none;
     
+  }
+
+  .navbar.active{
+    display: block;
+    
+  }
+  .navbar a{
+    display: block;
+    font-size: 2rem;
+    margin: 3rem 0;
+    
+
+
+  }
+
+  .home
+  {
+    flex-direction: column;
+  }
+
+  .home-content h3{
+    font-size: 2.6rem;
+
+  }
+  .home-content h1{
+    font-size: 5rem;
+  }
+  .home-img img{
+    width:60vw;
+    margin-top: 4rem;
+    margin-left:10%;
+  }
+  .about
+  {
+    flex-direction: column-reverse;
+  }
+  .about img{
+    width:60vw;
+    margin-top:4rem;
+    margin-left:10%;
+  }
+
+  .services h2{
+    margin-bottom:3rem;
+  }
+  .project h2{
+    margin-bottom: 3rem;
+  }
+  .project-container
+  {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .contact form{
+    margin-left:18%;
+  }
 }
 
-
-
-#int h2
+@media (max-width: 617px)
 {
-  
-  font-size:15px;
-  
+  .project-container{
+    grid-template-columns: 1fr;
+  }
+
+  .home
+  {
+    flex-direction: column;
+    margin-left: 4%;
+  }
+
+  .home-content h3{
+    font-size: 2rem;
+
+  }
+  .home-content h1{
+    font-size: 4rem;
+  }
+  .home-img img{
+    width:70vw;
+    margin-top: 4rem;
+    margin-left:1%;
+  }
+  .about
+  {
+    flex-direction: column-reverse;
+  }
+  .about img{
+    width:70vw;
+    margin-top:4rem;
+    margin-left:10%;
+  }
+
+  .contact form{
+    margin-left:%;
+  }
+
 }
-
-#int h3
-{
-  font-size:15px;
-}
-
-
-
-}
-
-
-
-
-
-
-
-
-
-
 
 </style>
+<body>
+  <header class="header">
+    <a href="#" class="logo">Ashu</a>
 
+    <i class='bx bx-menu' id="menu-icon"></i>
+    <nav class="navbar">
+      <a href="#" class="active">Home</a>
+      <a href="#about">About</a>
+      <a href="#myskills">Skills</a>
+      <a href="#project">My Project</a>
+      <a href="#contact">Contact</a>
+      <a href="#">Practice Work</a>
 
-<div style="main">
+    </nav>
 
-<a name="About me">
-<div style="color:white; background:#4aa5f9; box-shadow:10px 10px 10px black; text-align:center;">
-<h1>About me </h1>
+  </header>
+  <section class="home" id="home">
+<div class="home-content">
+  <h3>Hello, It's me</h3>
+  <h1>Ashutosh Mathur</h1>
+  <h3> And I'm a <span>Web Developer</span></h3>
+  <p>Hello, I am web Designer to create a attractive websites frontend and<br/> many more using HTML, CSS, JavaScript and jquery</p>
+  <div class="social-media">
+    <a href="#"><i class='bx bxl-facebook'></i></a>
+    <a href="#"><i class='bx bxl-whatsapp'></i></a>
+    <a href="#"><i class='bx bxl-instagram-alt'></i></a>
+    <a href="#"><i class='bx bxl-linkedin'></i></a>
+  </div>
+  <a href="#" class="btn">Download CV</a>
+</div>
+<div class="home-img">
+  <img src="images/Ashu.png">
 </div>
 
+  </section>
 
-
-
-
-
-<body> 
-
-
-
-
-<div id="main">
-
-<div style="font-family:verdana;margin-bottom:20px; text-align:center;">
-<p class="my style">
-
-
-Hey,
-My self <b><i>Ashutosh Mathur</i></b> and I am 22 years old. I am professional UI/UX and Graphic designer. I am currently in learning stage at <b>Arena Animation Institute</b> GTB nagar.
+  <section class="about" id="about">
+    <div class="about-img">
+      <img src="images/Ashu.png">
+    </div>
+    <div class="about-content">
+      <h2 class="heading">About <span>Me</span></h2>
+      <h3>Front end Designer</h3>
+      <p>My self Ashutosh Mathur and I am 22 years old. I am professional UI/UX and Graphic designer. I am currently in learning stage at <b>Arena Animation Institute</b> GTB nagar.
 if I talk about my eductation, I have passed 12 from CBSE board in which I get first place in whole school and currently persuing Graduation from Delhi Universilty.
 I have a diploma in computer and worked as a senior Accountant. My goal is to to build my career in the company and one day start my own compnay. My hobby is reading new books and learning new things related to anything. My long terms goal to start my own company and build my career in this field  as a designer.
-
-<br/><br/>
-
-UX design focuses on the interaction that a human user has with everyday products and services. The goal of UX design 
-is to make using these products and services, both digital or physical, easy, logical, and fun.You may have spent your fair share 
-of time searching reviews for a new coffee maker. In essence, you’re not only looking for a new appliance, but a product with
-features that will deliver you, the user, an enjoyable experience.
-
-
 </p>
+<a href="#" class="btn">Read More</a>
+    </div>
+  </section>
 
+  <section class="myskills" id="myskills">
+    <h2 class="heading">My <span>Skills</span></h2>
+
+    <div class="services-container">
+      <div class="services-box">
+        <i class='bx bx-code-alt'></i>
+        <h3>Web Designer</h3>
+        <p>Web designer is a professional who is responsible for the visual and interactive design of websites according their size of screen and responsive websites using HTML, CSS, Javascript, Jquery and Bootstrap.Considering how users will interact with the website. .</p>
+        <a href="#" class="btn">Read More</a>
+      </div>
+
+      <div class="services-box">
+        <i class='bx bxs-paint'></i>
+        <h3>Graphic Designer </h3>
+        <p>graphic designer is a professional who creates visual content to communicate ideas and messages, often working with both print and digital media Creating advertisements, social media content, and marketing materials using Photoshop, Coreldraw, Ilustration and Indesign</p>
+        <a href="#" class="btn">Read More</a>
+      </div>
+
+      <div class="services-box">
+       <i class='bx bxs-bar-chart-alt-2' ></i>
+        <h3>Accounting </h3>
+        <p>Accounting is the profession of tracking the assets or cash flows of a company or other large organization, and recording how its finances spent. Manage the balancesheet and stock inventory and fill the GST return on monthly basis maintain the ledger of sales and purchase account. </p>
+        <a href="#" class="btn">Read More</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="project" id="project">
+<h2 class="heading">
+  Latest <span>Project</span>
+</h2>
+
+<div class="project-container">
+  <div class="project-box">
+    <img src="images/dis1.jpg">
+    <div class="project-layer">
+      <h4>Web Design</h4>
+      <p>Disney land Websites using HTML CSS </p>
+      <a href="https://ashutosh7827.github.io/Disney/"><i class='bx bx-link-external' ></i></a>
+    </div>
+  </div>
+
+  <div class="project-box">
+    <img src="images/Furniture.jpg">
+    <div class="project-layer">
+      <h4>Web Design</h4>
+      <p>Home Furniture Websites using HTML CSS </p>
+      <a href="#"><i class='bx bx-link-external' ></i></a>
+    </div>
+  </div>
+
+  <div class="project-box">
+    <img src="images/formula1.jpg">
+    <div class="project-layer">
+      <h4>Web Design</h4>
+      <p>Fromula 1 racing carWebsites using HTML CSS</p>
+      <a href="https://ashutosh7827.github.io/f1racing/"><i class='bx bx-link-external' ></i></a>
+    </div>
+  </div>
+  <div class="project-box">
+    <img src="images/m2.jpg">
+    <div class="project-layer">
+      <h4>Web Design</h4>
+      <p> Mercedes Websites using HTML CSS </p>
+      <a href="https://ashutosh7827.github.io/mercedes/"><i class='bx bx-link-external' ></i></a>
+    </div>
+  </div>
+  <div class="project-box">
+    <img src="images/smurf.jpg">
+    <div class="project-layer">
+      <h4>Web Design</h4>
+      <p> Smurf Cartoon Websites using HTML CSS </p>
+      <a href="https://ashutosh7827.github.io/smurfweb/"><i class='bx bx-link-external' ></i></a>
+    </div>
+  </div>
 </div>
+</section>
 
+<section class="contact" id="contact">
+  <h2 class="heading">Contact <span>Me</span></h2>
 
+  <form action="#">
+    <div class="input-box">
+      <input type="text" placeholder="Full Name">
+      <input type="Email" placeholder="Email Address">
+    </div>
 
+    <div class="input-box">
+      <input type="Number" placeholder="Mobile Number">
+      <input type="Text" placeholder="Email Subject">
+    </div>
+    <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
+    <input type="submit" value="Send Message" class="btn">
+  </form>
+</section>
 
+<footer class="footer">
+  <div class="footer-text">
+    <p>Copyright &Copy; 2025 by Ashutosh / All Rights</p>
+  </div>
 
-
-<a name="My skills">
-<div style="color:white; background:#4aa5f9;box-shadow:10px 10px 10px black; text-align:center;">
-<h2><font size="5" >My skills</font> </h2>
-</div>
-
-
-
-<div style="font-family:verdana;margin-bottom:40px; text-transform:capitalize;  letter-spacing:1px;">
-<p1>
-<ul type="square"> 
-<font size="3"> 
-<li> <b>Photoshop:</b>   All Social Media post, banner, Resume, Poster, etc.</li>   
-<li><b>Illustration:</b>Design car illustration, Poster, Banner, Movie Poster, Company Logo, Branding etc.</li>     
-<li><b>Coreldraw: </b>Comapny Logo, Envelope, visiting card, Infographic, Calender, Flyers, Brochers, Packaging etc.</li> 
-<li><b>indesign: </b>Design Notebooks, Magazine, Books Design etc.</li> 
-<li><b>Animate CC: </b> Create a short Clip, Story of 2D Character etc.  </li>  
-<li><b>Computer Diploma: </b> Basic computer knowledge about MS word, MS Excel, MS Power point etc.</li>
-<li> <b>Advanced Tally: </b> Accounts, Balance sheet finalize, Payrolls, Ledgers, Sales and purchase, Stock summary, Inventory etc.</li></font>
-</ul>
-
-</p1> 
-</div>
-
-
-
-<a name="Social Media Link">
-
-<div style="color:white; background:#4aa5f9;box-shadow:10px 10px 10px black; text-align:center;">
-<h3><font size="5" >
-Social Media Link
-</font>
-</h3>
-</div>
-
-
-<a href="https://www.instagram.com/">
-<img class="logopic" src="images/insta.png">
-</a>
-
-<a href="https://www.facebook.com/login">
-<img class="logopic" src="images/facebook.png">
-</a>
-
-<a href="https://www.behance.net/ashutoshmathur3">
-<img class="image" src="images/behance.png">
-</a>
-
-<a href="https://web.whatsapp.com/login">
-<img class="logopic" src="images/whatsapp.png">
-</a>
-
-
-<a name="Contact Us">
-
-<div style="color:white; background:#4aa5f9;box-shadow:10px 10px 10px black; text-align:center;">
-<h4><font size="5">Contact Us</font></h4>
-</div>
-
-
-<div style="width:100%; //text-decoration: underline; ;font-family:verdana; letter-spacing:1.5px;">
-<p2>
-<b>Address:</b> Khasra no. 192, Som Bazaar Road, 25 Feet Road, Mukund Pur, Gali No. 9, Delhi- 110042, New Delhi, India
-<br/>
-
-
-<b>Mail:</b><a href="https://mail.google.com/mail/u/0/#inbox?compose=new"> mathurashutosh929@gmail.com</a>
-<br/>
-
-<b>Telephone:</b> 01145896572
-<br/>
-
-
-
-
-
-<b>Contact:</b> +91 7827220457
-<hr></hr>
-</p2>
-</div>
-
-
-
-
-
-
-
-
-
-
-<canvas id="myChart" style="width:20%;max-width:1500px; height:80px;"></canvas>
+  <div class="footer-iconTop">
+    <a href="#home"><i class='bx bx-up-arrow-alt'></i></a>
+  </div>
+</footer>
 
 <script>
-const xValues = ["HTML", "CSS", "Java Script", "Jquery", "Bootstrap", "PHP", "Wordpress"];
-const yValues = [55, 52, 44, 50, 15, 2, 1,];
-const barColors = ["red", "green","blue","orange","brown", "purple", "Blue"];
 
-new Chart("myChart", {
-  type: "bar",
-  data: {
-    labels: xValues,
-    datasets: [{
-      backgroundColor: barColors,
-      data: yValues
-    }]
-  },
-  options: {
-    legend: {display: false},
-    scales: {
-      yAxes: [{
-        ticks: {
-          beginAtZero: true
-        }
-      }]
-    },
+  let menuIcon = document.querySelector('#menu-icon');
+  let navbar = document.querySelector('.navbar');
 
-    title: {
-      display: true,
-      text: "My work Average"
-    }
-  }
-});
-</script>
+  menuIcon.onclick = () => {
+    menuIcon.classList.toggle('bx-x');
+    navbar.classList.toggle('active');
+  };
 
-<div id="web">
-
-<h1>My Sites</h1>
-</div>
-<div id="btn-top">
-<img src="images/f1.jpeg" class="interior">
-    <img src="images/m1.jpg" class="interior">
-    </div>
-
-    <div id="int">
-        <h2>
-            Formula 1 Car Racing
-         </h2>
   
-        <p1>Visit Site</p1>
-    </div>
+let section = document.querySelectorAll('section');
+let navLinks = document.querySelectorAll('header nav a');
 
-    <div id="int">
-        <h3>
-           Mercedes-Benz
+window.onscroll = () => {
+  section.forEach(sec =>{
+    let top = window.scrolly;
+    let offset = sec.offsetTop - 150;
+    let height = sec.offsetHeight;
+    let id = sec.getAttribute('id');
+
+    if(top >= offset && top < offset + height){
+     navLinks.foreach(links => {
+      links.classList.remove('active');
+      document.querySelector('header nav a[href*=' + id +']').classList.add('active');
+
+     });
+    };
+
+  });
+
+  let header = document.querySelector('header');
+
+  header.classList.toggle('sticky' , window.scrolly > 100);
+
+   menuIcon.classList.remove('bx-x');
+    navbar.classList.remove('active');
+};
 
 
 
-         </h3>
-      
-        <p1>Visit Site</p1>
-    </div>
 
-
-
-
-<div style="space:100px;height:200px;"> </div>
-
-
-
-
+</script>
+  
 </body>
-
-
 </html>
