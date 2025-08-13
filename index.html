@@ -1,32 +1,30 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Generative AI Platform</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Profile</title>
+ <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
-<a name="top">
 <style>
-    * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-body {
-  font-family: 'Segoe UI', sans-serif;
-  line-height: 1.6;
-  background:black;
-  overflow-x: hidden;
-}
-html
-{
-  overflow-x: hidden;
-  scroll-behavior: smooth;
-}
+  *
+  {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    text-decoration:none;
+    border:none;
+    outline:none;
+    scroll-behavior:smooth;
+    font-family:'Poppins', sans-serif;
+  }
+  body
+  {
+    overflow-x:hidden;
+  }
 
-:root
+  :root
   {
     --bg-color:#1f242d;
     --second-bg-color:#323946;
@@ -35,303 +33,156 @@ html
 
   }
 
-  .active
+  html
   {
-    color:var(--main-color)
-
+font-size:62.5%;
+overflow-x:hidden;
   }
 
-
-.pic
+  body{
+    background:var(--bg-color);
+    color:var(--text-color);
+  }
+  section
 {
-    width:10%;
-
+  min-height:100vh;
+  padding:10rem 9% 2rem;
+  margin-left:-12%;
 }
-nav {
-  background: #111;
-  color: white;
-  display: flex;
-  justify-content: space-between;
-  padding: 20px;
-   position:fixed;
+  .header
+  {
+    position:fixed;
     top:0;
     left:0;
     width:100%;
-    z-index: 100;
-  
-}
-nav .logo {
-  font-size: 24px;
-  font-weight: bold;
-  color:var(--main-color);
-}
-nav ul {
-  list-style: none;
-  display: flex;
-  
-  
-}
-nav ul li {
-  margin-left: 20px;
+    padding:2rem 9%;
+    background:var(--bg-color);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    z-index:100;
+  }
 
-  
-}
-nav ul li a {
-  color: white;
-  text-decoration: none;
-  color:white;
-  
+  .header.sticky
+  {
+    border-bottom: .1rem solid rgba(0, 0, 0, .2);
+  }
+  .logo
+  {
+    font-size:2.5rem;
+    color:var(--text-color);
+    font-weight:600;
+    cursor:default;
+  }
 
-}
-
-nav ul li a:hover{
-  color:var(--main-color)
-  
-}
-.main {
-  padding: 80px 20px;
-  text-align: center;
-  background: url(images/b1.jpg);
-  color: white;
-  height:500px;
-
-}
-
-.main h1 {
-  font-size: 40px;
-  margin-bottom: 10px;
-  margin-top:10%;
-}
-.main button {
-  padding: 10px 20px;
-  font-size: 16px;
-  background: white;
-  color: #333;
-  border: none;
-  cursor: pointer;
-  margin-top: 20px;
-  border-radius:5px;
-}
-section {
-  padding: 50px 20px;
-  text-align: center;
-  color:white;
-}
-
-section h2{
-  color:var(--main-color)
-}
-
-section p
-{
-  text-align:center;
-}
-.feature-boxes {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
-  padding: 2rem 0 1rem;
-}
-.feature {
-  background: black;
-  border: 1px solid #ccc;
-  padding: 20px;
-  width: 250px;
-  border-radius: 8px;
-  color:white;
-  cursor: pointer;
-  box-shadow: 5px 5px 5px  solid white;
-
-}
-
-.feature h3
+  .navbar a
+  {
+    font-size:1.7rem;
+    color:var(--text-color);
+    margin-left:4rem;
+    transition:.3s;
+    font-family:verdana;
+    
+  }
+  .navbar a:hover, .navbar a.active
 {
   color:var(--main-color);
 }
-#contact
+
+#menu-icon
 {
-  background:black;
-}
-#contact h2
-{
-  color:white;
-  color:var(--main-color)
+  font-size:3.6rem;
+  color:var(--text-color);
+  display:none;
 }
 
-
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  max-width: 400px;
-  margin: 0 auto;
+.home
+{
+  display:flex;
+  justify-content:center;
+  align-items:center;
 }
-form input, form textarea {
-  padding: 10px;
-  border: 1px solid #ccc;
+
+.home-img img
+{
+  width:28vw;
+  margin-left:50%;
+  animation: floatImage 4s ease-in-out infinite;
+}
+@keyframes floatImage{
+  0%{
+    transform: translateY(0);
+  }
+  50%{
+    transform: translateY(-2.4rem);
+  }
+ 100%{
+    transform: translateY(0);
+  }
+}
+.home-content h3
+{
+  font-size:3.2rem;
+  font-weight:700;
   
 }
-form button {
-  background-color: var(--main-color);
-  color:black;
-  border-radius: 10px;
-  padding: 10px;
-  border: none;
-  cursor: pointer;
-  width:40%;
-  margin:auto;
-  font-size: 18px;
-}
 
-#apps h2
+span
 {
-  font-size: 35px;
-  padding:1rem 0 2rem;
+  color:var(--main-color);
 }
 
-
-
-.apps
+.home-content h3:nth-of-type(2)
 {
-  width:10%;
-  padding:10px;
-  
-}
-.tool-boxes {
-  display: flex;
-  justify-content: center;
-  gap: 50px;
-  flex-wrap: wrap;
-  padding: 2rem 0 2rem;
-  border:1px solid white;
-  background:#C1F5C1;
+  margin-bottom:2rem;
 }
 
-#mar h2
+.home-content h1
 {
-  color:white;
-  font-family: 'Segoe UI', sans-serif;
-  text-align:center;
-  font-size:25px;
-
+  font-size:5.6rem;
+  font-weight:700;
+  line-height:1.3;
 }
 
-.box
+.home-content p
 {
-width:30%;
-
-border-radius:5px;
-margin-top:10px;
-border:1px solid white;
-display:inline-block;
-margin:1%;
-background:white;
-overflow:hidden;
-background:black;
-height:500px;
-
+  font-size:1.6rem;
+  font-family:verdana;
 }
 
-
-
-
-.image img
+.social-media a
 {
-width:100%;
-
-
+  display:inline-flex;
+  justify-content:center;
+  align-items:center;
+  width:4rem;
+  height:4rem;
+  background:transparent;
+  border:.2rem solid var(--main-color);
+  border-radius:50%;
+  font-size:2rem;
+  color:var(--main-color);
+  margin:3rem 1.5rem 3rem 0;
 }
 
-.image img:hover
+.social-media a:hover
 {
-
-    cursor:pointer;
-    transform:scale(1.05);
-    transition:0.5s;
-    
-}
-
-
-.name
-{
-
-font-size:20px;
-padding:20px;
-color:white;
-}
-
-.price
-{
-
-font-size:18px;
-color:white;
-margin-left:4%;
-
-
-}
-
-
-
-.mrd
-{
-    width:50%;
-    margin:50px;
-    border-radius:25px;
-}
-
-.mrd1
-{
-    width:50%;
-    margin:50px;
-    margin-left:50%;
-    margin-top:10%;
-    border-radius:25px;
-}
-
-.mrd2
-{
-    width:50%;
-    margin:50px;
-    margin-top:8%;
-    border-radius:25px;
-}
-
-#col
-{
-    width:40%;
-    margin-left:57%;
-    margin-top:-35%;
-    font-size:25px;
-    box-shadow:5px 5px 5px solid rgb(241, 1, 1);
-   
-}
-
-#col h2
-{
-    color:var(--main-color);
-    
-}
-
-#col p
-{
-    text-align:justify;
-    color:white;
-    font-size:20px;
+  background:var(--main-color);
+  color:var(--second-bg-color);
+  box-shadow:0 0 1rem var(--main-color);
 }
 
 .btn
 {
-  
+  display:inline-block;
   padding:1rem 2.8rem;
-  background:#0ef;
+  background:var(--main-color);
   border-radius:4rem;
- box-shadow:0 0 1rem var(--main-color);
+  box-shadow:0 0 1rem var(--main-color);
   font-size:1.6rem;
-  color:black;
+  color:var(--second-bg-color);
   letter-spacing: .1rem;
   font-weight: 600;
-  text-decoration: none;
   transition: .5s;
 }
 
@@ -340,48 +191,243 @@ margin-left:4%;
   box-shadow:none;
 }
 
-#col1
+.about
 {
-    width:40%;
-    margin-left:5%;
-    margin-top:-35%;
-    font-size:25px;
-    box-shadow:5px 5px 5px solid rgb(241, 1, 1);
-   
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:2rem;
+  background:var(--second-bg-color);
 }
 
-#col1 p
+.about-img img
 {
-    text-align:justify;
-    color:white;
-    font-size:20px;
+  width:28vw;
+  margin-left:30%;
 }
 
-#col1 h2
+.heading
 {
-    color:var(--main-color);
+  text-align:center;
+  font-size:4.5rem;
+  
+
+}
+.about-content
+{
+  margin-left:20%;
+  
 }
 
-#col2
+.about-content h2
 {
-    width:40%;
-    margin-left:58%;
-    margin-top:-35%;
-    font-size:25px;
-    box-shadow:5px 5px 5px solid rgb(241, 1, 1);
-   
+  text-align:left;
+  line-height:1.2;
+
+}
+.about-content h3
+{
+  font-size: 2.6rem;
+}
+.about-content p
+{
+  font-size: 1.6rem;
+  margin:2rem 0 3rem;
+  font-size: Medium;
+  letter-spacing:1px;
 }
 
-#col2 h2
+.myskills h2
 {
-    color:var(--main-color);
+  margin-bottom:5rem;
+   margin-left:10%;
+
+  
+  
 }
 
-#col2 p
+.services-container
 {
-    text-align:justify;
-    color:white;
-    font-size:20px;
+  display:flex;
+  justify-content:center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap:2rem;
+  margin-left:10%;
+
+}
+
+
+
+.services-container .services-box
+{
+  flex:1 1 30rem;
+  background:var(--second-bg-color);
+  padding: 3rem 2rem 5rem;
+  border-radius: 2rem;
+  text-align: center;
+  border: .2rem solid var(--bg-color);
+  transition: 0.5s;
+}
+.services-container .services-box:hover
+{
+border-color: var(--main-color);
+transform:scale(1.02)
+}
+.services-box i
+{
+  font-size:7rem;
+  color:var(--main-color);
+}
+
+.services-box h3
+{
+  font-size:2.6rem;
+}
+
+.services-box p
+{
+  font-size: 1.6rem;
+  margin: 2rem 0 4rem;
+  
+}
+
+.project
+{
+  background: var(--second-bg-color);
+}
+.project h2
+{
+  margin-bottom: 4rem;
+  margin-left:10%;
+
+}
+.project-container
+{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  gap:2rem;
+  margin-left:10%;
+}
+
+.project-container .project-box
+{
+  position: relative;
+  border-radius: 2rem;
+  box-shadow: 0 0 1rem var(--bg-color);
+  overflow: hidden;
+  display: flex;
+}
+.project-box img
+{
+  width:100%;
+  transition: .5s ease;
+}
+
+.project-box:hover img
+{
+  transform: scale(1.1);
+}
+
+.project-box .project-layer
+{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width:100%;
+  height:100%;
+  background:linear-gradient(rgba(0, 0, 0, .1), var(--main-color));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding:0 4rem;
+  transform: translateY(100%);
+  transition: 1s ease;
+}
+
+.project-box:hover .project-layer
+{
+  transform: translateY(0);
+}
+
+.project-layer h4
+{
+  font-size: 4rem;;
+}
+.project-layer p
+{
+  font-size: 1.6rem;
+  margin:.3rem 0 1rem;
+}
+
+.project-layer a
+{
+  display: inline-flex;
+  justify-content: center;
+align-items: center;
+width: 5rem;
+height:5rem;
+background: var(--text-color);
+border-radius: 50%;
+
+}
+.project-layer a i
+{
+  font-size:2rem;
+  color:var(--second-bg-color);
+}
+
+.contact h2
+{
+  margin-bottom: 3rem;
+  margin-left:15%;
+}
+.contact form
+{
+  max-width:70rem;
+  margin:1rem auto;
+  text-align: center;
+  margin-bottom: 3rem;
+  margin-left:30%;
+}
+.contact form .input-box
+{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  
+}
+
+.contact form .input-box input, .contact form textarea
+{
+  width: 100%;
+  padding: 1.5rem;
+  font-size: 1.6rem;
+  color: var(--text-color);
+  background: var(--second-bg-color);
+  border-radius: .8rem;
+  margin:.7rem 0;
+  
+
+}
+
+.contact form .input-box input
+{
+  width: 49%;
+}
+
+.contact form textarea
+{
+  resize:none;
+}
+
+.contact form .btn
+{
+  margin-top: 2rem;
+  cursor: pointer;
 }
 
 .footer 
@@ -397,9 +443,7 @@ margin-left:4%;
 
 .footer-text p
 {
-  font-size:1rem;
-  color:var(--text-color);
-
+  font-size:1.6rem;
 
 }
 .footer-iconTop a
@@ -410,7 +454,6 @@ margin-left:4%;
   padding: .8rem;
   background: var(--main-color);
   border-radius: .5rem;
-  text-decoration: none;
 
 }
 
@@ -421,505 +464,182 @@ margin-left:4%;
 
 .footer-iconTop a i
 {
-font-size:2rem;
+font-size:2.4rem;
 color:var(--second-bg-color);
-
 }
 
-#mar h2{
-  color:var(--main-color)
-}
-
-@media only screen and (max-width: 390px)
+@media (max-width: 1200px)
 {
-  body{
-    overflow-x: hidden;
+  html{
+    font-size: 55%;
   }
-  .apps
-{
-  width:25%;
-  padding:5px;
-  
-}
-.tool-boxes {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
-  padding: 2rem 0 2rem;
-  border:1px solid white;
-  background:#C1F5C1;
-  border-radius: 10%;
 }
 
-.mrd
+@media (max-width: 991px)
 {
-    width:97%;
-    margin:auto;
-    border-radius:25px;
+.header
+{
+  padding:2rem 3%;
+}
+section
+{
+padding:10rem 3% 2rem;
 }
 
-.mrd1
-{
-    width:97%;
-    margin:auto;
-   
-    border-radius:25px;
+.project{
+  padding-bottom: 7rem;
 }
 
-.mrd2
-{
-    width:97%;
-    margin:auto;
-   
-    border-radius:25px;
+.services{
+  padding-bottom: 7rem;
 }
 
-#col
+.contact
 {
-    width:95%;
-    margin-left:1%;
-    margin-top:-1%;
-    font-size:25px;
-    box-shadow:5px 5px 5px solid rgb(241, 1, 1);
-   
+
+  min-height: auto;
+}
+.footer
+{
+  padding: 2rem 3%;
+}
 }
 
-#col h2
+@media (max-width: 768px)
 {
-    color:var(--main-color);
-     font-size: 25px;
-}
+  #menu-icon
+  {
+    display: block;
+    cursor: pointer;
 
-#col p
-{
-    text-align:justify;
-    color:white;
-    font-size:20px;
-}
-
-.btn
-{
-  
-  padding:1rem 2rem;
-  background:#0ef;
-  border-radius:4rem;
- box-shadow:0 0 1rem var(--main-color);
-  font-size:1rem;
-  color:black;
-  letter-spacing: .1rem;
-  font-weight: 600;
-  text-decoration: none;
-  transition: .5s;
-}
-
-.btn:hover
-{
-  box-shadow:none;
-}
-
-#col1
-{
-    width:95%;
-    margin-left:1%;
-    margin-top:-1%;
-    font-size:25px;
-    box-shadow:5px 5px 5px solid rgb(241, 1, 1);
-   
-}
-
-#col1 p
-{
-    text-align:justify;
-    color:white;
-    font-size:20px;
-}
-
-#col1 h2
-{
-    color:var(--main-color);
-    font-size: 25px;
-}
-
-#col2
-{
-    width:95%;
-    margin-left:1%;
-    margin-top:-1%;
-    font-size:25px;
-    box-shadow:5px 5px 5px solid rgb(241, 1, 1);
-   
-}
-
-#col2 h2
-{
-  color:var(--main-color);
-    font-size: 25px;
-}
-
-#col2 p
-{
-    text-align:justify;
-    color:white;
-    font-size:20px;
-}
-
-.box
-{
-width:97%;
-
-border-radius:5px;
-margin-top:10px;
-border:1px solid white;
-display:inline-block;
-margin:1%;
-background:white;
-overflow:hidden;
-background:black;
-height:500px;
-
-}
-
-
-
-
-.image img
-{
-width:100%;
-
-
-}
-
-.image img:hover
-{
-
-    cursor:pointer;
-    transform:scale(1.05);
-    transition:0.5s;
+  }
+  .navbar
+  {
+    position: absolute;
+    top:100%;
+    left: 0;
+    width:100%;
+    background: var(--bg-color);
+    padding: 1rem 3%;
+    border-top:.1rem solid rgba(0, 0, 0, .2);
+    box-shadow:0 .5rem 1rem rgba(0, 0, 0, .2);
+    display:none;
     
-}
+  }
+
+  .navbar.active{
+    display: block;
+    
+  }
+  .navbar a{
+    display: block;
+    font-size: 2rem;
+    margin: 3rem 0;
+    
 
 
-.name
-{
+  }
 
-font-size:18px;
-padding:20px;
-color:var(--main-color);
-}
+  .home
+  {
+    flex-direction: column;
+  }
 
-.price
-{
+  .home-content h3{
+    font-size: 2.6rem;
 
-font-size:15px;
-color:white;
-margin-left:4%;
-
-
-}
-
-.feature-boxes {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
-  padding: 2rem 0 1rem;
-}
-.feature {
-  background: black;
-  border: 1px solid #ccc;
-  padding: 20px;
-  width: 300px;
-  border-radius: 8px;
-  color:white;
-  cursor: pointer;
-  box-shadow: 5px 5px 5px  solid white;
-
-}
-nav .logo {
-  font-size: 20px;
-  font-weight: bold;
-  color:var(--main-color)
-}
-section h2{
-  color:var(--main-color);
-  padding:1rem 0 2rem;
-  font-size:30px;
-}
-
-#contact h2{
-  color:var(--main-color);
-  padding:1rem 0 1rem;
-  font-size:30px;
-}
-
-#about p{
-  font-size:18px;
-
-
-}
-form button{
-  width:60%;
-  font-size:20px;
-  background-color: var(--main-color);
-  color:black;
-  border-radius: 10px;
-}
-
-.footer{
+  }
+  .home-content h1{
+    font-size: 5rem;
+  }
+  .home-img img{
+    width:60vw;
+    margin-top: 4rem;
+    margin-left:10%;
+  }
+  .about
+  {
     flex-direction: column-reverse;
+  }
+  .about img{
+    width:60vw;
+    margin-top:4rem;
+    margin-left:10%;
+  }
+
+  .services h2{
+    margin-bottom:3rem;
+  }
+  .project h2{
+    margin-bottom: 3rem;
+  }
+  .project-container
+  {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .contact form{
+    margin-left:18%;
+  }
+}
+
+@media (max-width: 617px)
+{
+  .project-container{
+    grid-template-columns: 1fr;
+  }
+
+  .home
+  {
+    flex-direction: column;
+    margin-left: 4%;
+  }
+
+  .home-content h3{
+    font-size: 2.5rem;
 
   }
-  .footer p{
-    text-align: center;
-    margin-top: 2rem;
+  .home-content h1{
+    font-size: 4.5rem;
+  }
+  .home-img img{
+    width:80vw;
+    margin-top: 4rem;
+    margin-left:1%;
+  }
+  .about
+  {
+    flex-direction: column-reverse;
+  }
+  .about img{
+    width:80vw;
+    margin-top:4rem;
+    margin-left:10%;
   }
 
-}
-
-@media only screen and (max-width: 768px)
-{
-  body{
-    overflow-x: hidden;
+  .contact form{
+    margin-left:10%;
   }
-  .apps
-{
-  width:25%;
-  padding:5px;
+
   
-}
-.tool-boxes {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
-  padding: 2rem 0 2rem;
-  border:1px solid white;
-   background:#C1F5C1;
-  border-radius: 10%;
+
 }
 
-.mrd
+@media (max-width: 450px)
 {
-    width:97%;
-    margin:auto;
-    border-radius:25px;
-}
-
-.mrd1
-{
-    width:97%;
-    margin:auto;
-   
-    border-radius:25px;
-}
-
-.mrd2
-{
-    width:97%;
-    margin:auto;
-   
-    border-radius:25px;
-}
-
-#col
-{
-    width:95%;
-    margin-left:1%;
-    margin-top:-1%;
-    font-size:25px;
-    box-shadow:5px 5px 5px solid rgb(241, 1, 1);
-   
-}
-
-#col h2
-{
-    color:var(--main-color);
-     font-size: 25px;
-}
-
-#col p
-{
-    text-align:justify;
-    color:white;
-    font-size:20px;
-}
-
-.btn
-{
-  
-  padding:1rem 2rem;
-  background:#0ef;
-  border-radius:4rem;
- box-shadow:0 0 1rem var(--main-color);
-  font-size:1rem;
-  color:black;
-  letter-spacing: .1rem;
-  font-weight: 600;
-  text-decoration: none;
-  transition: .5s;
-}
-
-.btn:hover
-{
-  box-shadow:none;
-}
-
-#col1
-{
-    width:95%;
-    margin-left:1%;
-    margin-top:-1%;
-    font-size:25px;
-    box-shadow:5px 5px 5px solid rgb(241, 1, 1);
-   
-}
-
-#col1 p
-{
-    text-align:justify;
-    color:white;
-    font-size:20px;
-}
-
-#col1 h2
-{
-   color:var(--main-color);
-    font-size: 25px;
-}
-
-#col2
-{
-    width:95%;
-    margin-left:1%;
-    margin-top:-1%;
-    font-size:25px;
-    box-shadow:5px 5px 5px solid rgb(241, 1, 1);
-   
-}
-
-#col2 h2
-{
-    color:var(--main-color);
-    font-size: 25px;
-}
-
-#col2 p
-{
-    text-align:justify;
-    color:white;
-    font-size:20px;
-}
-
-.box
-{
-width:97%;
-
-border-radius:5px;
-margin-top:10px;
-border:1px solid white;
-display:inline-block;
-margin:1%;
-background:white;
-overflow:hidden;
-background:black;
-height:580px;
+html{
+  font-size:50%;
 
 }
-
-
-
-
-.image img
-{
-width:100%;
-
-
+.contact form .input-box input{
+  width:100%;
 }
 
-.image img:hover
-{
+.contact form{
+    margin-left:10%;
+  }
 
-    cursor:pointer;
-    transform:scale(1.05);
-    transition:0.5s;
-    
-}
-
-
-.name
-{
-
-font-size:23px;
-padding:20px;
-color:var(--main-color);
-
-}
-
-.price
-{
-
-font-size:20px;
-color:white;
-margin-left:4%;
-
-
-}
-
-.feature-boxes {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
-  padding: 2rem 0 1rem;
-}
-.feature {
-  background: black;
-  border: 1px solid #ccc;
-  padding: 20px;
-  width: 350px;
-  border-radius: 8px;
-  color:white;
-  cursor: pointer;
-  box-shadow: 5px 5px 5px  solid white;
-  font-size:20px;
-
-}
-.pic
-{
-    width:35%;
-    margin-top:-10%;
-
-}
-
-#mar h2{
-  color:var(--main-color);
-  padding:1rem 0 2rem;
-}
-
-section h2{
-  color:var(--main-color);
-  padding:1rem 0 2rem;
-  font-size:30px;
-}
-
-#contact h2{
-  color:var(--main-color);
-  padding:1rem 0 1rem;
-  font-size:30px;
-  
-}
-
-#about p{
-  font-size:18px;
-}
-
-form button{
-  font-size:20px;
-  width:60%;
-}
-
-.footer{
+  .footer{
     flex-direction: column-reverse;
 
   }
@@ -928,225 +648,237 @@ form button{
     margin-top: 2rem;
   }
 }
+
 
 
 </style>
 <body>
+  <header class="header">
+    <a href="#" class="logo">Ashu</a>
 
-  <header>
-    <nav>
-      <div class="logo">GenAI</div>
-      <ul>
-        
-        <li><a href="#about">About</a></li>
-        <li><a href="#features">Features</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
+    <i class='bx bx-menu' id="menu-icon"></i>
+    <nav class="navbar">
+      <a href="#" class="active">Home</a>
+      <a href="#about">About</a>
+      <a href="#myskills">Skills</a>
+      <a href="#project">My Project</a>
+      <a href="#contact">Contact</a>
+      <a href="menu.html">Practice Work</a>
+
     </nav>
-    <div class="main">
-      <h1>Powering Creativity with Generative AI</h1>
-      <p>Transforming your ideas into art, text, and more using intelligent systems.</p>
-      <button>Get Started</button>
-    </div>
+
   </header>
-
-  <section id="about">
-    <h2>About Generative AI</h2>
-    <p>Generative AI refers to artificial intelligence that can generate text, images, videos, and code using large-scale models trained on huge datasets. It is used in art, writing, design, Generative AI is a branch of artificial intelligence that creates new content—such as text, images, music, videos, or code—by learning patterns from large datasets. Unlike traditional AI, which focuses on analysis or prediction, Generative AI uses advanced models (like GPT, DALL·E, or Stable Diffusion) to produce original outputs based on a given prompt. It’s widely used in creative fields, automation, and content generation, but also raises concerns about accuracy, copyright, and ethics.coding, and more.Generative AI has become a revolutionary tool in the realm of website creation by offering solutions that streamline design processes and increase scalability. .</p>
-  </section>
-
-  <section id="features">
-    <h2>Key Features</h2>
-    <div class="feature-boxes">
-      <div class="feature">
-        <h3>Text Generation!</h3>
-        <p>Generate blog posts, emails, scripts, and more.</p>
-      </div>
-      <div class="feature">
-        <h3>Image Creation!</h3>
-        <p>Create stunning AI-generated images from prompts.</p>
-      </div>
-      <div class="feature">
-        <h3>Code Writing!</h3>
-        <p>Build code with AI assistance for any project.</p>
-      </div>
-       <div class="feature">
-        <h3>Productivity Tools!</h3>
-        <p>Integrate AI into workflows to save time.</p>
-      </div>
-       <div class="feature">
-        <h3> Design & Creative Tools!</h3>
-        <p>For UI/UX design, branding, and creative projects.</p>
-      </div>
-       <div class="feature">
-        <h3>Voice & Speech Tools!</h3>
-        <p>Work with audio — text-to-speech, speech-to-text, and voice cloning.
-    </div>
-    <div class="feature">
-        <h3> Chat & Writing Assistants!</h3>
-        <p>Used for generating text, answering questions, summarizing, translating, and creating content.
-
-.
-    </div>
-    </div>
-    
-  </section>
-
-  <section id="apps">
-    <h2>AI Apps</h2>
-    <div class="tool-boxes">
-      <img src="images/chat.png" class="apps">
-     <img src="images/grok.png" class="apps">
-      <img src="images/canva.png" class="apps">
-      <img src="images/mid.png" class="apps">
-      <br/>
-      <img src="images/syn.png" class="apps">
-       <img src="images/gem.png" class="apps">
-      
-      <img src="images/dall.png" class="apps">
-     
-    </div>
-    
-  </section>
-
-  
-<div id="side-statement">
-<img src="images/s3.jpg" class="mrd">
-<div id="col">
-    <h2>Revamp your website to boost conversions and increase pipeline.</h2>
-    <br/>
-    <p>By enhancing user experience, optimizing performance, and implementing scalable design, our website redesigns help you attract more visitors, convert leads, and drive sustainable growth.</p>
-     <br/>
-    <a href="#" class="btn">Learn More</a>
-      <br/>
-      <br/>
-
+  <section class="home" id="home">
+<div class="home-content">
+  <h3>Hello, It's me</h3>
+  <h1>Ashutosh Mathur</h1>
+  <h3> And I'm a <span class="multiple-text"></span></h3>
+  <p>Hello, I am web Designer to create a attractive websites frontend and<br/> many more using HTML, CSS, JavaScript and jquery</p>
+  <div class="social-media">
+    <a href="#"><i class='bx bxl-facebook'></i></a>
+    <a href="#"><i class='bx bxl-whatsapp'></i></a>
+    <a href="#"><i class='bx bxl-instagram-alt'></i></a>
+    <a href="#"><i class='bx bxl-linkedin'></i></a>
+  </div>
+  <a class="btn" href="images/resume.pdf" download="Ashutosh_Resume.pdf">Download CV</a>
 </div>
-</div>
-<img src="images/s2.jpg" class="mrd1">
-<div id="col1">
-    <h2>Seamless Website Migrations without the headaches.</h2>
-    <br/>
-    <p>Migrate your website to a modern platform with minimal downtime and maximum efficiency. From planning to execution, we ensure your migration is seamless, secure, and aligned with your business goals.</p>
-     <br/>
-    <a href="#" class="btn">Learn More</a>
-      <br/>
-    <br/>
-
+<div class="home-img">
+  <img src="images/Ashu.png">
 </div>
 
-<img src="images/s1.jpg" class="mrd2"> 
-<div id="col2">
-    <h2>Get a dedicated Website Product Team to drive continuous growth.</h2>
-    <br/>
-    <p>Get a tailored Website Product Team to help you continuously manage, optimize, and scale your website. Taking an agile, data-driven approach, we ensure your site evolves alongside your business goals. </p>
-    <br/>
-    <a href="#" class="btn">Learn More</a>
-      <br/>
-      <br/>
+  </section>
 
-</div> 
-<br/><br/><br/><br/><br/>
-  <div id="mar">
-    <h2>Top insights for AI marketers</h2>
+  <section class="about" id="about">
+    <div class="about-img">
+      <img src="images/Ashu.png">
+    </div>
+    <div class="about-content">
+      <h2 class="heading">About <span>Me</span></h2>
+      <h3>Front end Designer</h3>
+      <p>My self Ashutosh Mathur and I am 22 years old. I am professional UI/UX and Graphic designer. I am currently in learning stage at <b>Arena Animation Institute</b> GTB nagar.
+if I talk about my eductation, I have passed 12 from CBSE board in which I get first place in whole school and currently persuing Graduation from Delhi Universilty.
+I have a diploma in computer and worked as a senior Accountant. My goal is to to build my career in the company and one day start my own compnay. My hobby is reading new books and learning new things related to anything. My long terms goal to start my own company and build my career in this field  as a designer.
+</p>
+<a href="#" class="btn">Read More</a>
+    </div>
+  </section>
+
+  <section class="myskills" id="myskills">
+    <h2 class="heading">My <span>Skills</span></h2>
+
+    <div class="services-container">
+      <div class="services-box">
+        <i class='bx bx-code-alt'></i>
+        <h3>Web Designer</h3>
+        <p>Web designer is a professional who is responsible for the visual and interactive design of websites according their size of screen and responsive websites using HTML, CSS, Javascript, Jquery and Bootstrap.Considering how users will interact with the website. .</p>
+        <a href="#" class="btn">Read More</a>
+      </div>
+
+      <div class="services-box">
+        <i class='bx bxs-paint'></i>
+        <h3>Graphic Designer </h3>
+        <p>graphic designer is a professional who creates visual content to communicate ideas and messages, often working with both print and digital media Creating advertisements, social media content, and marketing materials using Photoshop, Coreldraw, Ilustration and Indesign</p>
+        <a href="#" class="btn">Read More</a>
+      </div>
+
+      <div class="services-box">
+       <i class='bx bxs-bar-chart-alt-2' ></i>
+        <h3>Accounting </h3>
+        <p>Accounting is the profession of tracking the assets or cash flows of a company or other large organization, and recording how its finances spent. Manage the balancesheet and stock inventory and fill the GST return on monthly basis maintain the ledger of sales and purchase account. </p>
+        <a href="#" class="btn">Read More</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="project" id="project">
+<h2 class="heading">
+  Latest <span>Project</span>
+</h2>
+
+<div class="project-container">
+  <div class="project-box">
+    <img src="images/dis1.jpg">
+    <div class="project-layer">
+      <h4>Web Design</h4>
+      <p>Disney land Websites using HTML CSS </p>
+      <a href="https://ashutosh7827.github.io/Disney/"><i class='bx bx-link-external' ></i></a>
+    </div>
   </div>
 
-  <div class="box">
+  <div class="project-box">
+    <img src="images/furniture.jpg">
+    <div class="project-layer">
+      <h4>Web Design</h4>
+      <p>Home Furniture Websites using HTML CSS </p>
+      <a href="#"><i class='bx bx-link-external' ></i></a>
+    </div>
+  </div>
 
-            <div class="image">
-            <img src="images/a1.jpg">
-            </div>
-            
-            <div class="name">
-                <b>Best AI Website Design Examples and Inspiration [2025]</b>
-            
-            </div>
-            
-            <div class="price">
-            <p>See how some of the top websites in the AI industry are enabling high growth through their website's exceptional UX and marketing strategies</p>
-             </div>
-            </div>
+  <div class="project-box">
+    <img src="images/formula1.jpg">
+    <div class="project-layer">
+      <h4>Web Design</h4>
+      <p>Fromula 1 racing carWebsites using HTML CSS</p>
+      <a href="https://ashutosh7827.github.io/f1racing/"><i class='bx bx-link-external' ></i></a>
+    </div>
+  </div>
+  <div class="project-box">
+    <img src="images/m2.jpg">
+    <div class="project-layer">
+      <h4>Web Design</h4>
+      <p> Mercedes Websites using HTML CSS </p>
+      <a href="https://ashutosh7827.github.io/mercedes/"><i class='bx bx-link-external' ></i></a>
+    </div>
+  </div>
+  <div class="project-box">
+    <img src="images/smurf.jpg">
+    <div class="project-layer">
+      <h4>Web Design</h4>
+      <p> Smurf Cartoon Websites using HTML CSS </p>
+      <a href="https://ashutosh7827.github.io/smurfweb/"><i class='bx bx-link-external' ></i></a>
+    </div>
+  </div>
+</div>
+</section>
 
-            
+<section class="contact" id="contact">
+  <h2 class="heading">Contact <span>Me</span></h2>
 
-            <div class="box">
+  <form action="#">
+    <div class="input-box">
+      <input type="text" placeholder="Full Name">
+      <input type="Email" placeholder="Email Address">
+    </div>
 
-            <div class="image">
-            <img src="images/a2.jpg">
-            </div>
-            
-            <div class="name">
-                <b>On-Page SEO Strategies for AI Companies</b>
-            
-            </div>
-            
-            <div class="price">
-            <p>Unlock the power of on-page SEO for your AI startup with proven strategies to boost rankings, drive organic traffic, and outshine competitors.</p>
-             </div>
-            </div>
+    <div class="input-box">
+      <input type="Number" placeholder="Mobile Number">
+      <input type="Text" placeholder="Email Subject">
+    </div>
+    <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
+    <input type="submit" value="Send Message" class="btn">
+  </form>
+</section>
 
-            <div class="box">
-
-            <div class="image">
-            <img src="images/a3.jpg">
-            </div>
-            
-            <div class="name">
-                <b>A Step-by-Step Guide to Website Migration for AI Businesses</b>
-            
-            </div>
-            
-            <div class="price">
-            <p>Unlock the secrets of seamless website migration for AI companies. Our step-by-step guide ensures a smooth transition, minimizing downtime and maximizing performance.</p>
-             </div>
-            </div>
-  
-
-  
-
-  <section id="contact">
-    <h2>Contact Us</h2>
-    <form id="contactForm">
-      <input type="text" placeholder="Your Name" required />
-      <input type="email" placeholder="Your Email" required />
-      <textarea placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-    <p id="formResponse"></p>
-
-
-    
-  </section>
 <footer class="footer">
   <div class="footer-text">
     <p>Copyright &Copy; 2025 by Ashutosh / All Rights</p>
   </div>
 
   <div class="footer-iconTop">
-    <a href="#top"><i class='bx bx-up-arrow-alt'></i></a>
+    <a href="#home"><i class='bx bx-up-arrow-alt'></i></a>
   </div>
 </footer>
 
-  
+<script src="https://unpkg.com/scrollreveal"></script>
+<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+<script>
+
+  let menuIcon = document.querySelector('#menu-icon');
+  let navbar = document.querySelector('.navbar');
+
+  menuIcon.onclick = () => {
+    menuIcon.classList.toggle('bx-x');
+    navbar.classList.toggle('active');
+  };
 
   
+let section = document.querySelectorAll('section');
+let navLinks = document.querySelectorAll('header nav a');
 
-  
+window.onscroll = () => {
+  section.forEach(sec =>{
+    let top = window.scrolly;
+    let offset = sec.offsetTop - 150;
+    let height = sec.offsetHeight;
+    let id = sec.getAttribute('id');
 
-  <script>
-  document.getElementById('contactForm').addEventListener('submit', function (e) {
-  e.preventDefault();
-  document.getElementById('formResponse').textContent = "Thank you! We'll get back to you soon.";
-  this.reset();
+    if(top >= offset && top < offset + height){
+     navLinks.foreach(links => {
+      links.classList.remove('active');
+      document.querySelector('header nav a[href*=' + id +']').classList.add('active');
+
+     });
+    };
+
+  });
+
+  let header = document.querySelector('header');
+
+  header.classList.toggle('sticky' , window.scrolly > 100);
+
+   menuIcon.classList.remove('bx-x');
+    navbar.classList.remove('active');
+};
+
+ScrollReveal({ 
+  reset: true,
+  distance: '80px',
+  duration: 1200,
+  delay: 50
+
+});
+
+ScrollReveal().reveal('.home-content, .heading', { origin: 'top'});
+ScrollReveal().reveal('.home-img, .services-container, .project-box, .contact form', { origin: 'bottom'});
+ScrollReveal().reveal('.home-content h1, .about-img', { origin: 'left'});
+ScrollReveal().reveal('.home-content p, .about-content', { origin: 'right'});
+
+
+const typed = new Typed('.multiple-text', {
+  strings: ['Web Designer', 'Graphic Designer', 'Accountant Manager'], 
+
+  typeSpeed: 100,
+  backSpeed: 100,
+  backDelay: 1000,
+  loop: true
+
 });
 
 
+
+
 </script>
-
-
-
-
-
-
+  
 </body>
 </html>
