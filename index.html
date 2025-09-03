@@ -1,894 +1,1077 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Profile</title>
- <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Profile- Ashutosh</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+ 
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="main.css" rel="stylesheet">
+
 </head>
-<style>
-  *
-  {
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    text-decoration:none;
-    border:none;
-    outline:none;
-    scroll-behavior:smooth;
-    font-family:'Poppins', sans-serif;
-  }
-  body
-  {
-    overflow-x:hidden;
-  }
 
-  :root
-  {
-    --bg-color:#1f242d;
-    --second-bg-color:#323946;
-    --text-color:#fff;
-    --main-color:#0ef;
-
-  }
-
-  html
-  {
-font-size:62.5%;
-overflow-x:hidden;
-  }
-
-  body{
-    background:var(--bg-color);
-    color:var(--text-color);
-  }
-  section
-{
-  min-height:100vh;
-  padding:10rem 9% 2rem;
-  margin-left:-12%;
-}
-  .header
-  {
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    padding:2rem 9%;
-    background:var(--bg-color);
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    z-index:100;
-  }
-
-  .header.sticky
-  {
-    border-bottom: .1rem solid rgba(0, 0, 0, .2);
-  }
-  .logo
-  {
-    font-size:2.5rem;
-    color:var(--text-color);
-    font-weight:600;
-    cursor:default;
-  }
-
-  .navbar a
-  {
-    font-size:1.7rem;
-    color:var(--text-color);
-    margin-left:4rem;
-    transition:.3s;
-    font-family:verdana;
-    
-  }
-  .navbar a:hover, .navbar a.active
-{
-  color:var(--main-color);
-}
-
-#menu-icon
-{
-  font-size:3.6rem;
-  color:var(--text-color);
-  display:none;
-}
-
-.home
-{
-  display:flex;
-  justify-content:center;
-  align-items:center;
-}
-
-.home-img img
-{
-  width:28vw;
-  margin-left:50%;
-  animation: floatImage 4s ease-in-out infinite;
-  
-}
-@keyframes floatImage{
-  0%{
-    transform: translateY(0);
-  }
-  50%{
-    transform: translateY(-2.4rem);
-  }
- 100%{
-    transform: translateY(0);
-  }
-}
-.home-content h3
-{
-  font-size:3.2rem;
-  font-weight:700;
-  
-}
-
-span
-{
-  color:var(--main-color);
-}
-
-.home-content h3:nth-of-type(2)
-{
-  margin-bottom:2rem;
-}
-
-.home-content h1
-{
-  font-size:5.6rem;
-  font-weight:700;
-  line-height:1.3;
-}
-
-.home-content p
-{
-  font-size:1.6rem;
-  font-family:verdana;
-}
-
-.social-media a
-{
-  display:inline-flex;
-  justify-content:center;
-  align-items:center;
-  width:4rem;
-  height:4rem;
-  background:transparent;
-  border:.2rem solid var(--main-color);
-  border-radius:50%;
-  font-size:2rem;
-  color:var(--main-color);
-  margin:3rem 1.5rem 3rem 0;
-}
-
-.social-media a:hover
-{
-  background:var(--main-color);
-  color:var(--second-bg-color);
-  box-shadow:0 0 1rem var(--main-color);
-}
-
-.btn
-{
-  display:inline-block;
-  padding:1rem 2.8rem;
-  background:var(--main-color);
-  border-radius:4rem;
-  box-shadow:0 0 1rem var(--main-color);
-  font-size:1.6rem;
-  color:var(--second-bg-color);
-  letter-spacing: .1rem;
-  font-weight: 600;
-  transition: .5s;
-}
-
-.btn:hover
-{
-  box-shadow:none;
-}
-
-.about
-{
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  gap:2rem;
-  background:var(--second-bg-color);
-}
-
-.about-img img
-{
-  width:28vw;
-  margin-left:30%;
-}
-
-.heading
-{
-  text-align:center;
-  font-size:4.5rem;
-  
-
-}
-.about-content
-{
-  margin-left:20%;
-  
-}
-
-.about-content h2
-{
-  text-align:left;
-  line-height:1.2;
-
-}
-.about-content h3
-{
-  font-size: 2.6rem;
-}
-.about-content p
-{
-  font-size: 1.6rem;
-  margin:2rem 0 3rem;
-  font-size: Medium;
-  letter-spacing:1px;
-}
-
-.myskills h2
-{
-  margin-bottom:5rem;
-   margin-left:10%;
-
-  
-  
-}
-
-.services-container
-{
-  display:flex;
-  justify-content:center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap:2rem;
-  margin-left:10%;
-
-}
-
-
-
-.services-container .services-box
-{
-  flex:1 1 30rem;
-  background:var(--second-bg-color);
-  padding: 3rem 2rem 5rem;
-  border-radius: 2rem;
-  text-align: center;
-  border: .2rem solid var(--main-color);
-  transition: 0.5s;
-}
-.services-container .services-box:hover
-{
-border-color: var(--main-color);
-transform:scale(1.02)
-}
-.services-box i
-{
-  font-size:7rem;
-  color:var(--main-color);
-}
-
-.services-box h3
-{
-  font-size:2.6rem;
-}
-
-.services-box p
-{
-  font-size: 1.6rem;
-  margin: 2rem 0 4rem;
-  
-}
-
-.project
-{
-  background: var(--second-bg-color);
-}
-.project h2
-{
-  margin-bottom: 4rem;
-  margin-left:10%;
-
-}
-.project-container
-{
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  align-items: center;
-  gap:2rem;
-  margin-left:10%;
-}
-
-.project-container .project-box
-{
-  position: relative;
-  border-radius: 2rem;
-  box-shadow: 0 0 1rem var(--bg-color);
-  overflow: hidden;
-  display: flex;
-}
-.project-box img
-{
-  width:100%;
-  transition: .5s ease;
-}
-
-.project-box:hover img
-{
-  transform: scale(1.1);
-}
-
-.project-box .project-layer
-{
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width:100%;
-  height:100%;
-  background:linear-gradient(rgba(0, 0, 0, .1), var(--main-color));
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  text-align: center;
-  padding:0 4rem;
-  transform: translateY(100%);
-  transition: 1s ease;
-}
-
-.project-box:hover .project-layer
-{
-  transform: translateY(0);
-}
-
-.project-layer h4
-{
-  font-size: 4rem;;
-}
-.project-layer p
-{
-  font-size: 1.6rem;
-  margin:.3rem 0 1rem;
-}
-
-.project-layer a
-{
-  display: inline-flex;
-  justify-content: center;
-align-items: center;
-width: 5rem;
-height:5rem;
-background: var(--text-color);
-border-radius: 50%;
-
-}
-.project-layer a i
-{
-  font-size:2rem;
-  color:var(--second-bg-color);
-}
-
-.contact h2
-{
-  margin-bottom: 3rem;
-  margin-left:15%;
-}
-.contact form
-{
-  max-width:70rem;
-  margin:1rem auto;
-  text-align: center;
-  margin-bottom: 3rem;
-  margin-left:30%;
-}
-.contact form .input-box
-{
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  
-}
-
-.contact form .input-box input, .contact form textarea
-{
-  width: 100%;
-  padding: 1.5rem;
-  font-size: 1.6rem;
-  color: var(--text-color);
-  background: var(--second-bg-color);
-  border-radius: .8rem;
-  margin:.7rem 0;
-  
-
-}
-
-.contact form .input-box input
-{
-  width: 49%;
-}
-
-.contact form textarea
-{
-  resize:none;
-}
-
-.contact form .btn
-{
-  margin-top: 2rem;
-  cursor: pointer;
-}
-
-.footer 
-{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  padding:2rem 9%;
-  background: var(--second-bg-color);
-
-}
-
-.footer-text p
-{
-  font-size:1.6rem;
-
-}
-.footer-iconTop a
-{
-  display: inline-flex;
-  justify-items: center;
-  align-items: center;
-  padding: .8rem;
-  background: var(--main-color);
-  border-radius: .5rem;
-
-}
-
-.footer-iconTop a:hover
-{
-  box-shadow: 0 0 1rem var(--main-color);
-}
-
-.footer-iconTop a i
-{
-font-size:2.4rem;
-color:var(--second-bg-color);
-}
-
-@media (max-width: 1200px)
-{
-  html{
-    font-size: 55%;
-  }
-}
-
-@media (max-width: 991px)
-{
-.header
-{
-  padding:2rem 3%;
-}
-section
-{
-padding:10rem 3% 2rem;
-}
-
-.project{
-  padding-bottom: 7rem;
-}
-
-.services{
-  padding-bottom: 7rem;
-}
-
-.contact
-{
-
-  min-height: auto;
-}
-.footer
-{
-  padding: 2rem 3%;
-}
-}
-
-@media (max-width: 768px)
-{
-  #menu-icon
-  {
-    display: block;
-    cursor: pointer;
-
-  }
-  .navbar
-  {
-    position: absolute;
-    top:100%;
-    left: 0;
-    width:100%;
-    background: var(--bg-color);
-    padding: 1rem 3%;
-    border-top:.1rem solid rgba(0, 0, 0, .2);
-    box-shadow:0 .5rem 1rem rgba(0, 0, 0, .2);
-    display:none;
-    
-  }
-
-  .navbar.active{
-    display: block;
-    
-  }
-  .navbar a{
-    display: block;
-    font-size: 2rem;
-    margin: 3rem 0;
-    
-
-
-  }
-
-  .home
-  {
-    flex-direction: column;
-  }
-
-  .home-content h3{
-    font-size: 2.6rem;
-
-  }
-  .home-content h1{
-    font-size: 5rem;
-  }
-  .home-img img{
-    width:60vw;
-    margin-top: 4rem;
-    margin-left:10%;
-  }
-  .about
-  {
-    flex-direction: column-reverse;
-  }
-  .about img{
-    width:60vw;
-    margin-top:4rem;
-    margin-left:10%;
-  }
-
-  .services h2{
-    margin-bottom:3rem;
-  }
-  .project h2{
-    margin-bottom: 3rem;
-  }
-  .project-container
-  {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .contact form{
-    margin-left:18%;
-  }
-}
-
-@media (max-width: 617px)
-{
-  .project-container{
-    grid-template-columns: 1fr;
-  }
-
-  .home
-  {
-    flex-direction: column;
-    margin-left: 4%;
-  }
-
-  .home-content h3{
-    font-size: 2.5rem;
-
-  }
-  .home-content h1{
-    font-size: 4.5rem;
-  }
-  .home-img img{
-    width:80vw;
-    margin-top: 4rem;
-    margin-left:1%;
-  }
-  .about
-  {
-    flex-direction: column-reverse;
-  }
-  .about img{
-    width:80vw;
-    margin-top:4rem;
-    margin-left:10%;
-  }
-
-  .contact form{
-    margin-left:10%;
-  }
-
-  
-
-}
-
-@media (max-width: 450px)
-{
-html{
-  font-size:50%;
-
-}
-.contact form .input-box input{
-  width:100%;
-}
-
-.contact form{
-    margin-left:10%;
-  }
-
-  .footer{
-    flex-direction: column-reverse;
-
-  }
-  .footer p{
-    text-align: center;
-    margin-top: 2rem;
-  }
-}
-
-
-
-</style>
-<body>
-  <header class="header">
-    <a href="#" class="logo">Ashu</a>
-
-    <i class='bx bx-menu' id="menu-icon"></i>
-    <nav class="navbar">
-      <a href="#" class="active">Home</a>
-      <a href="#about">About</a>
-      <a href="#myskills">Skills</a>
-      <a href="#project">My Project</a>
-      <a href="#contact">Contact</a>
-      <a href="menu.html">Practice Work</a>
-
-    </nav>
-
+<body class="index-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center">
+        
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+
+        <div class="profile-img">
+          <img src="images/Ashu.png" class="pic">
+        </div>
+
+        <a href="index.html" class="logo d-flex align-items-center justify-content-center active">
+         
+          <h1 class="sitename">Ashutosh Mathur</h1>
+        </a>
+
+        <div class="social-links text-center">
+          <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
+          <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="google-plus"><i class="bi bi-skype"></i></a>
+          <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+        </div>
+
+        <ul>
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#resume">Resume</a></li>
+          <li><a href="#portfolio">My Work</a></li>
+          <li><a href="#services">My Skills</a></li>
+          <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="menu.html">practise Work</a></li>
+              </ul>
+              
+               <ul>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+    </div>
   </header>
-  <section class="home" id="home">
-<div class="home-content">
-  <h3>Hello, It's me</h3>
-  <h1>Ashutosh Mathur</h1>
-  <h3> And I'm a <span class="multiple-text"></span></h3>
-  <p>Hello, I am web Designer to create a attractive websites frontend and<br/> many more using HTML, CSS, JavaScript and jquery</p>
-  <div class="social-media">
-    <a href="#"><i class='bx bxl-facebook'></i></a>
-    <a href="#"><i class='bx bxl-whatsapp'></i></a>
-    <a href="#"><i class='bx bxl-instagram-alt'></i></a>
-    <a href="#"><i class='bx bxl-linkedin'></i></a>
-  </div>
-  <a class="btn" href="images/resume.pdf" download="Ashutosh_Resume.pdf">Download CV</a>
-</div>
-<div class="home-img">
-  <img src="images/boy.png">
-</div>
 
-  </section>
+  <main class="main">
 
-  <section class="about" id="about">
-    <div class="about-img">
-      <img src="images/boy.png">
-    </div>
-    <div class="about-content">
-      <h2 class="heading">About <span>Me</span></h2>
-      <h3>Front end Designer</h3>
-      <p>My self Ashutosh Mathur and I am 22 years old. I am professional UI/UX and Graphic designer. I am currently in learning stage at <b>Arena Animation Institute</b> GTB nagar.
-if I talk about my eductation, I have passed 12 from CBSE board in which I get first place in whole school and currently persuing Graduation from Delhi Universilty.
-I have a diploma in computer and worked as a senior Accountant. My goal is to to build my career in the company and one day start my own compnay. My hobby is reading new books and learning new things related to anything. My long terms goal to start my own company and build my career in this field  as a designer.
-</p>
-<a href="#" class="btn">Read More</a>
-    </div>
-  </section>
+    <!-- Hero Section -->
+    <section id="hero" class="hero section">
 
-  <section class="myskills" id="myskills">
-    <h2 class="heading">My <span>Skills</span></h2>
+      <div class="container">
+        <div class="row g-0 align-items-center">
 
-    <div class="services-container">
-      <div class="services-box">
-        <i class='bx bx-code-alt'></i>
-        <h3>Web Designer</h3>
-        <p>Web designer is a professional who is responsible for the visual and interactive design of websites according their size of screen and responsive websites using HTML, CSS, Javascript, Jquery and Bootstrap.Considering how users will interact with the website. .</p>
-        <a href="#" class="btn">Read More</a>
+          <div class="col-lg-6 hero-content" data-aos="fade-right" data-aos-delay="100">
+            <div class="content-wrapper">
+              <h1 class="hero-title">Web <span class="typed" data-typed-items="Designer, Developer"></span></h1>
+              <p class="lead">I create responsive websites that inspire and engage. With a passion for clean design and innovative solutions, I transform ideas into beautiful, functional realities.</p>
+
+             
+
+              <div class="hero-actions" data-aos="fade-up" data-aos-delay="300">
+                <a href="images/resume.pdf" download="Ashutosh_Resume.pdf"" class="btn btn-primary">Download CV</a>
+                
+              </div>
+
+              <div class="social-links" data-aos="fade-up" data-aos-delay="400">
+                <a href="#"><i class="bi bi-twitter"></i></a>
+                <a href="#"><i class="bi bi-linkedin"></i></a>
+                <a href="#"><i class="bi bi-github"></i></a>
+                <a href="#"><i class="bi bi-instagram"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 hero-image" data-aos="fade-left" data-aos-delay="200">
+            <div class="image-container">
+              <div class="floating-elements">
+                <div class="floating-card card-1" data-aos="zoom-in" data-aos-delay="300">
+                  <i class="bi bi-code-slash"></i>
+                  <span>UI/UX Design</span>
+                </div>
+                <div class="floating-card card-2" data-aos="zoom-in" data-aos-delay="400">
+                  <i class="bi bi-code-slash"></i>
+                  <span>Designer</span>
+                </div>
+              
+              </div>
+              <img src="images/Ashu.png" alt="Portfolio Hero" class="img-fluid hero-main-image">
+              <div class="image-overlay"></div>
+            </div>
+          </div>
+
+        </div>
       </div>
 
-      <div class="services-box">
-        <i class='bx bxs-paint'></i>
-        <h3>Graphic Designer </h3>
-        <p>graphic designer is a professional who creates visual content to communicate ideas and messages, often working with both print and digital media Creating advertisements, social media content, and marketing materials using Photoshop, Coreldraw, Ilustration and Indesign</p>
-        <a href="#" class="btn">Read More</a>
+    </section><!-- /Hero Section -->
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+
+      <!-- Section Title -->
+      <div class="container section-title">
+        <h2>About</h2>
+        
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row align-items-center">
+
+          <div class="col-lg-5" data-aos="fade-right" data-aos-delay="200">
+            <div class="profile-image-wrapper">
+              <div class="profile-image">
+                <img src="images/Ashu.png" alt="Profile" class="img-fluid">
+              </div>
+              <div class="signature-section">
+                <img src="images/sign.png" alt="Signature" class="signature">
+                <p class="quote">Building meaningful digital experiences through creative code.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-7" data-aos="fade-left" data-aos-delay="300">
+            <div class="about-content">
+              <div class="intro">
+                <h2>Hi, I'm Ashutosh Mathur - A web designer</h2>
+                <p>I am a passionate and creative designer with a strong eye for detail and a love for crafting visually appealing, user-friendly designs. My expertise lies in combining aesthetics with functionality to deliver designs that not only look great but also provide seamless user experiences.
+
+I specialize in designing websites, mobile interfaces, and digital graphics with a focus on modern trends, clean layouts, and responsive design. With proficiency in tools like Adobe Photoshop, UI/UX Design </p>
+              </div>
+
+              <div class="skills-grid">
+                <div class="skill-item" data-aos="zoom-in" data-aos-delay="400">
+                  <div class="skill-icon">
+                    <i class="bi bi-code-slash"></i>
+                  </div>
+                  <h4>UI/UX Design</h4>
+                  <p>Create Responsive websites for PC and mobile interface</p>
+                </div>
+                <div class="skill-item" data-aos="zoom-in" data-aos-delay="450">
+                  <div class="skill-icon">
+                    <i class="bi bi-code-slash"></i>
+                  </div>
+                  <h4>Graphic Designer</h4>
+                  <p>Create Company banner and social media advertisement </p>
+                </div>
+                <div class="skill-item" data-aos="zoom-in" data-aos-delay="500">
+                  <div class="skill-icon">
+                    <i class="bi bi-code-slash"></i>
+                  </div>
+                  <h4>Accountancy</h4>
+                  <p>Tally with GST proper ITR return and Balance Sheet payroll</p>
+                </div>
+              </div>
+
+              <div class="journey-timeline" data-aos="fade-up" data-aos-delay="300">
+                <div class="timeline-item">
+                  <div class="year">2019</div>
+                  <div class="description">Passed 10th from CBSE board with Good Marks</div>
+                </div>
+                <div class="timeline-item">
+                  <div class="year">2021</div>
+                  <div class="description"></div>Passed 12th From CBSE Board and persuing Graduation
+                </div>
+                <div class="timeline-item">
+                  <div class="year">2023</div>
+                  <div class="description">Join Graphic Designer course at Arena Animation</div>
+                </div>
+                 <div class="timeline-item">
+                  <div class="year">2024</div>
+                  <div class="description">Join course as Web Designer and development at Arena Animation</div>
+                </div>
+              </div>
+
+              <div class="cta-section" data-aos="fade-up" data-aos-delay="400">
+                
+                <div class="action-buttons">
+                  <a href="#portfolio" class="btn btn-primary">View My Work</a>
+                  <a href="#" class="btn btn-outline">Download CV</a>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
       </div>
 
-      <div class="services-box">
-       <i class='bx bxs-bar-chart-alt-2' ></i>
-        <h3>Accounting </h3>
-        <p>Accounting is the profession of tracking the assets or cash flows of a company or other large organization, and recording how its finances spent. Manage the balancesheet and stock inventory and fill the GST return on monthly basis maintain the ledger of sales and purchase account. </p>
-        <a href="#" class="btn">Read More</a>
+    </section>
+
+    
+    <section id="skills" class="skills section">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row">
+          <div class="col-lg-8">
+            <div class="skills-grid">
+              <div class="row g-4">
+                <div class="col-md-6" data-aos="flip-left" data-aos-delay="200">
+                  <div class="skill-card">
+                    <div class="skill-header">
+                      <i class="bi bi-code-slash"></i>
+                      <h3>Frontend Development</h3>
+                    </div>
+                    <div class="skills-animation">
+                      <div class="skill-item">
+                        <div class="skill-info">
+                          <span class="skill-name">HTML/CSS</span>
+                          <span class="skill-percentage">95%</span>
+                        </div>
+                        <div class="skill-bar progress">
+                          <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                      </div>
+
+                      <div class="skill-item">
+                        <div class="skill-info">
+                          <span class="skill-name">JavaScript</span>
+                          <span class="skill-percentage">88%</span>
+                        </div>
+                        <div class="skill-bar progress">
+                          <div class="progress-bar" role="progressbar" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                      </div>
+
+                      <div class="skill-item">
+                        <div class="skill-info">
+                          <span class="skill-name">Jquery</span>
+                          <span class="skill-percentage">82%</span>
+                        </div>
+                        <div class="skill-bar progress">
+                          <div class="progress-bar" role="progressbar" aria-valuenow="82" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div><!-- End Frontend Card -->
+                </div>
+
+                <div class="col-md-6" data-aos="flip-left" data-aos-delay="300">
+                  <div class="skill-card">
+                    <div class="skill-header">
+                      <i class="bi bi-code-slash"></i>
+                      <h3>Backend Development</h3>
+                    </div>
+                    <div class="skills-animation">
+                      <div class="skill-item">
+                        <div class="skill-info">
+                          <span class="skill-name">PHP</span>
+                          <span class="skill-percentage">78%</span>
+                        </div>
+                        <div class="skill-bar progress">
+                          <div class="progress-bar" role="progressbar" aria-valuenow="78" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                      </div>
+
+                     
+                    </div>
+                  </div><!-- End Backend Card -->
+                </div>
+
+                <div class="col-md-6" data-aos="flip-left" data-aos-delay="400">
+                  <div class="skill-card">
+                    <div class="skill-header">
+                      <i class="bi bi-code-slash"></i>
+                      <h3>Design &amp; Tools</h3>
+                    </div>
+                    <div class="skills-animation">
+                      <div class="skill-item">
+                        <div class="skill-info">
+                          <span class="skill-name">Corel</span>
+                          <span class="skill-percentage">85%</span>
+                        </div>
+                        <div class="skill-bar progress">
+                          <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                      </div>
+
+                      <div class="skill-item">
+                        <div class="skill-info">
+                          <span class="skill-name">Photoshop</span>
+                          <span class="skill-percentage">70%</span>
+                        </div>
+                        <div class="skill-bar progress">
+                          <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                      </div>
+
+                      <div class="skill-item">
+                        <div class="skill-info">
+                          <span class="skill-name">Illustrator</span>
+                          <span class="skill-percentage">68%</span>
+                        </div>
+                        <div class="skill-bar progress">
+                          <div class="progress-bar" role="progressbar" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div><!-- End Design Card -->
+                </div>
+
+                <div class="col-md-6" data-aos="flip-left" data-aos-delay="500">
+                  <div class="skill-card">
+                    <div class="skill-header">
+                      <i class="bi bi-code-slash"></i>
+                      <h3>Accountancy</h3>
+                    </div>
+                    <div class="skills-animation">
+                      <div class="skill-item">
+                        <div class="skill-info">
+                          <span class="skill-name">Tally</span>
+                          <span class="skill-percentage">99%</span>
+                        </div>
+                        <div class="skill-bar progress">
+                          <div class="progress-bar" role="progressbar" aria-valuenow="76" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                      </div>
+
+                      <div class="skill-item">
+                        <div class="skill-info">
+                          <span class="skill-name">ITR and GST </span>
+                          <span class="skill-percentage">80%</span>
+                        </div>
+                        <div class="skill-bar progress">
+                          <div class="progress-bar" role="progressbar" aria-valuenow="73" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                      </div>
+
+                      <div class="skill-item">
+                        <div class="skill-info">
+                          <span class="skill-name">Balance sheet and payroll</span>
+                          <span class="skill-percentage">90%</span>
+                        </div>
+                        <div class="skill-bar progress">
+                          <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div><!-- End DevOps Card -->
+                </div>
+              </div>
+            </div><!-- End Skills Grid -->
+          </div>
+
+          <div class="col-lg-4">
+            <div class="skills-summary" data-aos="fade-left" data-aos-delay="200">
+              <h3>Professional Expertise</h3>
+              <p>Experienced in crafting clean, modern, and functional websites using HTML, CSS, Bootstrap, and responsive frameworks.</p>
+
+              <div class="summary-stats">
+                <div class="stat-item" data-aos="zoom-in" data-aos-delay="300">
+                  <div class="stat-circle">
+                    <i class="bi bi-trophy"></i>
+                  </div>
+                  <div class="stat-info">
+                    <span class="stat-number">5+</span>
+                    <span class="stat-label">Years Experience</span>
+                  </div>
+                </div>
+
+               
+              </div>
+
+              <div class="skills-badges" data-aos="fade-up" data-aos-delay="600">
+                <h4>Certifications</h4>
+                <div class="badge-list">
+                  <div class="skill-badge">Tally Prime </div>
+                  <div class="skill-badge">Diploma in Computer Application</div>
+                  <div class="skill-badge">Media Publishing</div>
+                  <div class="skill-badge">UI/UX Design</div>
+                </div>
+              </div>
+            </div><!-- End Skills Summary -->
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /Skills Section -->
+
+    <!-- Resume Section -->
+    <section id="resume" class="resume section">
+
+      <!-- Section Title -->
+      <div class="container section-title">
+        <h2>Resume</h2>
+        
+      </div>
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row">
+          <div class="col-lg-6" data-aos="fade-right" data-aos-delay="200">
+            <div class="experience-section">
+              <div class="section-header">
+                <h2><i class="bi bi-briefcase"></i> Professional Journey</h2>
+                
+              </div>
+
+              <div class="experience-cards">
+                <div class="experience-card" data-aos="zoom-in" data-aos-delay="300">
+                  <div class="card-header">
+                    <div class="role-info">
+                      <h3>Account Manager</h3>
+                      <h4>Swastik Chemicals</h4>
+                    </div>
+                    <span class="duration">2023 - Present</span>
+                  </div>
+                  <div class="card-body">
+                    <p>Managed a diverse portfolio of accounts, ensuring timely communication and effective problem
+resolution.</p>
+                    <ul class="achievements">
+                      <li>Increased client satisfaction by building strong relationships and addressing their needs promptly.</li>
+                      <li>Collaborated with sales team to identify potential upsell opportunities and expand client base.</li>
+                      <li> Established clear communication channels between clients and internal teams, ensuring seamless
+project execution</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="experience-card" data-aos="zoom-in" data-aos-delay="400">
+                  <div class="card-header">
+                    <div class="role-info">
+                      <h3>Customer care Executive</h3>
+                      <h4>BPO convergance Pvt. Ltd.</h4>
+                    </div>
+                    <span class="duration">2022 - 2023</span>
+                  </div>
+                  <div class="card-body">
+                    <p>Provided excellent customer service by efficiently resolving issues and responding to inquiries.</p>
+                  </div>
+                </div>
+
+               
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-left" data-aos-delay="200">
+            <div class="education-section">
+              <div class="section-header">
+                <h2><i class="bi bi-mortarboard"></i> Educational Details</h2>
+               
+              </div>
+
+              <div class="education-timeline">
+                <div class="timeline-track"></div>
+
+                <div class="education-item" data-aos="slide-up" data-aos-delay="300">
+                  <div class="timeline-marker"></div>
+                  <div class="education-content">
+                    <div class="degree-header">
+                      <h3>BA Programme with history</h3>
+                      <span class="year">2023 - running</span>
+                    </div>
+                    <h4 class="institution">Delhi University</h4>
+                   
+                  </div>
+                </div>
+
+                <div class="education-item" data-aos="slide-up" data-aos-delay="400">
+                  <div class="timeline-marker"></div>
+                  <div class="education-content">
+                    <div class="degree-header">
+                      <h3>Certification</h3>
+                      
+                    </div>
+                    <h4 class="institution">Arena Animation institute</h4>
+                    <p>Web Designer, Web development and Graphic designer</p>
+                  </div>
+                </div>
+
+                <div class="education-item" data-aos="slide-up" data-aos-delay="500">
+                  <div class="timeline-marker"></div>
+                  <div class="education-content">
+                    <div class="degree-header">
+                      <h3>Skills</h3>
+                      
+                    </div>
+                    
+                    <p>Team management : Data Analysis : Account management : Designer : Knowledge of Computer
+software : Client relationship</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services section">
+
+      <!-- Section Title -->
+      <div class="container section-title">
+        <h2>My Skills</h2>
+        
+      </div>
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row g-4">
+
+        
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-item">
+              <div class="icon">
+                <i class="bi bi-stack"></i>
+              </div>
+              <h3>Photoshop</h3>
+              <p>Adobe Photoshop is the industry-standard software for creating, editing, and manipulating raster (pixel-based) images and graphics</p>
+              <div class="card-links">
+                <a href="#" class="link-item">
+                  Learn More
+                  <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+          <!-- Card 2 -->
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-item">
+              <div class="icon">
+                 <i class="bi bi-stack"></i>
+              </div>
+              <h3>Corel Draw</h3>
+              <p>CorelDRAW Graphics Suite is a professional design software for vector illustration, photo editing, and layout, used across various industries for creating everything</p>
+              <div class="card-links">
+                <a href="#" class="link-item">
+                  Learn More
+                  <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+          <!-- Card 3 -->
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-item">
+              <div class="icon">
+                <i class="bi bi-stack"></i>
+              </div>
+              <h3>Illustration</h3>
+              <p>An illustration is a visual representation that explains, decorates, or communicates an idea, concept, or narrative. It can be created by an artist using various techniques</p>
+              <div class="card-links">
+                <a href="#" class="link-item">
+                  Learn More
+                  <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+          <!-- Card 4 -->
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-item">
+              <div class="icon">
+                 <i class="bi bi-stack"></i>
+              </div>
+              <h3>HTML, CSS</h3>
+              <p>HTML (HyperText Markup Language) and CSS (Cascading Style Sheets) are fundamental technologies for building web pages.</p>
+              <div class="card-links">
+                <a href="#" class="link-item">
+                  Learn More
+                  <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-item">
+              <div class="icon">
+                 <i class="bi bi-stack"></i>
+              </div>
+              <h3>Javascript</h3>
+              <p>JavaScript is a high-level, dynamically typed, and multi-paradigm programming language primarily known for its role in creating interactive and dynamic web pages.</p>
+              <div class="card-links">
+                <a href="#" class="link-item">
+                  Learn More
+                  <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+          <!-- Card 6 -->
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-item">
+              <div class="icon">
+                 <i class="bi bi-stack"></i>
+              </div>
+              <h3>Bootstrap, Jquery and PHP</h3>
+              <p>Bootstrap, jQuery, and PHP represent key technologies often used together in web development, particularly in creating dynamic and visually appealing web applications.</p>
+              <div class="card-links">
+                <a href="#" class="link-item">
+                  Learn More
+                  <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio section">
+
+      <!-- Section Title -->
+      <div class="container section-title">
+        <h2>My Work</h2>
+        
+      </div><!-- End Section Title -->
+
+      <div class="container-fluid" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+
+          <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="200">
+            <li data-filter="*" class="filter-active">
+              <i class="bi bi-grid-3x3"></i> All Projects
+            </li>
+            <li data-filter=".filter-ui">
+              UI/UX
+            </li>
+           
+          </ul>
+
+          <div class="row g-4 isotope-container" data-aos="fade-up" data-aos-delay="300">
+
+            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item isotope-item filter-ui">
+              <article class="portfolio-entry">
+                <figure class="entry-image">
+                  <img src="images/photo1.jpg" class="img-fluid" alt="" loading="lazy">
+                  <div class="entry-overlay">
+                    <div class="overlay-content">
+                      <div class="entry-meta">UI/UX Design</div>
+                      <h3 class="entry-title">Photography with SnapX</h3>
+                      <div class="entry-links">
+                        <a href="images/photo1.jpg" class="glightbox" data-gallery="portfolio-gallery-ui" data-glightbox="title: Mobile Banking App; description: Praesent commodo cursus magna, vel scelerisque nisl consectetur.">
+                          <i class="bi bi-arrows-angle-expand"></i>
+                        </a>
+                        <a href="https://ashutosh7827.github.io/photography/">
+                          <i class="bi bi-arrow-right"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </figure>
+              </article>
+            </div>
+
+            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item isotope-item filter-development">
+              <article class="portfolio-entry">
+                <figure class="entry-image">
+                  <img src="images/smurf.jpg" class="img-fluid" alt="" loading="lazy">
+                  <div class="entry-overlay">
+                    <div class="overlay-content">
+                      <div class="entry-meta">UI/UX Design</div>
+                      <h3 class="entry-title">Smurf world</h3>
+                      <div class="entry-links">
+                        <a href="images/smurf.jpg" class="glightbox" data-gallery="portfolio-gallery-development" data-glightbox="title: Smurf world; description: Nulla vitae elit libero, a pharetra augue mollis interdum.">
+                          <i class="bi bi-arrows-angle-expand"></i>
+                        </a>
+                        <a href="https://ashutosh7827.github.io/smurfweb/">
+                          <i class="bi bi-arrow-right"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </figure>
+              </article>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item isotope-item filter-photography">
+              <article class="portfolio-entry">
+                <figure class="entry-image">
+                  <img src="images/formula1.jpg" class="img-fluid" alt="" loading="lazy">
+                  <div class="entry-overlay">
+                    <div class="overlay-content">
+                      <div class="entry-meta">UI/UX Design</div>
+                      <h3 class="entry-title">Formula 1 car racing</h3>
+                      <div class="entry-links">
+                        <a href="images/formula1.jpg" class="glightbox" data-gallery="portfolio-gallery-photography" data-glightbox="title: Urban Architecture; description: Sed ut perspiciatis unde omnis iste natus error sit voluptatem.">
+                          <i class="bi bi-arrows-angle-expand"></i>
+                        </a>
+                        <a href="https://ashutosh7827.github.io/f1racing/">
+                          <i class="bi bi-arrow-right"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </figure>
+              </article>
+            </div>
+
+            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item isotope-item filter-marketing">
+              <article class="portfolio-entry">
+                <figure class="entry-image">
+                  <img src="images/m2.jpg" class="img-fluid" alt="" loading="lazy">
+                  <div class="entry-overlay">
+                    <div class="overlay-content">
+                      <div class="entry-meta">Marketing</div>
+                      <h3 class="entry-title">Social Media Campaign</h3>
+                      <div class="entry-links">
+                        <a href="assets/img/m2.jpg" class="glightbox" data-gallery="portfolio-gallery-marketing" data-glightbox="title: Social Media Campaign; description: Quis autem vel eum iure reprehenderit qui in ea voluptate.">
+                          <i class="bi bi-arrows-angle-expand"></i>
+                        </a>
+                        <a href="https://ashutosh7827.github.io/mercedes/">
+                          <i class="bi bi-arrow-right"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </figure>
+              </article>
+            </div>
+
+            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item isotope-item filter-ui">
+              <article class="portfolio-entry">
+                <figure class="entry-image">
+                  <img src="images/furniture.jpg" class="img-fluid" alt="" loading="lazy">
+                  <div class="entry-overlay">
+                    <div class="overlay-content">
+                      <div class="entry-meta">UI/UX Design</div>
+                      <h3 class="entry-title">Smart Home Interface</h3>
+                      <div class="entry-links">
+                        <a href="images/furniture.jpg" class="glightbox" data-gallery="portfolio-gallery-ui" data-glightbox="title: Smart Home Interface; description: At vero eos et accusamus et iusto odio dignissimos ducimus.">
+                          <i class="bi bi-arrows-angle-expand"></i>
+                        </a>
+                        <a href="https://ashutosh7827.github.io/furniture/">
+                          <i class="bi bi-arrow-right"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </figure>
+              </article>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item isotope-item filter-development">
+              <article class="portfolio-entry">
+                <figure class="entry-image">
+                  <img src="assets/img/portfolio/portfolio-11.webp" class="img-fluid" alt="" loading="lazy">
+                  <div class="entry-overlay">
+                    <div class="overlay-content">
+                      <div class="entry-meta">Development</div>
+                      <h3 class="entry-title">Cloud Management System</h3>
+                      <div class="entry-links">
+                        <a href="assets/img/portfolio/portfolio-11.webp" class="glightbox" data-gallery="portfolio-gallery-development" data-glightbox="title: Cloud Management System; description: Temporibus autem quibusdam et aut officiis debitis.">
+                          <i class="bi bi-arrows-angle-expand"></i>
+                        </a>
+                        <a href="portfolio-details.html">
+                          <i class="bi bi-arrow-right"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </figure>
+              </article>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item isotope-item filter-photography">
+              <article class="portfolio-entry">
+                <figure class="entry-image">
+                  <img src="assets/img/portfolio/portfolio-8.webp" class="img-fluid" alt="" loading="lazy">
+                  <div class="entry-overlay">
+                    <div class="overlay-content">
+                      <div class="entry-meta">Photography</div>
+                      <h3 class="entry-title">Nature Collection</h3>
+                      <div class="entry-links">
+                        <a href="assets/img/portfolio/portfolio-8.webp" class="glightbox" data-gallery="portfolio-gallery-photography" data-glightbox="title: Nature Collection; description: Integer posuere erat a ante venenatis dapibus posuere velit aliquet.">
+                          <i class="bi bi-arrows-angle-expand"></i>
+                        </a>
+                        <a href="portfolio-details.html">
+                          <i class="bi bi-arrow-right"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </figure>
+              </article>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item isotope-item filter-marketing">
+              <article class="portfolio-entry">
+                <figure class="entry-image">
+                  <img src="assets/img/portfolio/portfolio-5.webp" class="img-fluid" alt="" loading="lazy">
+                  <div class="entry-overlay">
+                    <div class="overlay-content">
+                      <div class="entry-meta">Marketing</div>
+                      <h3 class="entry-title">Brand Strategy</h3>
+                      <div class="entry-links">
+                        <a href="assets/img/portfolio/portfolio-5.webp" class="glightbox" data-gallery="portfolio-gallery-marketing" data-glightbox="title: Brand Strategy; description: Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum.">
+                          <i class="bi bi-arrows-angle-expand"></i>
+                        </a>
+                        <a href="portfolio-details.html">
+                          <i class="bi bi-arrow-right"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </figure>
+              </article>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  
+
+            
+                <script type="application/json" class="swiper-config">
+                  {
+                    "loop": true,
+                    "speed": 600,
+                    "autoplay": {
+                      "delay": 5000
+                    },
+                    "slidesPerView": 1,
+                    "spaceBetween": 30,
+                    "pagination": {
+                      "el": ".swiper-pagination",
+                      "type": "bullets",
+                      "clickable": true
+                    },
+                    "breakpoints": {
+                      "768": {
+                        "slidesPerView": 2
+                      },
+                      "992": {
+                        "slidesPerView": 3
+                      }
+                    }
+                  }
+                </script>
+
+               
+                
+    <!-- Faq Section -->
+    <section id="faq" class="faq section">
+
+      <!-- Section Title -->
+      <div class="container section-title">
+        <h2>Frequently Asked Questions</h2>
+        
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row justify-content-center">
+
+          <div class="col-lg-12" data-aos="fade-up" data-aos-delay="100">
+
+            <div class="faq-container">
+
+              <div class="faq-item faq-active">
+                <h3>Why is web designing importance for us?</h3>
+                <div class="faq-content">
+                  <p>Web design is important because it creates the crucial first impression of a brand, significantly impacting user experience, trust, and overall business success. Good design improves brand identity, enhances user experience (UX) by making sites easy to navigate, boosts search engine optimization (SEO) for better visibility, and increases conversion rates by guiding users to desired actions. </p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <div class="faq-item">
+                <h3>How many languages are use for web desinging?</h3>
+                <div class="faq-content">
+                  <p>There isn't a fixed number of languages for web design; rather, there's a core set of foundational languages—HTML, CSS, and JavaScript—followed by a wide array of other technologies for both front-end and back-end development. While HTML, CSS, and JavaScript are essential for building the structure, style, and interactivity of a website's user interface, back-end languages like Python, PHP, and Java are used for server-side operations</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div>
+
+              <div class="faq-item">
+                <h3>What is JavaScript and why is it used?</h3>
+                <div class="faq-content">
+                  <p>JavaScript is a versatile scripting language that can create robust web applications. JavaScript can create interactive features like menus, and form validation. It can also improve the user experience by providing visual feedback or animations.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div>
+
+             
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    
+    <section id="contact" class="contact section light-background">
+
+      <!-- Section Title -->
+      <div class="container section-title">
+        <h2>Contact</h2>
+       
+      </div>
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row g-4 g-lg-5">
+          <div class="col-lg-5">
+            <div class="info-box" data-aos="fade-up" data-aos-delay="200">
+              <h3>Contact Info</h3>
+              <p>I’d love to connect and collaborate! Whether you have a project idea, a design challenge, or just want to say hello, feel free to reach out.</p>
+
+              <div class="info-item" data-aos="fade-up" data-aos-delay="300">
+                <div class="icon-box">
+                  <i class="bi bi-geo-alt"></i>
+                </div>
+                <div class="content">
+                  <h4>Our Location</h4>
+                  <p>Gali no.9, 25 Feet road </p>
+                  <p>Mukund Pur, Delhi-110042</p>
+                </div>
+              </div>
+
+              <div class="info-item" data-aos="fade-up" data-aos-delay="400">
+                <div class="icon-box">
+                  <i class="bi bi-telephone"></i>
+                </div>
+                <div class="content">
+                  <h4>Phone Number</h4>
+                  <p>+91 7827220457</p>
+                  <p>+91 9350364161</p>
+                </div>
+              </div>
+
+              <div class="info-item" data-aos="fade-up" data-aos-delay="500">
+                <div class="icon-box">
+                  <i class="bi bi-envelope"></i>
+                </div>
+                <div class="content">
+                  <h4>Email Address</h4>
+                  <p>mathurashutosh929@gmail.com</p>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-7">
+            <div class="contact-form" data-aos="fade-up" data-aos-delay="300">
+              <h3>Get In Touch</h3>
+              <p>I’d love to connect and collaborate! Whether you have a project idea, a design challenge, or just want to say hello, feel free to reach out.</p>
+
+              <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+                <div class="row gy-4">
+
+                  <div class="col-md-6">
+                    <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
+                  </div>
+
+                  <div class="col-md-6 ">
+                    <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
+                  </div>
+
+                  <div class="col-12">
+                    <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
+                  </div>
+
+                  <div class="col-12">
+                    <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
+                  </div>
+
+                  <div class="col-12 text-center">
+                    <div class="loading">Loading</div>
+                    <div class="error-message"></div>
+                    <div class="sent-message">Your message has been sent. Thank you!</div>
+
+                    <button type="submit" class="btn">Send Message</button>
+                  </div>
+
+                </div>
+              </form>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer id="footer" class="footer dark-background">
+
+    <div class="container">
+      <div class="copyright text-center ">
+        <p>© <span>Copyright</span> <strong class="px-1 sitename">Style</strong> <span>All Rights Reserved</span></p>
+      </div>
+      <div class="social-links d-flex justify-content-center">
+        <a href=""><i class="bi bi-twitter-x"></i></a>
+        <a href=""><i class="bi bi-facebook"></i></a>
+        <a href=""><i class="bi bi-instagram"></i></a>
+        <a href=""><i class="bi bi-linkedin"></i></a>
+      </div>
+    
       </div>
     </div>
-  </section>
 
-  <section class="project" id="project">
-<h2 class="heading">
-  Latest <span>Project</span>
-</h2>
-
-<div class="project-container">
-  <div class="project-box">
-    <img src="images/dis1.jpg">
-    <div class="project-layer">
-      <h4>Web Design</h4>
-      <p>Disney land Websites using HTML CSS </p>
-      <a href="https://ashutosh7827.github.io/Disney/"><i class='bx bx-link-external' ></i></a>
-    </div>
-  </div>
-
-  <div class="project-box">
-    <img src="images/furniture.jpg">
-    <div class="project-layer">
-      <h4>Web Design</h4>
-      <p>Home Furniture Websites using HTML CSS </p>
-      <a href="https://ashutosh7827.github.io/furniture/"><i class='bx bx-link-external' ></i></a>
-    </div>
-  </div>
-
-  <div class="project-box">
-    <img src="images/formula1.jpg">
-    <div class="project-layer">
-      <h4>Web Design</h4>
-      <p>Fromula 1 racing carWebsites using HTML CSS</p>
-      <a href="https://ashutosh7827.github.io/f1racing/"><i class='bx bx-link-external' ></i></a>
-    </div>
-  </div>
-  <div class="project-box">
-    <img src="images/m2.jpg">
-    <div class="project-layer">
-      <h4>Web Design</h4>
-      <p> Mercedes Websites using HTML CSS </p>
-      <a href="https://ashutosh7827.github.io/mercedes/"><i class='bx bx-link-external' ></i></a>
-    </div>
-  </div>
-  <div class="project-box">
-    <img src="images/smurf.jpg">
-    <div class="project-layer">
-      <h4>Web Design</h4>
-      <p> Smurf Cartoon Websites using HTML CSS </p>
-      <a href="https://ashutosh7827.github.io/smurfweb/"><i class='bx bx-link-external' ></i></a>
-    </div>
-  </div>
-    <div class="project-box">
-    <img src="images/photo1.jpg">
-    <div class="project-layer">
-      <h4>Web Design</h4>
-      <p> Photography with SnapX contest </p>
-      <a href="https://ashutosh7827.github.io/photography/"><i class='bx bx-link-external' ></i></a>
-    </div>
-  </div>
-  
-</div>
-</section>
-
-<section class="contact" id="contact">
-  <h2 class="heading">Contact <span>Me</span></h2>
-
-  <form action="#">
-    <div class="input-box">
-      <input type="text" placeholder="Full Name">
-      <input type="Email" placeholder="Email Address">
-    </div>
-
-    <div class="input-box">
-      <input type="Number" placeholder="Mobile Number">
-      <input type="Text" placeholder="Email Subject">
-    </div>
-    <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
-    <input type="submit" value="Send Message" class="btn">
-  </form>
-</section>
-
-<footer class="footer">
-  <div class="footer-text">
-    <p>Copyright &Copy; 2025 by Ashutosh / All Rights</p>
-  </div>
-
-  <div class="footer-iconTop">
-    <a href="#home"><i class='bx bx-up-arrow-alt'></i></a>
-  </div>
-</footer>
-
-<script src="https://unpkg.com/scrollreveal"></script>
-<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-
-<script>
-
-  let menuIcon = document.querySelector('#menu-icon');
-  let navbar = document.querySelector('.navbar');
-
-  menuIcon.onclick = () => {
-    menuIcon.classList.toggle('bx-x');
-    navbar.classList.toggle('active');
-  };
+  </footer>
 
   
-let section = document.querySelectorAll('section');
-let navLinks = document.querySelectorAll('header nav a');
-
-window.onscroll = () => {
-  section.forEach(sec =>{
-    let top = window.scrolly;
-    let offset = sec.offsetTop - 150;
-    let height = sec.offsetHeight;
-    let id = sec.getAttribute('id');
-
-    if(top >= offset && top < offset + height){
-     navLinks.foreach(links => {
-      links.classList.remove('active');
-      document.querySelector('header nav a[href*=' + id +']').classList.add('active');
-
-     });
-    };
-
-  });
-
-  let header = document.querySelector('header');
-
-  header.classList.toggle('sticky' , window.scrolly > 100);
-
-   menuIcon.classList.remove('bx-x');
-    navbar.classList.remove('active');
-};
-
-ScrollReveal({ 
-  reset: true,
-  distance: '80px',
-  duration: 1200,
-  delay: 50
-
-});
-
-ScrollReveal().reveal('.home-content, .heading', { origin: 'top'});
-ScrollReveal().reveal('.home-img, .services-container, .project-box, .contact form', { origin: 'bottom'});
-ScrollReveal().reveal('.home-content h1, .about-img', { origin: 'left'});
-ScrollReveal().reveal('.home-content p, .about-content', { origin: 'right'});
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
 
-const typed = new Typed('.multiple-text', {
-  strings: ['Web Designer', 'Graphic Designer', 'Accountant Manager'], 
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
 
-  typeSpeed: 100,
-  backSpeed: 100,
-  backDelay: 1000,
-  loop: true
-
-});
-
-
-
-
-</script>
   
+  <script src="main.js"></script>
+
 </body>
+
 </html>
